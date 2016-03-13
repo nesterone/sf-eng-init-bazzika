@@ -1,88 +1,73 @@
-#Learning Principles
+# Planning and Time Management
 
-**[<= Back](../README.md)**		*	*	*	**[Next =>](casual-programming.md)**
-
-It's very important to setup communication 'protocol' between you and colleagues 
+**[<= Back](../01-communication/communication.md)**		*	*	*	**[Next =>](../03-few-simple-principles/few-simple-principles.md)**
 
 ## Table of Contents
 
 ### Theory
 
-#### How to Ask Questions
+#### Planning
 
->Be aware, the next article is big and contains a lot of important small details
->You may found yourself re-reading it again and again ;-)
+1. Before planning, trainees should create their issues according to `Issues Guide`
+1. During planing team discus issues, corner cases and prepare plan for next iteration
 
-[How To Ask Questions The Smart Way](http://www.catb.org/esr/faqs/smart-questions.html)
+##### Issues Guide
 
->Place a rubber duck on your monitor and describe your problems to it.
-There's something magical about stating your problems aloud that makes the solution more clear.
+1. Provide meaningful, descriptive  name for the issue
+    * NO any 'Exercise 1' or 'My article'
+1. Issue shouldn't have empty description, at least link to the 'source' of the issue
+    * usually 'sources' of the issue somewhere in our content, for example you always can make a link to any exercise or theory subsection
+    * put whatever useful information you may found to solve the issue
+1. Provide proper `label` for the issue
+1. Provide proper `milestone`, usually they like `trainee-bootcamp`, `trainee-syntax` etc
+1. Provide your `estimation` in some imaginary points, I call them `elephants`
+1. Don't hesitate to start discussion in comments section
+    * for example it could be a question to mentor or some information to yourself
 
-I have a question and I'm writing it to someone... but not sending it. In the moment when
-you `transfer` the question from your mind to some `medium` (paper, email, chart, [thinking out loud](http://c2.com/cgi/wiki?ThinkingOutLoud)) 
-it turns on other parts of your brain and in next 5-10 minutes answer comes. 
-Nine times out of ten. Amazing thing is that you find solution `themselves` and without spending time of `others`.
-
-Question shouldn't contains **NO/NOT** 
-
-* do NOT know
-* can NOT, 
-* NOT possible
-* NO time
-* NO experience
-* etc
-
-Instead it should be *open* and contains 
-
-* How
-* Where
-* How much
-* Who
-* When
-* etc
-
-Questions like
-
-* Why
-* What for
-
-Dangerous because motivate to find guiltier. In case of addresses to themselves could drop you in deep recursive self-analyze
-
-This effect among programmers called `Teddy Bear Effect` or [`Rubber Duck`](http://c2.com/cgi/wiki?RubberDucking)
-
-You may remember when you are starting describe problem to someone but instead find solution without any output from your partner. 
-
-Let's summarize:
-
-##### Simple algorithm 
-
-1. You have a question
-1. Describe it in details to somebody how can give an answer, use some medium (email, chat, paper, etc)
-1. All statement with **NO/NOT** replace with How, Where, Who etc.
-
-##### Example
-
-Joe, I **can not** install this library to the project ?
-
-Rewrite to
-
-Joe, **How can** I install this library to the project ?
-
-Re-read it and switch from the question to other activity: switch to other task, play in billiard, tennis, drink a cup of tea ...
-or just go for a walk. The main idea is to not think about question. You even can take another task for a while.
-If after 10-15 mins no any `insight` then you can ask question your colleges
+###### Labels
+ 
+| Label         | Description    |
+| --------------|:-------------:|
+| `theory`      | Some media content which you have to read, watch or listen, usually they are items from `Theory` or `Addition` section |
+| `exercise`    | Any exercise from `Practice` section |
+| `workshop`    | Any cource or workshop which involves not only `passive consuming of information` but some actions from your side, like replicating of some actions. For example NodeSchool workshops|
+| `question`    | Questions for some topic|
+| `project`     | It's a special type of `Practise`, when you have to plan your project and split it into small sub-tasks|
+| `bug`         | Defects in your exercise or project|
+| `tech-dept`   | Bad design, `code smells` in your project|
 
 
-##### Use your mind on 100%
+###### Estimation
 
-> Remember, if question appears in your mind, then answer already there, you just need to find it ...
+>My subjective recommendations
+
+| Points         | Description    |
+| --------------|:-------------:|
+| 1     | Something trivial, it could takes you around one hour to make it done|
+| 2     | Still clear what and how to do, may take from 1-2h to make it done|
+| 3     | There are some minor unknown parts, you have to make some steps in learn/investigate things, it may takes you from 1-3h to make it done|
+| 5     | Looks like investigation can take almost half of the time, you may spend around 4h to make it done|
+| 8     | 2/3 of `you don't know`, it can takes you around 6h to make it done|
+| 13    | You have a clue on how to make it, but tasks seems challenging for you, it can takes whole day to make it done|
+| 20    | It's a real challenge for you,  so you are a bit scared by complexity of the task, however you desire to make it done, it can takes from one to three days of your time|
+| 40    | `Terra incognito`, no lees then month of work|
+| 100   | You are paralyzed by complexity of the task, you feels like it would take years to make it done|
+
 
 **[⬆ back to top](#table-of-contents)**
 
-### Time Management
+#### Meetings
+
+* [Painless Meetings](http://egorfine.com/en/articles/painless-meetings/)
+* [A Conference Call in Real Life](https://www.youtube.com/watch?v=DYu_bGbZiiQ)
+
+
+**[⬆ back to top](#table-of-contents)**
+
+#### Time Management
 
 1. Each task has to be presented in our issue tracker
-1. Task has to be like "Do something in 5 hours" but not "Do something"
+1. Task has to be like "Do something in 5 hours" but not "Do something" (keep hours in your mind) in tracker use points
 1. Don't spend more time on the task then it requires
 1. Try to complete as much tasks as possible
 1. Write all completed actions and occurred problems. It would be ground for increasing time limit for the task
@@ -98,67 +83,17 @@ If after 10-15 mins no any `insight` then you can ask question your colleges
 **[⬆ back to top](#table-of-contents)**
 
 
-## Planing
-
-1. Trainees create their personal `daily plans` at the end of the day or in the morning and put them to their repository.
-1. A plan includes a list of tasks to be done on the following day. 
-	* It is a good idea to mark higher priority tasks and put such tasks first. 
-	* The plan should include estimation of how much time will be spent on the task.
-1. Trainee should pay attention to individual plans provided by mentors. Tasks assigned by mentors have higher priority compared to the ordinary trainee program.
-1. Mentors should perform daily check of the trainee's plan and correct it if needed.
-1. At the end of the day trainees create `worklog` (daily report). A report lists what have been done, how much time was spent, any issues related to the tasks. All blockers should be clearly marked as well
-
-**[⬆ back to top](#table-of-contents)**
-
-## Prepare Your Status Repository
-
-Idea is that all links to reports, tasks and projects would be stored in your status repository
-
-1. First of all you have to [create account](https://github.com/join) under github
-1. Find your mentor in forks for [js-eng-status](https://github.com/brotherhood-of-javascript/js-eng-status), clone mentor's repository and add link to your repo in README.md, don't panic [it's simple](http://screencast.com/t/sivkdBOaleuD)
-1. [Create pull request](http://screencast.com/t/tmhdoF3ejrh) to mentor repo with your change
-
->Hint: I don't want **your** worklogs/plan changes in **my** status repo, push me only link to **your** repo
-
-**[⬆ back to top](#table-of-contents)**
-
-## Prepare Worklog and Daily Plan
-
-It's time to make your first worklog and daily plan
-
-> Make sure that you understand ['basic markdown syntax'](http://daringfireball.net/projects/markdown/basics)
-
-> Your last report date should be always on the top of the page
-
-#####Worklog
-
-1. Find 'report/worklog.md' in **your** 'js-eng-status'
-1. Put there are what you have done by today, the [sample](https://github.com/brotherhood-of-javascript/js-eng-status/blob/master/report/worklogs.md) could help you
-1. Commit changes in **your** repo
-
-
-### Daily Plan
-
-1. Find 'report/daily.md' in **your** 'js-eng-status'
-1. Put there are tasks which wasn't done by today
-1. Take a look in future material and put tasks which you are going to work on tomorrow
-1. Commit changes in **your** repo
-
-**[⬆ back to top](#table-of-contents)**
-
+### Additional
+ 
+1. [Time Management](https://www.nczonline.net/newsletter/archive/5afe08eb6f)
+1. [Software Estimation: How Misperceptions Mean We Almost Always Get It Wrong](http://www.drdobbs.com/architecture-and-design/software-estimation-how-misperceptions-m/240166474)
 
 ### Practice
 
 #### Exercise 1 
 
 Prepare for next planing by creating issues for next iteration. Make sure that you cover all topics and 
-assign proper labels and milestones. Don't forget about estimate. Prepare questions about exercises etc
+assign proper labels and milestones. Don't forget about estimates. Prepare questions about exercises if any etc
 
-### Additional
- 
-1. [How to write E-Mails (ru) ](http://www.dtf.ru/blog/read.php?id=39418)
-1. [Time Management](https://www.nczonline.net/newsletter/archive/5afe08eb6f)
-1. [Painless Meetings](http://egorfine.com/en/articles/painless-meetings/)
+**[<= Back](../01-communication/communication.md)**		*	*	*	**[Next =>](../03-few-simple-principles/few-simple-principles.md)**
 
-
-**[<= Back](../README.md)**		*	*	*	**[Next =>](casual-programming.md)**

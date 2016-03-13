@@ -69,6 +69,7 @@ Looks like article would consist of headings, paragraphs, links, lists and quote
 After some analise, you understand that pain text isn't your choose because it's too featureless and `HTML` is too verbose, 
 so you decided to use `markdown` syntax. Write that article with as much markdown features as possible. 
 
+> Write an article as description to the issue
 > Don't use markdown features blindly, use them where they make sense 
 
 **[⬆ back to top](#intro)**
