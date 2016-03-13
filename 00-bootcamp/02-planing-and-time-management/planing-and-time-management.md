@@ -2,38 +2,26 @@
 
 **[<= Back](../README.md)**		*	*	*	**[Next =>](casual-programming.md)**
 
-It's very important to setup communication 'protocol' between trainees and mentor.
+It's very important to setup communication 'protocol' between you and colleagues 
 
 ## Table of Contents
 
-**Theory (~5h)**
+### Theory
 
-It's very important to setup communication 'protocol' between trainee and mentor.
-Let's start with next important topics
+#### How to Ask Questions
 
-1. [How to Ask Questions](#how-to-ask-questions)
-1. [Painless Meetings](http://egorfine.com/en/articles/painless-meetings/)
-1. [Time Management](#time-managment)
-1. [Daily Plan and Worklog](#daily-plan-and-worklog)
+>Be aware, the next article is big and contains a lot of important small details
+>You may found yourself re-reading it again and again ;-)
 
-**Practice (~3h)**
+[How To Ask Questions The Smart Way](http://www.catb.org/esr/faqs/smart-questions.html)
 
-1. [Prepare Your Status Repository](#prepare-your-status-repository)
-1. [Prepare Worklog and Daily Plan](#prepare-worklog-and-daily-plan)
-
-**Additional Materials**
-
-1. [How to write E-Mails (ru) ](http://www.dtf.ru/blog/read.php?id=39418)
-
-
-## How to ask Questions
-
->Place a rubber duck on your monitor and describe your problems to it. There's something magical about stating your problems aloud that makes the solution more clear.
+>Place a rubber duck on your monitor and describe your problems to it.
+There's something magical about stating your problems aloud that makes the solution more clear.
 
 I have a question and I'm writing it to someone... but not sending it. In the moment when
-you 'transfer' the question from your mind to some medium (paper, email, chart, [thinking out loud](http://c2.com/cgi/wiki?ThinkingOutLoud)) it turns on other parts of your brain and in next 5-10 minutes answer comes. Nine times out of ten. Amazing thing is that you find solution **themselves** and without spending time of **others**.
-
-Note that 
+you `transfer` the question from your mind to some `medium` (paper, email, chart, [thinking out loud](http://c2.com/cgi/wiki?ThinkingOutLoud)) 
+it turns on other parts of your brain and in next 5-10 minutes answer comes. 
+Nine times out of ten. Amazing thing is that you find solution `themselves` and without spending time of `others`.
 
 Question shouldn't contains **NO/NOT** 
 
@@ -66,13 +54,13 @@ You may remember when you are starting describe problem to someone but instead f
 
 Let's summarize:
 
-####Simple algorithm 
+##### Simple algorithm 
 
 1. You have a question
 1. Describe it in details to somebody how can give an answer, use some medium (email, chat, paper, etc)
 1. All statement with **NO/NOT** replace with How, Where, Who etc.
 
-####Example
+##### Example
 
 Joe, I **can not** install this library to the project ?
 
@@ -80,49 +68,37 @@ Rewrite to
 
 Joe, **How can** I install this library to the project ?
 
-Re-read it and switch from the question to other activity: play in billiard, tennis, drink a cup of tea ...
+Re-read it and switch from the question to other activity: switch to other task, play in billiard, tennis, drink a cup of tea ...
 or just go for a walk. The main idea is to not think about question. You even can take another task for a while.
-If after 10-15 mins no any `insight` then you can ask question your colleges.
+If after 10-15 mins no any `insight` then you can ask question your colleges
 
-#####Use your mind on 100%
+
+##### Use your mind on 100%
 
 > Remember, if question appears in your mind, then answer already there, you just need to find it ...
 
 **[⬆ back to top](#table-of-contents)**
 
-## Time management
+### Time Management
 
-1. All your working day ( N hours) should be prepared and stored at your repository
-2. During planing, please, take to account recommendations from this article
-3. Don't spend more time on the task then it requires
-4. Always clarify time dedicated for the task
-5. Task has to be like "Do something in 5 hours" but not "Do something"
-6. If you spend more time then expected then inform your mentor
-7. Work on task before the first blocker. Once blocker appears inform your mentor as early as possible. If no any corrections/suggestions/instruction then switch to other task
-8. Acceptable to spend some extra time to eliminate blocker themselves, let's say 10..30 mins.
-Mentor desires if you have to spend more time
-9. Write all completed actions and occurred problems. It would be ground for increasing time limit for the task
-10. Try to complete as much tasks as possible
-11. Absence of time isn't a reason in cases like: "I was working on task A that's why haven't done task B". Exceptions are 
-	* dependent tasks, when incomplete A is a blocker for B. 
-	* tasks with explicitly set highest priority where output is concrete result
-12. Try to work evenly. For example you have a task for 6 hour but delivery is in 3 days, it's ok to split for 2 hours per day. Work on few tasks simultaneously each day by combining complex and easy tasks
-13. Lear to effectively use time-frames for performing small sub-tasks. For example
-	* build of the project
-	* execution of tests
-	* docs/email
-	* TODO 
-14. If you **naturally** can't work on few tasks simultaneously, don't hesitate and inform your mentor
-15. There are 4 categories of tasks
-	* urgent important
-	* not urgent important
-	* urgent and not important
-	* not important and not urgent
-16. If you have done all urgent and important tasks for current iteration, take a look in future materials and try to prepare sketch plan for it, then go back for learned section and read additional materials like articles,books or bonus tasks.
+1. Each task has to be presented in our issue tracker
+1. Task has to be like "Do something in 5 hours" but not "Do something"
+1. Don't spend more time on the task then it requires
+1. Try to complete as much tasks as possible
+1. Write all completed actions and occurred problems. It would be ground for increasing time limit for the task
+1. Absence of time isn't a reason in cases like: "I was working on task A that's why haven't done task B". Exceptions are 
+    * dependent tasks, when incomplete A is a blocker for B. 
+1. Try to work evenly. For example you have a task for 6 hour but delivery is in 3 days, it's ok to split for 2 hours per day. Work on few tasks simultaneously each day by combining complex and easy tasks
+1. Lear to effectively use time-frames for performing small sub-tasks. For example
+    * build of the project
+    * execution of tests
+    * docs/email
+1. If you have done all urgent and important tasks for current iteration, take a look in future materials and try to prepare sketch plan for it, then go back for learned section and read additional materials like articles,books or bonus tasks.
 
 **[⬆ back to top](#table-of-contents)**
 
-## Daily Plan and Worklog
+
+## Planing
 
 1. Trainees create their personal `daily plans` at the end of the day or in the morning and put them to their repository.
 1. A plan includes a list of tasks to be done on the following day. 
@@ -161,7 +137,7 @@ It's time to make your first worklog and daily plan
 1. Commit changes in **your** repo
 
 
-#####Daily Plan
+### Daily Plan
 
 1. Find 'report/daily.md' in **your** 'js-eng-status'
 1. Put there are tasks which wasn't done by today
@@ -169,5 +145,20 @@ It's time to make your first worklog and daily plan
 1. Commit changes in **your** repo
 
 **[⬆ back to top](#table-of-contents)**
+
+
+### Practice
+
+#### Exercise 1 
+
+Prepare for next planing by creating issues for next iteration. Make sure that you cover all topics and 
+assign proper labels and milestones. Don't forget about estimate. Prepare questions about exercises etc
+
+### Additional
+ 
+1. [How to write E-Mails (ru) ](http://www.dtf.ru/blog/read.php?id=39418)
+1. [Time Management](https://www.nczonline.net/newsletter/archive/5afe08eb6f)
+1. [Painless Meetings](http://egorfine.com/en/articles/painless-meetings/)
+
 
 **[<= Back](../README.md)**		*	*	*	**[Next =>](casual-programming.md)**
