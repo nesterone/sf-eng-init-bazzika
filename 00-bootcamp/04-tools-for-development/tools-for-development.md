@@ -57,6 +57,8 @@ My opinion you should have to learn **three** because they solve different tasks
 
 ##Install NodeJS and NPM
 
+* [Javascripting](https://github.com/sethvincent/javascripting#javascripting)
+
 [Download and Install](https://nodejs.org/download/)
 
 **[⬆ back to top](#tools-for-development)**
