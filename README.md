@@ -6,7 +6,7 @@ JavaScript and others learning materials which help you to become software engin
 
 ### Part I
 
-1. [Bootcamp](00-bootcamp/bootcamp.md) 
+1. [Bootcamp](00-bootcamp/00-intro/intro.md) 
     1. [Learning Principles](00-bootcamp/learning-principles.md)
     1. [Casual Programming](00-bootcamp/casual-programming.md)
     1. [Learn Git and Github](00-bootcamp/learn-git-and-github.md)
