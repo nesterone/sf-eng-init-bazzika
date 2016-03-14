@@ -51,7 +51,7 @@
 | 13    | You have a clue on how to make it, but tasks seems challenging for you, it can takes whole day to make it done|
 | 20    | It's a real challenge for you,  so you are a bit scared by complexity of the task, however you desire to make it done, it can takes from one to three days of your time|
 | 40    | `Terra incognito`, no lees then month of work|
-| 100   | You are paralyzed by complexity of the task, you feels like it would take years to make it done|
+| 100   | You are paralyzed by complexity of the task, you feel like it would takes years to make it done|
 
 
 **[⬆ back to top](#table-of-contents)**
@@ -92,7 +92,7 @@
 
 #### Exercise 1 
 
-Prepare for next planing by creating issues for next iteration. Make sure that you cover all topics and 
+Prepare for next planning. Make sure that you cover all topics and 
 assign proper labels and milestones. Don't forget about estimates. Prepare questions about exercises if any etc
 
 **[<= Back](../01-communication/communication.md)**		*	*	*	**[Next =>](../03-few-simple-principles/few-simple-principles.md)**

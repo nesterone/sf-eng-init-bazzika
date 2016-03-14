@@ -41,11 +41,11 @@ Let's make a bit of casual programming with next cool workshop [JavaScript for C
 
 #### Exercise 2
 
-Write expanded overview on how DRY, KISS and YAGNI principles connected together
+Write expanded overview of how DRY, KISS and YAGNI principles connected together
 
 #### Exercise 3
 
-Provide 5 imaginary or real examples of Overengineering, for example
+Provide 5 imaginary or real examples of `Overengineering`, for example
 
 * family sedan that can drive at 300 km/h
 * home video cassette recorder with a projected lifespan of 100 years
