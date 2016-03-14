@@ -6,11 +6,12 @@ JavaScript and others learning materials which help you to become software engin
 
 ### Part I
 
-1. [Bootcamp](00-bootcamp/bootcamp.md) 
-    1. [Learning Principles](00-bootcamp/learning-principles.md)
-    1. [Casual Programming](00-bootcamp/casual-programming.md)
-    1. [Learn Git and Github](00-bootcamp/learn-git-and-github.md)
-    1. [Tools for development](00-bootcamp/tools-for-development.md)
+1. [Bootcamp](00-bootcamp/00-intro/intro.md) 
+    1. [Communication](00-bootcamp/01-communication/communication.md)
+    1. [Planning and Time Management](00-bootcamp/02-planing-and-time-management/planing-and-time-management.md)
+    1. [Few Simple Principles](00-bootcamp/03-few-simple-principles/few-simple-principles.md)
+    1. [Tools for development](00-bootcamp/04-tools-for-development/tools-for-development.md)
+    1. [Learn Git and Github](00-bootcamp/05-git-and-github/learn-git-and-github.md)
 1. [ECMAScript 5 Syntax](01-syntax/syntax.md)
     1. [Values, Types and Operators](01-syntax/00-values-types-operators/values-types-operators.md)
     1. [Program Structure](01-syntax/01-program-structure/program-structure.md)

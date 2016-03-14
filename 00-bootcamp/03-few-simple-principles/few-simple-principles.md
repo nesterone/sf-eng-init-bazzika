@@ -1,26 +1,16 @@
-#Casual Programming
+# Few Simple Principles
 
-**[<= Back](tools-for-development.md)**		*	*	*	**[Next =>](code-style.md)**
+**[<= Back](../02-planing-and-time-management/planing-and-time-management.md)**		*	*	*	**[Next =>](../04-tools-for-development/tools-for-development.md)**
 
 ## Table of Contents
 
-**Theory**
+### Theory
 
-> Time: (~2h)
+#### Casual Programming
 
-1. [Entry Barriers to Development](#entry-barriers-to-development)
-1. [Casual Programming is the future](http://casualprogramer.blogspot.com/2012/02/casual-programming-is-future.html)
+[Casual Programming is the future](http://casualprogramer.blogspot.com/2012/02/casual-programming-is-future.html)
 
-**Practice**
-
-> Time: (~5h)
-
-1. [Try JavaScript](https://www.javascript.com/try)
-1. [Brief intro to JavaScript](#brief-intro-to-javascript)
-1. [Javascripting](#javascripting)
-
-
-##Entry Barriers to Development
+##### Entry Barriers to Development
 
 Another important dimension along which operating systems differ is the height of the barrier that separates mere users from becoming developers. There are two important cost drivers here. One is the monetary cost of development tools, the other is the time cost of gaining proficiency as a developer. Some development cultures evolve social barriers to entry, but these are usually an effect of the underlying technology costs, not a primary cause.
 
@@ -32,24 +22,36 @@ Casual programming tends to produce lots of small programs and a self-reinforcin
 
 from [The Art of Unix Programming](http://www.catb.org/esr/writings/taoup/html/) by Eric Steven Raymond
 
+#### DRY, KISS and YAGNI
+
+1. [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+    * [Dont Repeat Yourself](http://c2.com/cgi/wiki?DontRepeatYourself)
+1. [KISS](https://en.wikipedia.org/wiki/KISS_principle)
+    * [Unix: Rule of Simplicity](http://www.catb.org/~esr/writings/taoup/html/ch01s06.html#id2877917)
+1. [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
+    * [YouArentGonnaNeedIt](http://c2.com/cgi/wiki?YouArentGonnaNeedIt)
+    * [Overengineering](https://en.wikipedia.org/wiki/Overengineering)
+1. [DRY, KISS, YAGNI (ru)](https://habrahabr.ru/post/144611/)
+
+### Practice
+
+#### Workshop 1
+
+Let's make a bit of casual programming with next cool workshop [JavaScript for Cats](http://jsforcats.com/)
+
+#### Exercise 1
+
+Write expanded overview of how DRY, KISS and YAGNI principles connected together
+
+#### Exercise 2
+
+Provide 5 imaginary or real examples of `Overengineering`, for example
+
+* family sedan that can drive at 300 km/h
+* home video cassette recorder with a projected lifespan of 100 years
+
 **[⬆ back to top](#table-of-contents)**
 
-##Brief intro to JavaScript
-
- > If you see sample, try it with your hands, avoid passive reading
-
- Even cats can do this. [JavaScript for Cats](http://jsforcats.com/)
-
-**[⬆ back to top](#table-of-contents)**
-
-##Javascripting
-
-Go ahead and try next core workshop from NodeSchoole
-
-* [Javascripting](https://github.com/sethvincent/javascripting#javascripting)
-
-**[⬆ back to top](#table-of-contents)**
-
-**[<= Back](tools-for-development.md)**		*	*	*	**[Next =>](code-style.md)**
+**[<= Back](../02-planing-and-time-management/planing-and-time-management.md)**		*	*	*	**[Next =>](../04-tools-for-development/tools-for-development.md)**
 
 
