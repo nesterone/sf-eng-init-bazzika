@@ -6,7 +6,7 @@ In that section we would concentrate on learning on what is Git and how to use i
 
 ### Practice
 
-#### Exercise 1
+#### Workshop 1
 
 [Lesson 1: Navigating a Commit History](https://www.udacity.com/course/viewer#!/c-ud775/l-2980038599/m-2960778925)
 
@@ -16,14 +16,14 @@ Description of issue should contain
 * Link to your fork of `asteroid` repository with fixes
 * Link to your fork of `pappu-pakia` repository with fixes
 
-#### Exercise 2
+#### Workshop 2
 
 [Lesson 2: Creating and Modifying a Repository](https://www.udacity.com/course/viewer#!/c-ud775/l-2969618657/m-2960548760)
 
 * Reflections with answers 
 * New Features in `asteroid` repository
 
-#### Exercise 3 
+#### Workshop 3 
 
 [Lesson 3: Intro to GitHub](https://www.udacity.com/course/viewer#!/c-ud775/l-3105028581/m-3089888671)
                                                                            

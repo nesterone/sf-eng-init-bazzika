@@ -35,15 +35,15 @@ from [The Art of Unix Programming](http://www.catb.org/esr/writings/taoup/html/)
 
 ### Practice
 
-#### Exercise 1
+#### Workshop 1
 
 Let's make a bit of casual programming with next cool workshop [JavaScript for Cats](http://jsforcats.com/)
 
-#### Exercise 2
+#### Exercise 1
 
 Write expanded overview of how DRY, KISS and YAGNI principles connected together
 
-#### Exercise 3
+#### Exercise 2
 
 Provide 5 imaginary or real examples of `Overengineering`, for example
 
