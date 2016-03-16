@@ -51,16 +51,18 @@ We would try to work in Agile-Kanban style, there is some brief info
 
 You may have some problem in workflow or UI bug, one of the way to explain is to create `screenshot` or record `screencast`
 
->Use `Jing` for that
+> Use `Jing` for that
 
 1. Imagine that you have broken layout at you application and need help from someone
     * create screenshot
     * create issue with label `bug`
     * provide sreenshot as image in description to your issue
+    * name of the issue should be meaningful
 1. Imagine that you have a problem with some new tool or workflow
     * create screencast
     * create issue with label `question`
     * provide screencast as link in description to your issue
+    * name of the issue should be meaningful
 
 #### Exercise 2
 
@@ -69,7 +71,10 @@ Looks like article would consist of headings, paragraphs, links, lists and quote
 After some analise, you understand that pain text isn't your choose because it's too featureless and `HTML` is too verbose, 
 so you decided to use `markdown` syntax. Write that article with as much markdown features as possible. 
 
-> Write an article as description to the issue
+* create issue with label `exercise`
+* issue name should be like an article title
+* write an article as description to the issue
+
 > Don't use markdown features blindly, use them where they make sense 
 
 **[⬆ back to top](#intro)**
