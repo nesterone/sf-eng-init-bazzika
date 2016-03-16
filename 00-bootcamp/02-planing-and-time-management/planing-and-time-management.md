@@ -35,6 +35,7 @@
 | `project`     | It's a special type of `Practise`, when you have to plan your project and split it into small sub-tasks|
 | `bug`         | Defects in your exercise or project|
 | `tech-dept`   | Bad design, `code smells` in your project|
+| `setup`       | Installation or configuration of some software, tool etc|
 
 
 ###### Estimation
