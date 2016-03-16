@@ -53,10 +53,6 @@ You may choose between
   * make sure that IDE works with your GIT installation
 
 
-## Install NodeJs
-
-[Download and Install](https://nodejs.org/download/)
-
 ## Install Google Chrome
 
 I hope you already have one ;-)
