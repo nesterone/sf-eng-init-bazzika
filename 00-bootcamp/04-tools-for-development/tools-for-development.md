@@ -49,7 +49,8 @@ You may choose between
 >You also free to choose here, but I would able to help only with next one
 
 * Install [WebStorm](https://www.jetbrains.com/webstorm/)
-* Make sure you have found full list of shortcuts, you even may/have-to print them ...
+  * make sure you have found full list of shortcuts, you even may/have-to print them ...
+  * make sure that IDE works with your GIT installation
 
 
 ## Install NodeJs
@@ -78,10 +79,8 @@ You may choose between
 After installation you was exploring your tools and  decided to share your findings with others
 
 1. Write 5th your favourite `bash` commands
-1. 3 terminal`s shortcuts 
-1. 5 IDE's shortcuts
-
-> Don't forget about description for shortcuts and commands
+1. 3 terminal`s shortcuts with some explanation
+1. 5 IDE's shortcuts with some explanation
 
 
 **[⬆ back to top](#tools-for-development)**
