@@ -37,6 +37,12 @@ Description of issue should contains
 Description of issue should contains
 
 * Link to your pull request in `adventure game` project
+* 
+
+### Workshop: Learn Git Branching in Browser
+
+[Learn Git Branching](http://pcottle.github.io/learnGitBranching)
+
 
 ### Additional
 
@@ -44,7 +50,6 @@ Description of issue should contains
 1. [Git Koans](http://stevelosh.com/blog/2013/04/git-koans/)
 1. [Why Reflect?](https://sites.google.com/site/reflection4learning/why-reflect)
 1. [How Critical Reflection Triggers Transformative Learning](http://184.182.233.150/rid=1LW06D9V6-26428MK-1Z64/Mezirow's%20chapter,%20How%20Critical%20Refletion%20Triggers%20TL.pdf)
-1. [Learn Git Branching](http://pcottle.github.io/learnGitBranching)
 
 
 ### Resources
