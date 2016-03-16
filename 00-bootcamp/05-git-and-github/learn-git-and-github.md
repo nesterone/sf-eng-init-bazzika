@@ -6,30 +6,38 @@ In that section we would concentrate on learning on what is Git and how to use i
 
 ### Practice
 
-#### Workshop 1
+#### Workshop: Commit History
 
 [Lesson 1: Navigating a Commit History](https://www.udacity.com/course/viewer#!/c-ud775/l-2980038599/m-2960778925)
 
-Description of issue should contain
+Description of issue should contains
  
 * Reflections with answers 
 * Link to your fork of `asteroid` repository with fixes
 * Link to your fork of `pappu-pakia` repository with fixes
 
-#### Workshop 2
+>Links to particular revisions are wellcome
+
+
+#### Workshop: Creating and Modifying a Repository
 
 [Lesson 2: Creating and Modifying a Repository](https://www.udacity.com/course/viewer#!/c-ud775/l-2969618657/m-2960548760)
 
-* Reflections with answers 
-* New Features in `asteroid` repository
+Description of issue should contains
 
-#### Workshop 3 
+* Reflections with answers 
+* Link to your fork of `asteroid` repository with fixes
+
+>Links to particular revisions are wellcome
+
+#### Workshop: Github's Adventure Game 
 
 [Lesson 3: Intro to GitHub](https://www.udacity.com/course/viewer#!/c-ud775/l-3105028581/m-3089888671)
-                                                                           
+
+Description of issue should contains
+
 * Link to your pull request in `adventure game` project
 
-                
 ### Additional
 
 1. [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
