@@ -37,7 +37,6 @@ Description of issue should contains
 Description of issue should contains
 
 * Link to your pull request in `adventure game` project
-* 
 
 ### Workshop: Learn Git Branching in Browser
 
