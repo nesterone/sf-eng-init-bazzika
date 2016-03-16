@@ -57,30 +57,38 @@ You may choose between
 
 [Download and Install](https://nodejs.org/download/)
 
+## Install Google Chrome
+
+I hope you already have one ;-)
+
+
 **[⬆ back to top](#tools-for-development)**
 
 
 ## Practice 
 
-### Workshop 1
+### Workshop: Linux Command Line Basics
 
-[Lesson 1: Get Into the Shell](https://www.udacity.com/course/viewer#!/c-ud595/l-4597278561/m-4696869597)
+* [Lesson 1: Get Into the Shell](https://www.udacity.com/course/viewer#!/c-ud595/l-4597278561/m-4696869597)
+* [Lesson 2: Shell Commands](https://www.udacity.com/course/viewer#!/c-ud595/l-4585008597/m-4687379501)
+* [Lesson 3: The Linux Filesystem](https://www.udacity.com/course/viewer#!/c-ud595/l-4575425132/e-4746144347/m-4746144348)
 
-### Workshop 2
+### Workshop: Discover Developer Tools
 
-[Lesson 2: Shell Commands](https://www.udacity.com/course/viewer#!/c-ud595/l-4585008597/m-4687379501)
+* [Chapter 1: Getting Started & Basic DOM and Styles](http://discover-devtools.codeschool.com/chapters/1?locale=en)
+* [Chapter 2: Advanced DOM and Styles](http://discover-devtools.codeschool.com/chapters/2?locale=en)
+* [Chapter 3: Working With the Console](http://discover-devtools.codeschool.com/chapters/3?locale=en)
+* [Chapter 4: Debugging JavaScript](http://discover-devtools.codeschool.com/chapters/4?locale=en)
 
-### Workshop 3
 
-[Lesson 3: The Linux Filesystem](https://www.udacity.com/course/viewer#!/c-ud595/l-4575425132/e-4746144347/m-4746144348)
-
-### Exercise 1
+### Exercise: Junior Geek Report
 
 After installation you was exploring your tools and  decided to share your findings with others
 
-1. Write 5th your favourite `bash` commands
+1. Write 5th your favourite linux commands
 1. 3 terminal`s shortcuts with some explanation
 1. 5 IDE's shortcuts with some explanation
+2. 3 Google Chrome Dev Tool shortcuts with some explanation
 
 
 **[⬆ back to top](#tools-for-development)**
