@@ -1,39 +1,26 @@
-#Error Handing and Regexp
+# Error
 
-**[<= Back](project-the-electronic-life.md)**		*	*	*	**[Next =>](../organize-code/modules.md)**
+**[<= Back](../06-project-elife/project-elife.md)**		*	*	*	**[Next =>](../08-regexp/regexp.md)**
 
-
-## Table of Contents
-
-**Theory**
-
-> Time: (~6h)
+### Theory
 
 1. [Bugs and Error Handling](http://eloquentjavascript.net/08_error.html)
 
-**Practice**
+### Additional
 
->Time: (~3h)
+1. [Strict Mode Is Coming To Town](http://yuiblog.com/blog/2010/12/14/strict-mode-is-coming-to-town)
 
+### Practice
 
-1. Write your own implementation
-	* Retry
-	* The locked box
-	* Regexp golf
-	* Quoting Style
-	* Numbers again
-1. Share through GitHub
+#### Exercise: Retry
 
+* [Retry](http://eloquentjavascript.net/08_error.html#h_n1zYouiAfX)
 
-**Additional**
+#### Exercise: The locked box
 
-1. [Irregular Expression](http://blog.brentlaabs.com/2015/05/three-tales-of-second-system-syndrome.html)
+* [The locked box](http://eloquentjavascript.net/08_error.html#h_iGlwnUbkRs)
 
-**[⬆ back to top](#table-of-contents)**
-
-**[<= Back](project-the-electronic-life.md)**		*	*	*	**[Next =>](../organize-code/modules.md)**
-
-
+**[<= Back](../06-project-elife/project-elife.md)**		*	*	*	**[Next =>](../08-regexp/regexp.md)**
 
 
 

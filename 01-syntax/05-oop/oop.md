@@ -16,6 +16,10 @@
 
 ### Practice
 
+#### Workshop: Planet Proto
+
+* [NodeSchool: Planet Proto](https://github.com/sporto/planetproto)
+
 #### Exercise: A Vector Type
  
 * [Eloquent JavaScript: A Vector Type](http://eloquentjavascript.net/06_object.html#h_zO8FRQBMAy)
