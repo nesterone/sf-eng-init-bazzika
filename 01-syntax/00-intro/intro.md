@@ -4,7 +4,6 @@
 
 So, during bootcamp you have to work with javascript even without deep understanding it's parts. Right now it's time to start learn it in details.
 
-
 ### Theory
 
 |    Book                                                           |             Description        |  
@@ -12,11 +11,9 @@ So, during bootcamp you have to work with javascript even without deep understan
 | [Eloquent JavaScript](http://eloquentjavascript.net/)             |  The backbone of this course  |
 | [JavaScript for Web Developers](https://it-ebooks.info/book/483/) |  Also might be very helpful   |
 
-
 1. JavaScript for Web Developers: What Is JavaScript
 1. JavaScript for Web Developers: Javascript in HTML
 1. [Eloquent JavaScript: Introduction](http://eloquentjavascript.net/00_intro.html)
-
 
 ### Additional
 
@@ -24,6 +21,7 @@ So, during bootcamp you have to work with javascript even without deep understan
 1. [Douglas Crockford: **Chapter 2: And Then There Was JavaScript**](https://www.youtube.com/watch?v=RO1Wnu-xKoY) [1:30:22]
 1. [Douglas Crockford: **JavaScript: The Good Parts**](https://www.youtube.com/watch?v=hQVTIJBZook) [1:03:47]
 1. [History Timeline](http://nesterone.github.io/myslides/jshistory/)
+1. [Browser History: Netscape](http://www.blooberry.com/indexdot/history/netscape.htm)
 
 ### Exercise
 
