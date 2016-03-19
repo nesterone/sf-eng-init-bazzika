@@ -6,6 +6,9 @@
 
 1. JavaScript for Web Developers: Variable, Scope and Memory
 1. [Eloquent JavaScript: Functions](http://eloquentjavascript.net/03_functions.html)
+1. JavaScript for Web Developers: Function Expressions
+
+>If you feel like `JavaScript for Web Developers: Function Expressions` not clear for you right now, then keep it in backlog for a while
 
 ### Additional
 
