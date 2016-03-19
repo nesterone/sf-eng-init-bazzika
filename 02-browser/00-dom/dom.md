@@ -1,6 +1,6 @@
 #Document Object Model
 
-**[<= Back](../10-project-egg/project-egg.md)**		*	*	*	**[Next =>](../01-handling-events/handling-events.md)**
+**[<= Back](../../10-project-egg/project-egg.md)**		*	*	*	**[Next =>](../01-handling-events/handling-events.md)**
 
 ## Table of Contents
 
@@ -32,4 +32,4 @@
 **[⬆ back to top](#table-of-contents)**
 
 
-**[<= Back](../10-project-egg/project-egg.md)**		*	*	*	**[Next =>](../01-handling-events/handling-events.md)**
+**[<= Back](../../10-project-egg/project-egg.md)**		*	*	*	**[Next =>](../01-handling-events/handling-events.md)**
