@@ -16,7 +16,7 @@
 
 #### Workshop: Functional JavaScript
 
-[NodeSchool: Functional Javascript](https://github.com/timoxley/functional-javascript-workshop)
+* [NodeSchool: Functional Javascript](https://github.com/timoxley/functional-javascript-workshop)
 
 #### Exercise:  Flattering
 
