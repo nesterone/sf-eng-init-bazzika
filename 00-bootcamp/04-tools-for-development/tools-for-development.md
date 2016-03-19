@@ -69,13 +69,6 @@ I hope you already have one ;-)
 * [Lesson 2: Shell Commands](https://www.udacity.com/course/viewer#!/c-ud595/l-4585008597/m-4687379501)
 * [Lesson 3: The Linux Filesystem](https://www.udacity.com/course/viewer#!/c-ud595/l-4575425132/e-4746144347/m-4746144348)
 
-### Workshop: Discover Developer Tools
-
-* [Chapter 1: Getting Started & Basic DOM and Styles](http://discover-devtools.codeschool.com/chapters/1?locale=en)
-* [Chapter 2: Advanced DOM and Styles](http://discover-devtools.codeschool.com/chapters/2?locale=en)
-* [Chapter 3: Working With the Console](http://discover-devtools.codeschool.com/chapters/3?locale=en)
-* [Chapter 4: Debugging JavaScript](http://discover-devtools.codeschool.com/chapters/4?locale=en)
-
 
 ### Exercise: Junior Geek Report
 
