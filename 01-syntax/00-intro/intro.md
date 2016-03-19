@@ -9,19 +9,19 @@ So, during bootcamp you have to work with javascript even without deep understan
 1. [Eloquent JavaScript](http://eloquentjavascript.net/)  
 2. [JavaScript for Web Developers](https://it-ebooks.info/book/483/)
 
+### References
+
+1. [Follow Code Style Guide](https://github.com/airbnb/javascript/tree/master/es5)
+
 ### Theory
 
-1. JavaScript for Web Developers: What Is JavaScript
-1. JavaScript for Web Developers: Javascript in HTML
-1. [Eloquent JavaScript: Introduction](http://eloquentjavascript.net/00_intro.html)
+1. [Douglas Crockford: Section 8: Programming Style and Your Brain](https://www.youtube.com/watch?v=taaEzHI9xyY) [1:06:45]
+
 
 ### Additional
 
-1. [Douglas Crockford: **Volume One: The Early Years**](https://www.youtube.com/watch?v=JxAXlJEmNMg) [1:42:08]
-1. [Douglas Crockford: **Chapter 2: And Then There Was JavaScript**](https://www.youtube.com/watch?v=RO1Wnu-xKoY) [1:30:22]
-1. [Douglas Crockford: **JavaScript: The Good Parts**](https://www.youtube.com/watch?v=hQVTIJBZook) [1:03:47]
-1. [History Timeline](http://nesterone.github.io/myslides/jshistory/)
-1. [Browser History: Netscape](http://www.blooberry.com/indexdot/history/netscape.htm)
+1. [Nicholas Zakas: Maintainable JavaScript](https://www.youtube.com/watch?v=c-kav7Tf834) [47:04]
+
 
 ### Exercise
 

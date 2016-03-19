@@ -5,9 +5,21 @@
 
 ### Theory
 
+1. JavaScript for Web Developers: What Is JavaScript
+1. JavaScript for Web Developers: Javascript in HTML
 1. JavaScript for Web Developers: Language Basics
+1. [Eloquent JavaScript: Introduction](http://eloquentjavascript.net/00_intro.html)
 1. [Eloquent JavaScript: Values, Types, and Operators](http://eloquentjavascript.net/01_values.html)
 1. [Program Structure](http://eloquentjavascript.net/02_program_structure.html)
+
+
+### Additional
+
+1. [Douglas Crockford: **Volume One: The Early Years**](https://www.youtube.com/watch?v=JxAXlJEmNMg) [1:42:08]
+1. [Douglas Crockford: **Chapter 2: And Then There Was JavaScript**](https://www.youtube.com/watch?v=RO1Wnu-xKoY) [1:30:22]
+1. [Douglas Crockford: **JavaScript: The Good Parts**](https://www.youtube.com/watch?v=hQVTIJBZook) [1:03:47]
+1. [History Timeline](http://nesterone.github.io/myslides/jshistory/)
+1. [Browser History: Netscape](http://www.blooberry.com/indexdot/history/netscape.htm)
 
 
 ### Practice
@@ -40,9 +52,6 @@ Draw a pyramid in console
 Imagine some shape and draw it in a console
 
 
-### Additional
-
-...
 
 **[<= Back](../00-intro/intro.md)**		*	*	*	**[Next =>](../02-functions-variables-scope-and-memory/functions-variables-scope-and-memory.md)**
 

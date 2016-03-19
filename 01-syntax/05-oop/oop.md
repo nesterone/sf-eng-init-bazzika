@@ -13,6 +13,7 @@
 
 1. [Understanding JavaScript Function Invocation and "this"](http://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/)
 1. [Prototypes and Inheritance in JavaScript](https://msdn.microsoft.com/en-us/magazine/ff852808.aspx)
+1. [Alex Russell: Learning to Love JavaScript](https://www.youtube.com/watch?v=seX7jYI96GE) [1:03:25]
 
 ### Practice
 

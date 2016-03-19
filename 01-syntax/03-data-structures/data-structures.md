@@ -12,7 +12,7 @@
 
 ### Additional
 
-...
+1. [Ryan Sandor Richards: Garbage Collection & Heap Management](http://vimeo.com/45140516) [32:57]
 
 ### Practice
 
