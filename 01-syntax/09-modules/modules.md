@@ -4,7 +4,7 @@
 
 ### Theory
 
-1. [Modules](http://eloquentjavascript.net/06_object.html)
+1. [Eloquent JavaScript: Modules](http://eloquentjavascript.net/06_object.html)
 
 ### Practice
 
