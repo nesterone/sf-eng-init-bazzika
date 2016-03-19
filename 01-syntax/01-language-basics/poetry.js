@@ -1,6 +1,6 @@
 /*
 
-Print next poetry through console 
+Print next poetry through console, without loop
 
 
 //////////////////////////////////////
@@ -44,3 +44,5 @@ Print next poetry through console
 Take care about tabs, newlines etc.
 
 */
+
+//your code here
