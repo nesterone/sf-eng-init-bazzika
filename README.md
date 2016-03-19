@@ -15,7 +15,7 @@ JavaScript and others learning materials which help you to become software engin
     1. [Our Model of Collaboration](00-bootcamp/06-our-model-of-collaboration/our-model-of-collaboration.md)
 1. [JavaScript](01-syntax/00-intro/intro.md)
     1. [Language Basics](01-syntax/01-language-basics/language-basics.md)
-    1. [Functions](01-syntax/02-functions/functions.md)
+    1. [Functions, Variables, Scope and Memory](01-syntax/02-functions-variables-scope-and-memory/functions-variables-scope-and-memory.md)
     1. [Data Structures](01-syntax/03-data-structures/data-structures.md)
     1. [High-Order Functions](01-syntax/04-high-order-functions/high-order-functions.md)
     1. [Objects](01-syntax/05-objects/objects.md)

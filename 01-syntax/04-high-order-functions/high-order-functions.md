@@ -12,6 +12,11 @@
 
 **Practice**
 
+### Workshop: Functional JavaScript
+
+[NodeSchool: Functional Javascript](https://github.com/timoxley/functional-javascript-workshop)
+
+
 1. Write your own implementation
 	* Flattering
 	* Mother-child age difference 

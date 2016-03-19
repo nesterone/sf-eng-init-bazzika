@@ -1,6 +1,6 @@
 #Data Structures
 
-**[<= Back](../02-functions/functions.md)**		*	*	*	**[Next =>](../04-high-order-functions/high-order-functions.md)**
+**[<= Back](../02-functions-variables-scope-and-memory/functions-variables-scope-and-memory.md)**		*	*	*	**[Next =>](../04-high-order-functions/high-order-functions.md)**
 
 ## Table of Contents
 
@@ -33,7 +33,7 @@
 
 **[⬆ back to top](#table-of-contents)**
 
-**[<= Back](../02-functions/functions.md)**		*	*	*	**[Next =>](../04-high-order-functions/high-order-functions.md)**
+**[<= Back](../02-functions-variables-scope-and-memory/functions-variables-scope-and-memory.md)**		*	*	*	**[Next =>](../04-high-order-functions/high-order-functions.md)**
 
 
 

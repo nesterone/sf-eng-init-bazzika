@@ -1,6 +1,6 @@
 # Language Basics
 
-**[<= Back](../00-intro/intro.md)**		*	*	*	**[Next =>](../02-functions/functions.md)**
+**[<= Back](../00-intro/intro.md)**		*	*	*	**[Next =>](../02-functions-variables-scope-and-memory/functions-variables-scope-and-memory.md)**
 
 
 ### Theory
@@ -44,7 +44,7 @@ Imagine some shape and draw it in a console
 
 ...
 
-**[<= Back](../00-intro/intro.md)**		*	*	*	**[Next =>](../02-functions/functions.md)**
+**[<= Back](../00-intro/intro.md)**		*	*	*	**[Next =>](../02-functions-variables-scope-and-memory/functions-variables-scope-and-memory.md)**
 
 
 
