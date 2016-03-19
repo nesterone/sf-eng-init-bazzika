@@ -1,10 +1,10 @@
 #High-Order Functions
 
-**[<= Back](../03-data-structures/data-structures.md)**		*	*	*	**[Next =>](../05-objects/objects.md)**
+**[<= Back](../03-data-structures/data-structures.md)**		*	*	*	**[Next =>](../05-oop/oop.md)**
 
 ### Theory
 
-1. [High-order Functions](http://eloquentjavascript.net/05_higher_order.html)
+1. [Eloquent JavaScript: High-order Functions](http://eloquentjavascript.net/05_higher_order.html)
 
 ### Additional
 
@@ -41,7 +41,7 @@
 * [Structure and Interpretation of Computer Programs](https://mitpress.mit.edu/sicp/)
 
 
-**[<= Back](../03-data-structures/data-structures.md)**		*	*	*	**[Next =>](../05-objects/objects.md)**
+**[<= Back](../03-data-structures/data-structures.md)**		*	*	*	**[Next =>](../05-oop/oop.md)**
 
 
 

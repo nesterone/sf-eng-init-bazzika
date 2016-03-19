@@ -1,6 +1,6 @@
 #Project: The Electronic Life
 
-**[<= Back](the-secret-life-of-objects.md)**		*	*	*	**[Next =>](error-handing-and-regexp.md)**
+**[<= Back](../05-oop/oop.md)**		*	*	*	**[Next =>](../07-error/error.md)**
 
 ## Table of Contents
 
@@ -30,11 +30,4 @@
 1. [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
 
-**[⬆ back to top](#table-of-contents)**
-
-**[<= Back](the-secret-life-of-objects.md)**		*	*	*	**[Next =>](error-handing-and-regexp.md)**
-
-
-
-
-
+**[<= Back](../05-oop/oop.md)**		*	*	*	**[Next =>](../07-error/error.md)**

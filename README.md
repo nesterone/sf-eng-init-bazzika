@@ -18,7 +18,7 @@ JavaScript and others learning materials which help you to become software engin
     1. [Functions, Variables, Scope and Memory](01-syntax/02-functions-variables-scope-and-memory/functions-variables-scope-and-memory.md)
     1. [Data Structures](01-syntax/03-data-structures/data-structures.md)
     1. [High-Order Functions](01-syntax/04-high-order-functions/high-order-functions.md)
-    1. [Objects](01-syntax/05-objects/objects.md)
+    1. [OOP](01-syntax/05-oop/oop.md)
     1. [Project: Electronic Life](01-syntax/06-project-elife/project-elife.md)
     1. [Errors](01-syntax/07-error/error.md)
     1. [Regexp](01-syntax/08-regexp/regexp.md)
