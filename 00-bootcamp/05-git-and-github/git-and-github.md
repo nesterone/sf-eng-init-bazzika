@@ -1,6 +1,6 @@
-#Learn Git and Github
+#Git and Github
 
-**[<= Back](../04-tools-for-development/tools-for-development.md)**		*	*	*	**[Next =>](../04-tools-for-development/tools-for-development.md)**
+**[<= Back](../04-tools-for-development/tools-for-development.md)**		*	*	*	**[Next =>](../06-our-model-of-collaboration/our-model-of-collaboration.md)**
 
 In that section we would concentrate on learning on what is Git and how to use it
 
@@ -61,6 +61,6 @@ Description of issue should contains
 1. [Book](http://git-scm.com/book)
 1. [GitHub guidelines](https://guides.github.com/)
 
-**[⬆ back to top](#learn-git-and-github)**
+**[⬆ back to top](#git-and-github)**
 
-**[<= Back](learning-principles.md)**		*	*	*	**[Next =>](tools-for-development.md)**
+**[<= Back](../04-tools-for-development/tools-for-development.md)**		*	*	*	**[Next =>](../06-our-model-of-collaboration/our-model-of-collaboration.md)**
