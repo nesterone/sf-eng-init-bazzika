@@ -39,6 +39,8 @@ but with some exceptions
 
 ### Workshop: Contribute to Open Source 
 
+> Don't forget to provide links to your projects
+
 [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
 
 ### Exercise: Send your code
