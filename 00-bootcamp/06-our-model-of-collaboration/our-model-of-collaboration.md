@@ -43,6 +43,7 @@ but with some exceptions
 
 ### Exercise: Send your code
 
+* Make sure that you have branch `exercises`
 * Write a program which would print `Hello, World!` in a console, file for code [here](./helloWorld.js) 
 * Create pull request to branch with name like your github nick
 * Make sure that issue is wired with your pull request
