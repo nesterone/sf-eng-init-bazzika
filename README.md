@@ -13,7 +13,7 @@ JavaScript and others learning materials which help you to become software engin
     1. [Tools for development](00-bootcamp/04-tools-for-development/tools-for-development.md)
     1. [Git and Github](00-bootcamp/05-git-and-github/git-and-github.md)
     1. [Our Model of Collaboration](00-bootcamp/06-our-model-of-collaboration/our-model-of-collaboration.md)
-1. [ECMAScript 5 Syntax](01-syntax/syntax.md)
+1. [JavaScript](01-syntax/00-intro/intro.md)
     1. [Values, Types and Operators](01-syntax/00-values-types-operators/values-types-operators.md)
     1. [Program Structure](01-syntax/01-program-structure/program-structure.md)
     1. [Functions](01-syntax/02-functions/functions.md)
