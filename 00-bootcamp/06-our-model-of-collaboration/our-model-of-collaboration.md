@@ -10,7 +10,7 @@
 
 ## Idea
 
-Setup such model of collaboration which would  allows constant evolution and improvements of
+Setup such model of collaboration which would allow constant evolution and improvements of
 learning content, tools and processes.
 
 ## Technical Details
@@ -21,16 +21,15 @@ but with some exceptions
 
 ### Trainee to Mentor
 
-1. Trainees are doing exercises in their forks and pull request them to mentor for review
+1. Trainees are doing exercises in their forks and create pull requests to mentor for review
     * [task is completed](http://c2.com/cgi/wiki?TaskCompleteDefinition) only if mentor merged it to his repository and closed corresponding issue
-1. Trainee merges his competed tasks from mentor's repo after each milestone
-1. Trainees may contribute to learning program but providing pull request to mentor's master branch
+1. Trainee merges his completed tasks from mentor's repo after each milestone
+1. Trainees may contribute to learning program by providing pull request to mentor's master branch
 
 ### Mentor to Trainee
 
 1. Mentor provides updates in course content
-1. Mentor provides additional exercise's content and send pull requests to trainees repos
-
+1. Mentor provides additional exercises ontent and send pull requests to trainees repos
 
 ## Repositories organization
 
