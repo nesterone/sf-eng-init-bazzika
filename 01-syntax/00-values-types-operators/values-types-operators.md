@@ -1,22 +1,22 @@
 #Basic Syntax
 
-**[<= Back](../bootcamp/tools-for-development.md)**		*	*	*	**[Next =>](functions-and-data-structures.md)**
+**[<= Back](../../00-bootcamp/06-our-model-of-collaboration/our-model-of-collaboration.md)**		*	*	*	**[Next =>](../00-values-types-operators/values-types-operators.md)**
 
 So, during bootcamp you have to work with javascript even without deep understanding
 it's parts. Right now it's time to start learn it in details.
 
-The backbone of this course is [Eloquent JavaScript](http://eloquentjavascript.net/) written by Marijn Haverbeke. It's not only 'book' but a sandbox for playing with code
 
-Separation between theory and practice very subjective here. You have to understand
-each sample in provided book, change, play with code. If you can't
-understand some tasks/samples send a link to the chat with question.
+|    Book                                                           |             Description        |  
+| ------------------------------------------------------------------| -------------------------------|
+| [Eloquent JavaScript](http://eloquentjavascript.net/)             |  The backbone of this course  |
+| [JavaScript for Web Developers](https://it-ebooks.info/book/483/) |  Also might be very helpful   |
 
->Hint: Each section in the book has anchor like [this](http://eloquentjavascript.net/03_functions.html#p_hkFlscMSbe) or [that](http://eloquentjavascript.net/03_functions.html#c_MhQVBHC9xI) 
-
-
-## Table of Contents
 
 ###Theory
+
+1. [Eloquent JavaScript: Values, Types, and Operators](http://eloquentjavascript.net/01_values.html)
+
+
 
 |    Book                       |             Part                      |  Importance | Time |
 | ------------------------------| --------------------------------------|-------------|------|
@@ -41,15 +41,8 @@ understand some tasks/samples send a link to the chat with question.
 **Additional**
 
 1. Write your own 'Drawings' like Chess Board
-1. [Douglas Crockford: **JavaScript: The Good Parts**](https://www.youtube.com/watch?v=hQVTIJBZook) [1:03:47]
-1. [Douglas Crockford: **Volume One: The Early Years**](https://www.youtube.com/watch?v=JxAXlJEmNMg) [1:42:08]
-1. [Douglas Crockford: **Chapter 2: And Then There Was JavaScript**](https://www.youtube.com/watch?v=RO1Wnu-xKoY) [1:30:22]
+
 
 **[⬆ back to top](#table-of-contents)**
 
 **[<= Back](../bootcamp/tools-for-development.md)**		*	*	*	**[Next =>](functions-and-data-structures.md)**
-
-
-
-
-
