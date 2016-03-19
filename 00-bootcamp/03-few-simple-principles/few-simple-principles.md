@@ -35,20 +35,31 @@ from [The Art of Unix Programming](http://www.catb.org/esr/writings/taoup/html/)
 
 ### Practice
 
-#### Workshop 1
+#### Workshop: JavaScript for Cats
 
 Let's make a bit of casual programming with next cool workshop [JavaScript for Cats](http://jsforcats.com/)
 
-#### Exercise 1
+#### Workshop: Discover Developer Tools
+
+* [Chapter 1: Getting Started & Basic DOM and Styles](http://discover-devtools.codeschool.com/chapters/1?locale=en)
+* [Chapter 2: Advanced DOM and Styles](http://discover-devtools.codeschool.com/chapters/2?locale=en)
+* [Chapter 3: Working With the Console](http://discover-devtools.codeschool.com/chapters/3?locale=en)
+* [Chapter 4: Debugging JavaScript](http://discover-devtools.codeschool.com/chapters/4?locale=en)
+* [Chapter 5: Network](http://discover-devtools.codeschool.com/chapters/5?locale=en)
+* [Chapter 6: Profiles](http://discover-devtools.codeschool.com/chapters/6?locale=en)
+* [Chapter 7: Memory](http://discover-devtools.codeschool.com/chapters/7?locale=en)
+
+#### Exercise: Overview of DRY,KISS and YAGNI
 
 Write expanded overview of how DRY, KISS and YAGNI principles connected together
 
-#### Exercise 2
+#### Exercise: Overengineering and Imagination
 
 Provide 5 imaginary or real examples of `Overengineering`, for example
 
 * family sedan that can drive at 300 km/h
 * home video cassette recorder with a projected lifespan of 100 years
+
 
 **[⬆ back to top](#table-of-contents)**
 
