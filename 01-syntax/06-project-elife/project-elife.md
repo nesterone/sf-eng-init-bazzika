@@ -20,11 +20,11 @@ Make sure that resulted code is compliant with our code style
 
 #### Exercise: Artificial Stupidity
 
-* [Artificial Stupidity](http://eloquentjavascript.net/07_elife.html#h_lU2HuCXhbH)
+* [Eloquent JavaScript: Artificial Stupidity](http://eloquentjavascript.net/07_elife.html#h_lU2HuCXhbH)
 
 #### Exercise: Predators
 
-* [Predators](http://eloquentjavascript.net/07_elife.html#h_QUnD2hCBv4)
+* [Eloquent JavaScript: Predators](http://eloquentjavascript.net/07_elife.html#h_QUnD2hCBv4)
 
 #### Exercise: Add more plants and spices
 

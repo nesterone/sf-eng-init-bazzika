@@ -4,7 +4,7 @@
 
 ### Theory
 
-1. [Bugs and Error Handling](http://eloquentjavascript.net/08_error.html)
+1. [Eloquent JavaScript: Bugs and Error Handling](http://eloquentjavascript.net/08_error.html)
 
 ### Additional
 
@@ -14,11 +14,11 @@
 
 #### Exercise: Retry
 
-* [Retry](http://eloquentjavascript.net/08_error.html#h_n1zYouiAfX)
+* [Eloquent JavaScript: Retry](http://eloquentjavascript.net/08_error.html#h_n1zYouiAfX)
 
 #### Exercise: The locked box
 
-* [The locked box](http://eloquentjavascript.net/08_error.html#h_iGlwnUbkRs)
+* [Eloquent JavaScript: The locked box](http://eloquentjavascript.net/08_error.html#h_iGlwnUbkRs)
 
 **[<= Back](../06-project-elife/project-elife.md)**		*	*	*	**[Next =>](../08-regexp/regexp.md)**
 

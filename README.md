@@ -20,7 +20,7 @@ JavaScript and others learning materials which help you to become software engin
     1. [High-Order Functions](01-syntax/04-high-order-functions/high-order-functions.md)
     1. [OOP](01-syntax/05-oop/oop.md)
     1. [Project: Electronic Life](01-syntax/06-project-elife/project-elife.md)
-    1. [Errors](01-syntax/07-error/error.md)
+    1. [Error](01-syntax/07-error/error.md)
     1. [Regexp](01-syntax/08-regexp/regexp.md)
     1. [Modules](01-syntax/09-modules/modules.md)
     1. [Project: A Programming Language](01-syntax/10-project-egg/project-egg.md)
