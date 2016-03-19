@@ -1,15 +1,15 @@
 # Intro
 
-**[<= Back](../../00-bootcamp/06-our-model-of-collaboration/our-model-of-collaboration.md)**		*	*	*	**[Next =>](../00-values-types-operators/values-types-operators.md)**
+**[<= Back](../../00-bootcamp/06-our-model-of-collaboration/our-model-of-collaboration.md)**		*	*	*	**[Next =>](../01-language-basics/language-basics.md)**
 
 So, during bootcamp you have to work with javascript even without deep understanding it's parts. Right now it's time to start learn it in details.
 
-### Theory
+### Books for the Course 
 
-|    Book                                                           |             Description        |  
-| ------------------------------------------------------------------| -------------------------------|
-| [Eloquent JavaScript](http://eloquentjavascript.net/)             |  The backbone of this course  |
-| [JavaScript for Web Developers](https://it-ebooks.info/book/483/) |  Also might be very helpful   |
+1. [Eloquent JavaScript](http://eloquentjavascript.net/)  
+2. [JavaScript for Web Developers](https://it-ebooks.info/book/483/)
+
+### Theory
 
 1. JavaScript for Web Developers: What Is JavaScript
 1. JavaScript for Web Developers: Javascript in HTML
@@ -31,4 +31,4 @@ So, during bootcamp you have to work with javascript even without deep understan
 <!--Follow our [Naming Conventions](https://github.com/airbnb/javascript)-->
 <!--* use our linter to test that file-->
 
-**[<= Back](../../00-bootcamp/06-our-model-of-collaboration/our-model-of-collaboration.md)**		*	*	*	**[Next =>](../00-values-types-operators/values-types-operators.md)**
+**[<= Back](../../00-bootcamp/06-our-model-of-collaboration/our-model-of-collaboration.md)**		*	*	*	**[Next =>](../01-language-basics/language-basics.md)**
