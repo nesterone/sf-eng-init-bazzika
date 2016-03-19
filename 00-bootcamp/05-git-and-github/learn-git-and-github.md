@@ -42,6 +42,10 @@ Description of issue should contains
 
 [Learn Git Branching](http://pcottle.github.io/learnGitBranching)
 
+### Workshop: Git It
+
+[Git It](http://jlord.us/git-it/)
+
 
 ### Additional
 
