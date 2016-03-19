@@ -38,13 +38,13 @@ Description of issue should contains
 
 * Link to your pull request in `adventure game` project
 
-#### Workshop: Learn Git Branching in Browser
-
-[Learn Git Branching](http://pcottle.github.io/learnGitBranching)
-
 #### Workshop: Git It
 
 [Git It](http://jlord.us/git-it/)
+
+#### Workshop: Learn Git Branching in Browser
+
+[Learn Git Branching](http://pcottle.github.io/learnGitBranching)
 
 
 ### Additional
