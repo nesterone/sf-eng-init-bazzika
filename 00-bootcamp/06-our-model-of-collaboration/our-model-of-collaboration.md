@@ -32,9 +32,9 @@ but with some exceptions
 1. Mentor provides additional exercise's content and send pull requests to trainees repos
 
 
-## Repositories organization
+## Collaboration Diagram
 
-///Figure with repos  here
+![Collaboration Diagram](./sf-eng-init-collaboration-figure.png)
 
 ## Practice
 
