@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint 01-syntax/02-functions-variables-scope-and-memory/ || true"
+    "lint": "eslint 01-syntax/03-data-structures/ || true"
   },
   "repository": {
     "type": "git",
