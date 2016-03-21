@@ -1,6 +1,10 @@
-var eggScriptTags = document.querySelectorAll("script[type='text/egg']");
+/* global run */
 
-for(var i=0; i < eggScriptTags.length; i++){
-    var programm = eggScriptTags[i].innerText;
-    run(programm);
+var eggScriptTags = document.querySelectorAll('script[type=\'text/egg\']');
+var program = '';
+var i;
+
+for (i = 0; i < eggScriptTags.length; i++) {
+  program = eggScriptTags[i].innerText;
+  run(program);
 }
