@@ -1,4 +1,6 @@
-// Your code here.
+/* global every some */
+
+// → Your code here.
 
 console.log(every([NaN, NaN, NaN], isNaN));
 // → true

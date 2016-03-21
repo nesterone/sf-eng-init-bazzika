@@ -9,6 +9,7 @@
 ### Additional
 
 1. [Strict Mode Is Coming To Town](http://yuiblog.com/blog/2010/12/14/strict-mode-is-coming-to-town)
+1. [Functions Explained](http://markdaggett.com/blog/2013/02/15/functions-explained/)
 
 ### Practice
 

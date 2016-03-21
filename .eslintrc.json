@@ -1,9 +1,19 @@
 {
-    "extends": "airbnb/legacy",
-    "env":{
-        "browser": true
-    },
-    "rules":{
-        "no-console": [2, { "allow": ["warn", "error", "log"] }]
-    }
+  "extends": "airbnb/legacy",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "no-console": [
+      2,
+      {
+        "allow": [
+          "warn",
+          "error",
+          "log"
+        ]
+      }
+    ],
+    "func-names": 0
+  }
 }
