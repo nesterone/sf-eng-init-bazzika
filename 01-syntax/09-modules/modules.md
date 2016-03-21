@@ -6,6 +6,13 @@
 
 1. [Eloquent JavaScript: Modules](http://eloquentjavascript.net/06_object.html)
 
+### Additional
+
+1. [eval is evil](http://jslinterrors.com/eval-is-evil)
+1. [How evil is eval?](https://javascriptweblog.wordpress.com/2010/04/19/how-evil-is-eval/)
+1. [The Function constructor is eval](http://jslinterrors.com/the-function-constructor-is-eval/)
+1. [Angus Croll: Break all the rules ](https://www.youtube.com/watch?v=MFtijdklZDo) [31:29]
+
 ### Practice
 
 #### Exercise: Month Names
