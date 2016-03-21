@@ -5,21 +5,27 @@
 
 ### Theory
 
-1. JavaScript for Web Developers: What Is JavaScript
-1. JavaScript for Web Developers: Javascript in HTML
-1. JavaScript for Web Developers: Language Basics
-1. [Eloquent JavaScript: Introduction](http://eloquentjavascript.net/00_intro.html)
+1. [Speaking JavaScript: Basic JavaScript](http://speakingjs.com/es5/ch01.html)
+1. [Speaking JavaScript: Statements](http://speakingjs.com/es5/ch13.html)
 1. [Eloquent JavaScript: Values, Types, and Operators](http://eloquentjavascript.net/01_values.html)
-1. [Program Structure](http://eloquentjavascript.net/02_program_structure.html)
-
+1. [Eloquent JavaScript: Program Structure](http://eloquentjavascript.net/02_program_structure.html)
 
 ### Additional
 
+>You may find it useful to group section in different issues, plus split some of them to several issues
+
+1. [Speaking JavaScript: JavaScript’s Syntax](http://speakingjs.com/es5/ch07.html)
+1. [Speaking JavaScript: Values](http://speakingjs.com/es5/ch08.html)
+1. [Speaking JavaScript: Operators](http://speakingjs.com/es5/ch09.html)
+1. [Speaking JavaScript: Booleans](http://speakingjs.com/es5/ch10.html)
+1. [Speaking JavaScript: Numbers](http://speakingjs.com/es5/ch11.html)
+1. [Speaking JavaScript: Strings](http://speakingjs.com/es5/ch12.html)
 1. [Douglas Crockford: **Volume One: The Early Years**](https://www.youtube.com/watch?v=JxAXlJEmNMg) [1:42:08]
 1. [Douglas Crockford: **Chapter 2: And Then There Was JavaScript**](https://www.youtube.com/watch?v=RO1Wnu-xKoY) [1:30:22]
 1. [Douglas Crockford: **JavaScript: The Good Parts**](https://www.youtube.com/watch?v=hQVTIJBZook) [1:03:47]
 1. [History Timeline](http://nesterone.github.io/myslides/jshistory/)
 1. [Browser History: Netscape](http://www.blooberry.com/indexdot/history/netscape.htm)
+1. JavaScript for Web Developers: Language Basics
 
 
 ### Practice
@@ -33,19 +39,19 @@ call it once but with big string. Provide your solution in [`poetry.js`](./poetr
 
 #### Exercise: Looping a triangle
 
-[Looping a triangle](http://eloquentjavascript.net/02_program_structure.html#h_umoXp9u0e7)
+[Eloquent JavaScript: Looping a triangle](http://eloquentjavascript.net/02_program_structure.html#h_umoXp9u0e7)
 
 #### Exercise: FizzBuzz
 
-[FizzBuzz](http://eloquentjavascript.net/02_program_structure.html#h_rebKE3gdjV)
+[Eloquent JavaScript: FizzBuzz](http://eloquentjavascript.net/02_program_structure.html#h_rebKE3gdjV)
 
 #### Exercise: Chess board
 
-[Chess board](http://eloquentjavascript.net/02_program_structure.html#h_5Hz2kiaaXp)
+[Eloquent JavaScript: Chess board](http://eloquentjavascript.net/02_program_structure.html#h_5Hz2kiaaXp)
 
 #### Exercise: Pyramid
 
-Draw a pyramid in console
+Draw a pyramid in a console
 
 #### Exercise: Your Figure
 

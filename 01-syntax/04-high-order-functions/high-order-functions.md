@@ -4,13 +4,16 @@
 
 ### Theory
 
+1. [Speaking JavaScript: Functions](http://speakingjs.com/es5/ch14.html)
 1. [Eloquent JavaScript: High-order Functions](http://eloquentjavascript.net/05_higher_order.html)
+1. [Functions Explained](http://markdaggett.com/blog/2013/02/15/functions-explained/)
 
 ### Additional
 
 1. [Functional Programming](http://scott.sauyet.com/Javascript/Talk/FunctionalProgramming/) 
 1. [Don’t Be Scared Of Functional Programming](http://www.smashingmagazine.com/2014/07/02/dont-be-scared-of-functional-programming/)
 1. [When FP? And when OOP?](http://raganwald.com/2013/04/08/functional-vs-OOP.html)
+1. JavaScript for Web Developers: Function Expressions
 
 ### Practice
 

@@ -4,15 +4,14 @@
 
 ### Theory
 
-1. JavaScript for Web Developers: Variable, Scope and Memory
+1. [Speaking JavaScript: Variables: Scopes, Environments, and Closures](http://speakingjs.com/es5/ch16.html)
 1. [Eloquent JavaScript: Functions](http://eloquentjavascript.net/03_functions.html)
-1. JavaScript for Web Developers: Function Expressions
-
->If you feel like `JavaScript for Web Developers: Function Expressions` not clear for you right now, then keep it in backlog for a while
 
 ### Additional
 
 1. [Douglas Crockford: **Act III: Function the Ultimate** ](https://www.youtube.com/watch?v=ya4UHuXNygM)[1:13:28]
+1. [Ryan Sandor Richards: Garbage Collection & Heap Management](http://vimeo.com/45140516) [32:57]
+1. JavaScript for Web Developers: Variable, Scope and Memory
 
 
 ### Practice

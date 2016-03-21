@@ -4,12 +4,15 @@
 
 ### Theory
 
+1. [Speaking JavaScript: Exception Handling](http://speakingjs.com/es5/ch14.html)
 1. [Eloquent JavaScript: Bugs and Error Handling](http://eloquentjavascript.net/08_error.html)
 
 ### Additional
 
 1. [Strict Mode Is Coming To Town](http://yuiblog.com/blog/2010/12/14/strict-mode-is-coming-to-town)
-1. [Functions Explained](http://markdaggett.com/blog/2013/02/15/functions-explained/)
+1. [Speaking JavaScript: Date](http://speakingjs.com/es5/ch20.html)
+1. [Speaking JavaScript: Math](http://speakingjs.com/es5/ch21.html)
+1. [Speaking JavaScript: JSON](http://speakingjs.com/es5/ch22.html)
 
 ### Practice
 

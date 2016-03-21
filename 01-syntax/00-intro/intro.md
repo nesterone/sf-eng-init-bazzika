@@ -12,9 +12,9 @@ So, during bootcamp you have to work with javascript even without deep understan
 
 ### Theory
 
-1. [Why JavaScript?](http://speakingjs.com/es5/ch02.html)
-1. [Douglas Crockford: Section 8: Programming Style and Your Brain](https://www.youtube.com/watch?v=taaEzHI9xyY) [1:06:45]
-
+1. [Speaking JavaScript: Why JavaScript?](http://speakingjs.com/es5/ch02.html)
+1. [Eloquent JavaScript: Introduction](http://eloquentjavascript.net/00_intro.html)
+1. [Speaking JavaScript: A Meta Code Style Guide](http://speakingjs.com/es5/ch26.html)
 
 To establish code style rules we would follow next coding styleguide:
 
@@ -48,14 +48,19 @@ npm run lint
 
 * [Install EsLint Plugin](https://plugins.jetbrains.com/plugin/7494)
 * [Use Code Inspector](https://www.jetbrains.com/help/webstorm/2016.1/running-inspections.html?origin=old_help)
+    * `Code Inspector` allows you to see all `EsLint` concerns in one place 
 * [Exclude 'node_modules/' folder from the scope of the project](https://www.jetbrains.com/help/webstorm/2016.1/configuring-folders-within-a-content-root.html?origin=old_help)
 
-You have to make sure that IDE turned on and grabs `EsLint` project's configuration.
-`Code Inspector` allows you to see all `EsLint` concerns in one place 
+You have to make sure that linter is turned on in your IDE and grabs `EsLint` project's configuration.
+
 
 ### Additional
 
-...
+1. JavaScript for Web Developers: What Is JavaScript
+1. JavaScript for Web Developers: Javascript in HTML
+1. [Douglas Crockford: Section 8: Programming Style and Your Brain](https://www.youtube.com/watch?v=taaEzHI9xyY) [1:06:45]
+1. [Popular Coding Convention on Github](http://sideeffect.kr/popularconvention/#javascript)
+
 
 ### References
 
@@ -67,7 +72,7 @@ You have to make sure that IDE turned on and grabs `EsLint` project's configurat
 
 ### Practice
 
-#### Exercise: Fix styling
+#### Exercise: Fix code styling issues
 
 Copy next code to [codeStyle.js](./codeStyle.js)
 
@@ -83,12 +88,12 @@ for (var i=0; i < array.length, i++)
 console.log(arrayp[i])
 ```
 
-1. run CLI command to get list of errors
+1. Run CLI command to get list of errors
 2. inspect code in IDE 
     * directly in code editor
     * in code inspector
-3. make sure that you understand read about those conferences at `EsLint`
-4. List them in with description of why it's important fix them 
+3. Make sure that you read about those concerns at `EsLint` documentation
+4. List them in your issue with description of why it's important to fix them 
  
  > If you don't see a reason behind concern, just say that in description, don't spend a lot of time on research 
 

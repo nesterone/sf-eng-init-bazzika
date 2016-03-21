@@ -4,6 +4,9 @@
 
 ### Theory
 
+1. [Speacking JavaScript: Regular Expressions](http://speakingjs.com/es5/ch19.html)
+1. [Speaking JavaScript: Unicode and JavaScript](http://speakingjs.com/es5/ch24.html)
+1. [Speaking JavaScript: New in ECMAScript 5](http://speakingjs.com/es5/ch25.html)
 1. [Eloquent JavaScript: Regular Expressions](http://eloquentjavascript.net/09_regexp.html)
 
 ### Additional

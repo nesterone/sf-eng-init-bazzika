@@ -6,13 +6,14 @@
 ###Theory
 
 1. [Eloquent JavaScript: Data Structures](http://eloquentjavascript.net/04_data.html)
-1. JavaScript for Web Developers: Reference Type
+
 
 > You may found it useful  to split `JavaScript for Web Developers: Reference Type` in few issues and read piece by piece
 
 ### Additional
 
-1. [Ryan Sandor Richards: Garbage Collection & Heap Management](http://vimeo.com/45140516) [32:57]
+1. [Speaking JavaScript: Arrays](http://speakingjs.com/es5/ch07.html)
+1. JavaScript for Web Developers: Reference Type
 
 ### Practice
 

@@ -4,10 +4,12 @@
 
 ### Theory
 
+1. [Speaking JavaScript: Module Systems and Package Managers](http://speakingjs.com/es5/ch31.html)
 1. [Eloquent JavaScript: Modules](http://eloquentjavascript.net/06_object.html)
 
 ### Additional
 
+1. [Speaking JavaScript: Standard Global Variables](http://speakingjs.com/es5/ch23.html)
 1. [eval is evil](http://jslinterrors.com/eval-is-evil)
 1. [How evil is eval?](https://javascriptweblog.wordpress.com/2010/04/19/how-evil-is-eval/)
 1. [The Function constructor is eval](http://jslinterrors.com/the-function-constructor-is-eval/)
