@@ -1,29 +1,26 @@
 #Project: A Platform Game
 
-***[<= Back](../01-handling-events/handling-events.md)**		*	*	*	**[Next =>](../03-drawing-on-canvas/drawing-on-canvas.md)**
+***[<= Back](../02-dom-and-api/dom-and-api.md)**		*	*	*	**[Next =>](../04-drawing-on-canvas/drawing-on-canvas.md)**
 
-## Table of Contents
-
-> Time: (~4h)
+### Theory
 
 1. [Project: A Platform Game](http://eloquentjavascript.net/15_game.html)
 
+### Practice
 
-**Practice**
+I recommend not to copy past code from book, but replicate by your own hands step by step.
+Make sure that resulted code is compliant with our code style. 
 
-> Time: (~4h)
+#### Exercise: Game over
 
-1. Your own implementation of the game and 
-	* Game over
-	* Pausing the game
-1. Publish through Github as separate project
+* [Eloquent JavaScript: Game over](http://eloquentjavascript.net/15_game.html#h_tFsh86eaJC)
 
-**Additional**
+#### Exercise: Pausing the game
+
+* [Eloquent JavaScript: Pausing the game](http://eloquentjavascript.net/15_game.html#h_cNfzuXtVqI)
+
+### Additional
 
 1. [HTML5 Games](http://www.lessmilk.com/tutorials)
 
-
-**[⬆ back to top](#table-of-contents)**
-
-
-***[<= Back](../01-handling-events/handling-events.md)**		*	*	*	**[Next =>](../03-drawing-on-canvas/drawing-on-canvas.md)**
+***[<= Back](../02-dom-and-api/dom-and-api.md)**		*	*	*	**[Next =>](../04-drawing-on-canvas/drawing-on-canvas.md)**
