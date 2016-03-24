@@ -1,42 +1,39 @@
 #Data Structures
 
-**[<= Back](../02-functions-variables-scope-and-memory/functions-variables-scope-and-memory.md)**		*	*	*	**[Next =>](../04-high-order-functions/high-order-functions.md)**
+**[<= Back](../02-functions/functions.md)**		*	*	*	**[Next =>](../04-high-order-functions/high-order-functions.md)**
 
+## Table of Contents
 
 ###Theory
 
-1. [Eloquent JavaScript: Data Structures](http://eloquentjavascript.net/04_data.html)
+#####Books
 
+1. Eloquent JavaScript
+    * [Data Structures: Objects and Arrays](http://eloquentjavascript.net/04_data.html)
 
-### Additional
+#####Articles
 
-1. [Speaking JavaScript: Arrays](http://speakingjs.com/es5/ch07.html)
-1. JavaScript for Web Developers: Reference Type
+1. Some Article
+1. Other Article
+1. ffff
 
-> You may found it useful  to split `JavaScript for Web Developers: Reference Type` in few issues and read piece by piece
+###Exercises
 
-### Practice
+1. [The sum of a range](file:///projects/Eloquent-JavaScript/html/04_data.html#h_8ZspxiCEC/)
+1. [Reversing and array](file:///projects/Eloquent-JavaScript/html/04_data.html#h_6xTmjj4Rf5)
+1. [A list](file:///projects/Eloquent-JavaScript/html/04_data.html#h_nSTX34CM1M)
+1. [Deep comparison](file:///projects/Eloquent-JavaScript/html/04_data.html#h_IJBU+aXOIC)
 
-> Don't use build-in methods of 'Array'
+###Additional
 
-#### Exercise: The sum of a range
- 
-* [Eloquent JavaScript: The sum of a range](http://eloquentjavascript.net/04_data.html#h_8ZspxiCEC/) 
+1. [Douglas Crockford: **Act III: Function the Ultimate** ](https://www.youtube.com/watch?v=ya4UHuXNygM)[1:13:28]
+1. blalbalblab
+1. dfmdsfsfsdf
+1. sfdfsfsdfsd
 
-#### Exercise: Reversing and array
+**[⬆ back to top](#table-of-contents)**
 
-* [Eloquent JavaScript: Reversing and array](http://eloquentjavascript.net/04_data.html#h_6xTmjj4Rf5)
-
-#### Exercise: A list
-
-* [Eloquent JavaScript: A list](http://eloquentjavascript.net/04_data.html#h_nSTX34CM1M)
-
-#### Exercise: Deep comparison
-
-* [Eloquent JavaScript: Deep comparison](http://eloquentjavascript.net/04_data.html#h_IJBU+aXOIC)
-
-
-**[<= Back](../02-functions-variables-scope-and-memory/functions-variables-scope-and-memory.md)**		*	*	*	**[Next =>](../04-high-order-functions/high-order-functions.md)**
+**[<= Back](../02-functions/functions.md)**		*	*	*	**[Next =>](../04-high-order-functions/high-order-functions.md)**
 
 
 

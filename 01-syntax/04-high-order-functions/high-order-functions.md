@@ -1,50 +1,38 @@
 #High-Order Functions
 
-**[<= Back](../03-data-structures/data-structures.md)**		*	*	*	**[Next =>](../05-oop/oop.md)**
+**[<= Back](functions-and-data-structures.md)**		*	*	*	**[Next =>](the-secret-life-of-objects.md)**
 
-### Theory
+## Table of Contents
 
-1. [Speaking JavaScript: Functions](http://speakingjs.com/es5/ch14.html)
-1. [Eloquent JavaScript: High-order Functions](http://eloquentjavascript.net/05_higher_order.html)
-1. [Functions Explained](http://markdaggett.com/blog/2013/02/15/functions-explained/)
+> Time: (~8h)
 
-### Additional
+**'Theory'**
 
-1. [Functional Programming](http://scott.sauyet.com/Javascript/Talk/FunctionalProgramming/) 
+1. [High-order Functions](http://eloquentjavascript.net/05_higher_order.html)
+
+**Practice**
+
+1. Write your own implementation
+	* Flattering
+	* Mother-child age difference 
+	* Historical life expectancy
+	* Every and then some
+1. Share through GitHub
+1. [Functional Programming  Workshop](https://github.com/timoxley/functional-javascript-workshop)
+
+**Additional**
+
+1. [Functional Programming](http://scott.sauyet.com/Javascript/Talk/FunctionalProgramming/) by Scott Sauyet
 1. [Don’t Be Scared Of Functional Programming](http://www.smashingmagazine.com/2014/07/02/dont-be-scared-of-functional-programming/)
-1. [When FP? And when OOP?](http://raganwald.com/2013/04/08/functional-vs-OOP.html)
-1. JavaScript for Web Developers: Function Expressions
 
-### Practice
+>If you want to seriously start studding this area, then this book for you 
 
-#### Workshop: Functional JavaScript
-
-* [NodeSchool: Functional Javascript](https://github.com/timoxley/functional-javascript-workshop)
-
-#### Exercise:  Flattering
-
-* [Flattering](http://eloquentjavascript.net/05_higher_order.html#h_aIOczlLyX1)
-
-#### Exercise:  Mother-child age difference
-
-* [Mother-child age difference](http://eloquentjavascript.net/05_higher_order.html#h_I9XoVSLsTV)
-
-#### Exercise:  Historical life expectancy
-
-* [Historical life expectancy](http://eloquentjavascript.net/05_higher_order.html#h_FkNn96IrQe)
-
-#### Exercise:  Every and then some
-
-* [Every and then some](http://eloquentjavascript.net/05_higher_order.html#h_jr7hZiuR7+)
-
-### References
-
->If you want to seriously study this area, then this book is for you 
-
-* [Structure and Interpretation of Computer Programs](https://mitpress.mit.edu/sicp/)
+ [Structure and Interpretation of Computer Programs](https://mitpress.mit.edu/sicp/), by Abelson, Sussman, and Sussman.
 
 
-**[<= Back](../03-data-structures/data-structures.md)**		*	*	*	**[Next =>](../05-oop/oop.md)**
+**[⬆ back to top](#table-of-contents)**
+
+**[<= Back](functions-and-data-structures.md)**		*	*	*	**[Next =>](the-secret-life-of-objects.md)**
 
 
 

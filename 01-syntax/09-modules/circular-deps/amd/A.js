@@ -1,9 +1,10 @@
-define(['amd/B'], function (B) {
-  var A = 'Module A (AMD)';
+define(["amd/B"], function(B){
 
-  console.log('Loaded dependency to: ' + B);
+    console.log("Loaded dependency to: " + B);
 
-  console.log('Loaded: ' + A);
+    var A = "Module A (AMD)";
 
-  return A;
+    console.log("Loaded: " + A);
+
+    return A;
 });
