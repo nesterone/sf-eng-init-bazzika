@@ -46,8 +46,9 @@ but with some exceptions
 ### Exercise: Send your code
 
 * Make sure that you have branch `exercises`
+* Create `hello-world` branch from `exercises` branch
 * Write a program which would print `Hello, World!` in a console, file for code [here](./helloWorld.js) 
-* Create pull request to branch with name like your github nick
+* Send pull request from  `<your-fork>/hello-world` to `<mentor-repo>/<your-githubname>` 
 * Make sure that issue is wired with your pull request
 * Make sure that in our board you have issue+pull-request as a one item
 
