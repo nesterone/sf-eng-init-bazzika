@@ -1,0 +1,23 @@
+{
+  "extends": "airbnb/legacy",
+  "env": {
+    "browser": true,
+    "amd": true,
+    "node" : true,
+    "commonjs": true
+  },
+  "rules": {
+    "no-console": [
+      2,
+      {
+        "allow": [
+          "warn",
+          "error",
+          "log"
+        ]
+      }
+    ],
+    "func-names": 0,
+    "no-multi-str": 0
+  }
+}

@@ -1,72 +1,88 @@
-function require(name) {
-    if (name in require.cache)
-        return require.cache[name];
-
-    var code = new Function("exports, module", readFile(name));
-    var exports = {}, module = {exports: exports};
-    code(exports, module);
-
-    require.cache[name] = module.exports;
-    return module.exports;
-}
-require.cache = Object.create(null);
+/* eslint no-new-func: 0 no-use-before-define: 0 */
 
 var defineCache = Object.create(null);
 var currentMod = null;
 
-function getModule(name) {
-    if (name in defineCache)
-        return defineCache[name];
-
-    var module = {exports: null,
-        loaded: false,
-        onLoad: []};
-    defineCache[name] = module;
-    backgroundReadFile(name, function(code) {
-        currentMod = module;
-        var code = new Function("define", code);
-        code(define);
-    });
-    return module;
+function backgroundReadFile(name, done) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', name + '.js');
+  xhr.onload = function () {
+    done(xhr.responseText);
+  };
+  xhr.send();
 }
+
+function readFile(name) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', name + '.js', false);
+  xhr.send(null);
+  return xhr.responseText;
+}
+
+function require(name) {
+  var code = new Function('exports, module', readFile(name));
+  var exports = {};
+  var module = {
+    exports: exports
+  };
+  if (name in require.cache) {
+    return require.cache[name];
+  }
+  code(exports, module);
+  require.cache[name] = module.exports;
+  return module.exports;
+}
+
+require.cache = Object.create(null);
 
 function define(depNames, moduleFunction) {
-    var myMod = currentMod;
-    var deps = depNames.map(getModule);
+  var myMod = currentMod;
+  var deps = depNames.map(getModule);
 
-    deps.forEach(function(mod) {
-        if (!mod.loaded)
-            mod.onLoad.push(whenDepsLoaded);
+  function whenDepsLoaded() {
+    var isEveryDeps = !deps.every(function (m) {
+      return m.loaded;
     });
+    var args = deps.map(function (m) {
+      return m.exports;
+    });
+    var exports = moduleFunction.apply(null, args);
 
-    function whenDepsLoaded() {
-        if (!deps.every(function(m) { return m.loaded; }))
-            return;
-
-        var args = deps.map(function(m) { return m.exports; });
-        var exports = moduleFunction.apply(null, args);
-        if (myMod) {
-            myMod.exports = exports;
-            myMod.loaded = true;
-            myMod.onLoad.forEach(function(f) { f(); });
-        }
+    if (isEveryDeps) {
+      return;
     }
-    whenDepsLoaded();
+    if (myMod) {
+      myMod.exports = exports;
+      myMod.loaded = true;
+      myMod.onLoad.forEach(function (f) {
+        f();
+      });
+    }
+  }
+
+  deps.forEach(function (mod) {
+    if (!mod.loaded) {
+      mod.onLoad.push(whenDepsLoaded);
+    }
+  });
+
+  whenDepsLoaded();
 }
 
-function backgroundReadFile(name, done){
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', name + ".js");
-    xhr.onload = function () {
-        done(xhr.responseText);
-    };
-    xhr.send();
+function getModule(name) {
+  var module = {
+    exports: null,
+    loaded: false,
+    onLoad: []
+  };
+  if (name in defineCache) {
+    return defineCache[name];
+  }
+  defineCache[name] = module;
+  backgroundReadFile(name, function (code) {
+    var codeFn = new Function('define', code);
+    currentMod = module;
+    codeFn(define);
+  });
+  return module;
 }
-
-function readFile(name){
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', name + ".js", false);
-    xhr.send(null);
-    return xhr.responseText;
-}
-

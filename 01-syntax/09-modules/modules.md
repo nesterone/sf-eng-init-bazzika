@@ -1,24 +1,35 @@
 #Modules
 
-**[<= Back](project-the-electronic-life.md)**		*	*	*	**[Next =>](error-handing-regexp.md)**
+**[<= Back](../08-regexp/regexp.md)**		*	*	*	**[Next =>](../10-project-egg/project-egg.md)**
 
-## Table of Contents
+### Theory
 
-> Time: (~16h)
+1. [Speaking JavaScript: Module Systems and Package Managers](http://speakingjs.com/es5/ch31.html)
+1. [Eloquent JavaScript: Modules](http://eloquentjavascript.net/06_object.html)
 
-**'Theory'**
+### Additional
 
-1. [Modules](http://eloquentjavascript.net/06_object.html)
+1. [Speaking JavaScript: Standard Global Variables](http://speakingjs.com/es5/ch23.html)
+1. [eval is evil](http://jslinterrors.com/eval-is-evil)
+1. [How evil is eval?](https://javascriptweblog.wordpress.com/2010/04/19/how-evil-is-eval/)
+1. [The Function constructor is eval](http://jslinterrors.com/the-function-constructor-is-eval/)
+1. [Angus Croll: Break all the rules ](https://www.youtube.com/watch?v=MFtijdklZDo) [31:29]
 
-**Practice**
+### Practice
 
-1. Write your own implementation
-	* Month Names
-1. Separate your  'Electronic Life' project by modules
-1. Fix CommonJs-like loader to resolve particular circular dependency between A and B
-1. Provide circular dependencies  between A and B AMD-like modules
-    * Is it possible to fix it ? Explain your answer as comment to commit
+#### Exercise: Month Names
 
-**[⬆ back to top](#table-of-contents)**
+* [Eloquent JavaScript: Month Names](http://eloquentjavascript.net/10_modules.html#h_Ft63zbY95i)
 
-**[<= Back](functions-and-data-structures.md)**		*	*	*	**[Next =>](error-handing-regexp.md)**
+#### Exercise: A return to electronic life
+
+* [Eloquent JavaScript: A return to electronic life](http://eloquentjavascript.net/10_modules.html#h_3j/KaVGNV2)
+
+### Exercise: Circular dependencies
+
+* [Eloquent JavaScript: Circular dependencies](http://eloquentjavascript.net/10_modules.html#h_E/zWqBFdy8)
+* Provide circular dependencies  between A and B AMD-like modules
+* Fix CommonJs-like loader to resolve particular circular dependency between A and B
+* Is it possible to make workaround for circular deps for AMD modules as for CommonJS modules ?
+
+**[<= Back](../08-regexp/regexp.md)**		*	*	*	**[Next =>](../10-project-egg/project-egg.md)**

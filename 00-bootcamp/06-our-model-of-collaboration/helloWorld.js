@@ -1,1 +1,2 @@
-//Your code here
+// Your code here.
+console.log("Hello, World!");
