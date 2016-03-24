@@ -10,8 +10,6 @@
 
 ### Practice
 
-### Workshop: DOM Enlightenment 
-
 #### Exercise: Build a table
 
 * [Eloquent JavaScript: Build a table](http://eloquentjavascript.net/09_regexp.html#h_vDM8PzwQWU)

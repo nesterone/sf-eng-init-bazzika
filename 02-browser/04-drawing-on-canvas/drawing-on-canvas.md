@@ -1,30 +1,41 @@
 #Drawing on canvas
 
-**[<= Back](../02-project-platform-game/project-platform-game.md)**		*	*	*	**[Next =>](../04-http/http.md)**
+**[<= Back](../02-project-platform-game/project-platform-game.md)**		*	*	*	**[Next =>](../05-http/http.md)**
 
-## Table of Contents
-
-> Time: (~4h)
+### Theory
 
 1. [Drawing on canvas](http://eloquentjavascript.net/16_canvas.html)
 
-**Practice**
+### Practice
 
-> Time: (~4h)
+#### Exercise: Shapes
 
-1. Exercises  
-	* Game over
-	* Pausing the game
-1. Make your platform game graphic sexy
-1. Publish through Github
+* [Eloquent JavaScript: Shapes](http://eloquentjavascript.net/16_canvas.html#h_sZheOHQF5N)
 
-**Additional**
+#### Exercise: The pie chart
+
+* [Eloquent JavaScript: The pie chart](http://eloquentjavascript.net/16_canvas.html#h_bJrtZj5liF)
+
+#### Exercise: A bouncing ball
+
+* [Eloquent JavaScript: A bouncing ball](http://eloquentjavascript.net/16_canvas.html#h_IoBBN8CiQ5)
+
+#### Exercise: Precomputed mirroring
+
+* [Eloquent JavaScript: Precomputed mirroring](http://eloquentjavascript.net/16_canvas.html#h_3ePcd0S4v0)
+
+#### Exercise: Upgrade `platform game`
+
+Extend [`platform game`](../03-project-platform-game/platform-game/) to support canvas graphic display
+
+### Additional
 
 1. [Bringing Your Game to Life in 10 Simple Steps](http://gamedevelopment.tutsplus.com/tutorials/bringing-your-game-to-life-in-10-simple-steps--cms-23447)
+
+### References
+
 1. [HTML5 Graphics](http://www.html5rocks.com/en/features/graphics)
+1. [Canvasing](https://github.com/snorpey/glitch-canvas)
+1. [Canvas in Deeps](http://joshondesign.com/p/books/canvasdeepdive/toc.html)
 
-
-**[⬆ back to top](#table-of-contents)**
-
-
-**[<= Back](../02-project-platform-game/project-platform-game.md)**		*	*	*	**[Next =>](../04-http/http.md)**
+**[<= Back](../02-project-platform-game/project-platform-game.md)**		*	*	*	**[Next =>](../05-http/http.md)**
