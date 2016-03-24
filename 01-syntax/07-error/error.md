@@ -1,39 +1,30 @@
-#Error Handing and Regexp
+# Error
 
-**[<= Back](project-the-electronic-life.md)**		*	*	*	**[Next =>](../organize-code/modules.md)**
+**[<= Back](../06-project-elife/project-elife.md)**		*	*	*	**[Next =>](../08-regexp/regexp.md)**
 
+### Theory
 
-## Table of Contents
+1. [Speaking JavaScript: Exception Handling](http://speakingjs.com/es5/ch14.html)
+1. [Eloquent JavaScript: Bugs and Error Handling](http://eloquentjavascript.net/08_error.html)
 
-**Theory**
+### Additional
 
-> Time: (~6h)
+1. [Strict Mode Is Coming To Town](http://yuiblog.com/blog/2010/12/14/strict-mode-is-coming-to-town)
+1. [Speaking JavaScript: Date](http://speakingjs.com/es5/ch20.html)
+1. [Speaking JavaScript: Math](http://speakingjs.com/es5/ch21.html)
+1. [Speaking JavaScript: JSON](http://speakingjs.com/es5/ch22.html)
 
-1. [Bugs and Error Handling](http://eloquentjavascript.net/08_error.html)
+### Practice
 
-**Practice**
+#### Exercise: Retry
 
->Time: (~3h)
+* [Eloquent JavaScript: Retry](http://eloquentjavascript.net/08_error.html#h_n1zYouiAfX)
 
+#### Exercise: The locked box
 
-1. Write your own implementation
-	* Retry
-	* The locked box
-	* Regexp golf
-	* Quoting Style
-	* Numbers again
-1. Share through GitHub
+* [Eloquent JavaScript: The locked box](http://eloquentjavascript.net/08_error.html#h_iGlwnUbkRs)
 
-
-**Additional**
-
-1. [Irregular Expression](http://blog.brentlaabs.com/2015/05/three-tales-of-second-system-syndrome.html)
-
-**[⬆ back to top](#table-of-contents)**
-
-**[<= Back](project-the-electronic-life.md)**		*	*	*	**[Next =>](../organize-code/modules.md)**
-
-
+**[<= Back](../06-project-elife/project-elife.md)**		*	*	*	**[Next =>](../08-regexp/regexp.md)**
 
 
 
