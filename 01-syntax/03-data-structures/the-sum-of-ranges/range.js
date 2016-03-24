@@ -2,9 +2,8 @@
  *  [The sum of a range](file:///projects/Eloquent-JavaScript/html/04_data.html#h_8ZspxiCEC/)
  *
  */
-/* global range */
 
-// → Your code here.
+// Your code here
 
 console.log(range(5, 2, -1));
 

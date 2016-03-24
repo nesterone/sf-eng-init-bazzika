@@ -1,39 +1,39 @@
-# Regexp
+#Error Handing and Regexp
 
-**[<= Back](../07-error/error.md)**		*	*	*	**[Next =>](../09-modules/modules.md)**
-
-### Theory
-
-1. [Speacking JavaScript: Regular Expressions](http://speakingjs.com/es5/ch19.html)
-1. [Speaking JavaScript: Unicode and JavaScript](http://speakingjs.com/es5/ch24.html)
-1. [Speaking JavaScript: New in ECMAScript 5](http://speakingjs.com/es5/ch25.html)
-1. [Eloquent JavaScript: Regular Expressions](http://eloquentjavascript.net/09_regexp.html)
-
-### Additional
-
-1. [Debug Regex](https://www.debuggex.com/)
-1. [Regex 101](https://regex101.com/#javascript)
+**[<= Back](project-the-electronic-life.md)**		*	*	*	**[Next =>](../organize-code/modules.md)**
 
 
-### Practice
+## Table of Contents
 
-#### Workshop: Regexp Adventure
+**Theory**
 
-* [NodeSchool: regex-adventure](https://github.com/substack/regex-adventure)
+> Time: (~6h)
 
-#### Exercise: Regexp golf
+1. [Bugs and Error Handling](http://eloquentjavascript.net/08_error.html)
+1. [Regular Expressions](http://eloquentjavascript.net/09_regexp.html)
 
-* [Eloquent JavaScript: Regexp golf](http://eloquentjavascript.net/09_regexp.html#h_vDM8PzwQWU)
+**Practice**
 
-#### Exercise: Quoting Style
+>Time: (~3h)
 
-* [Eloquent JavaScript: Quoting Style](http://eloquentjavascript.net/09_regexp.html#h_dTiEW14oG0)
 
-#### Exercise: Numbers again
+1. Write your own implementation
+	* Retry
+	* The locked box
+	* Regexp golf
+	* Quoting Style
+	* Numbers again
+1. Share through GitHub
 
-* [Eloquent JavaScript: Numbers again](http://eloquentjavascript.net/09_regexp.html#h_izldJoT3uv)
 
-**[<= Back](../07-error/error.md)**		*	*	*	**[Next =>](../09-modules/modules.md)**
+**Additional**
+
+1. [Irregular Expression](http://blog.brentlaabs.com/2015/05/three-tales-of-second-system-syndrome.html)
+
+**[⬆ back to top](#table-of-contents)**
+
+**[<= Back](project-the-electronic-life.md)**		*	*	*	**[Next =>](../organize-code/modules.md)**
+
 
 
 

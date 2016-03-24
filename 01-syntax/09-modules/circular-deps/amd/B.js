@@ -1,7 +1,8 @@
-define([], function () {
-  var B = 'Module B (AMD)';
+define([], function(){
 
-  console.log('Loaded: ' + B);
+    var B = "Module B (AMD)";
 
-  return B;
+    console.log("Loaded: " + B);
+
+    return B;
 });
