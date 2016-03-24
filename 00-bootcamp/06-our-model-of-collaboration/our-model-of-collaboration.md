@@ -45,7 +45,7 @@ but with some exceptions
 
 ### Exercise: Send your code
 
-* Make sure that you have branch `exercises`
+* Create branch `exercises` from `master`
 * Create `hello-world` branch from `exercises` branch
 * Write a program which would print `Hello, World!` in a console, file for code [here](./helloWorld.js) 
 * Send pull request from  `<your-fork>/hello-world` to `<mentor-repo>/<your-githubname>` 
