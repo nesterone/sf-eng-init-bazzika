@@ -35,7 +35,7 @@ from [The Art of Unix Programming](http://www.catb.org/esr/writings/taoup/html/)
 
 Make your code easier, and all will be well or else... FLOP!
 
-![alt text](https://camo.githubusercontent.com/743fc5d7209aa5e1fe8c089f174b400bbf49156d/687474703a2f2f61726179652e6e65742f46696c65732f506f7374496d616765732f3374643779302e6a7067 "Flap!")
+![YAGNI](./yagni.jpg)
 
 #### Developer Tools
 
