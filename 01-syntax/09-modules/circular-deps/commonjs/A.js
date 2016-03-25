@@ -1,11 +1,11 @@
-var B = require("commonjs/B");
+var B = require('commonjs/B');
 
-var name = "Module A (CommonJs)";
+var name = 'Module A (CommonJs)';
 
-console.log("Loaded: " + name);
+console.log('Loaded: ' + name);
 
 module.exports.name = name;
 
-module.exports.printFrinendName =  function(){
-    console.log("My friend name is '" + B.name + "'");
+module.exports.printFrinendName = function () {
+  console.log('My friend name is ' + B.name);
 };

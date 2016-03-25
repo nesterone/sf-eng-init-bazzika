@@ -1,0 +1,31 @@
+{
+  "name": "@artemkonovalov/sf-eng-init",
+  "version": "0.1.0",
+  "description": "Project which might help you to became Software Engineer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint 01-syntax/ || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brotherhood-of-javascript/sf-eng-init.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "nesterone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brotherhood-of-javascript/sf-eng-init/issues"
+  },
+  "homepage": "https://github.com/brotherhood-of-javascript/sf-eng-init#readme",
+  "devDependencies": {
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.1.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "shelljs": "^0.6.0"
+  }
+}

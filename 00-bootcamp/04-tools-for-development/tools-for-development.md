@@ -69,6 +69,10 @@ I hope you already have one ;-)
 * [Lesson 2: Shell Commands](https://www.udacity.com/course/viewer#!/c-ud595/l-4585008597/m-4687379501)
 * [Lesson 3: The Linux Filesystem](https://www.udacity.com/course/viewer#!/c-ud595/l-4575425132/e-4746144347/m-4746144348)
 
+### Workshop: Learn Your Bash
+
+[NodeSchool: learnyoubash](https://github.com/denysdovhan/learnyoubash)
+
 
 ### Exercise: Junior Geek Report
 

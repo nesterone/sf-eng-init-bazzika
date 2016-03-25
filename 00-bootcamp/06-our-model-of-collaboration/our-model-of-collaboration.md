@@ -39,10 +39,13 @@ but with some exceptions
 
 ### Workshop: Contribute to Open Source 
 
+> Don't forget to provide links to your projects
+
 [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
 
 ### Exercise: Send your code
 
+* Make sure that you have branch `exercises`
 * Write a program which would print `Hello, World!` in a console, file for code [here](./helloWorld.js) 
 * Create pull request to branch with name like your github nick
 * Make sure that issue is wired with your pull request
