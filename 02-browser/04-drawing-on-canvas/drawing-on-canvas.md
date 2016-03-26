@@ -45,4 +45,4 @@ Organize all your code and other assets in [04-canvasing](04-canvasing/)
 1. [HTML5 Graphics](http://www.html5rocks.com/en/features/graphics)
 1. [Canvas in Deeps](http://joshondesign.com/p/books/canvasdeepdive/toc.html)
 
-**[<= Back](../02-project-platform-game/project-platform-game.md)**		*	*	*	**[Next =>](../05-http/http.md)**
+**[<= Back](../02-project-platform-game/project-platform-game.md)**		*	*	*	**[Next =>](../05-http-and-ajax.md/http-and-ajax.md.md)**

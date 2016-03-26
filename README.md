@@ -29,7 +29,7 @@ JavaScript and others learning materials which help you to become software engin
     1. [DOM and API](02-browser/02-dom-and-api/dom-and-api.md)
     1. [Project: A Platform Game](02-browser/03-project-platform-game/project-platform-game.md)
     1. [Drawing on Canvas](02-browser/04-drawing-on-canvas/drawing-on-canvas.md)
-    1. [HTTP](02-browser/05-http/http.md)
+    1. [HTTP and AJAX](02-browser/05-http-and-ajax/http-and-ajax.md)
     1. [Forms](02-browser/06-forms/forms.md)
     1. [Project: A Paint Program](02-browser/07-project-paint/project-paint.md)
     1. [Project: Your Game](02-browser/08-project-your-game/project-your-game.md)

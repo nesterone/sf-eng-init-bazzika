@@ -1,6 +1,6 @@
 #Forms
 
-**[<= Back](../04-http/http.md)**		*	*	*	**[Next =>](../06-project-paint/project-paint.md)**
+**[<= Back](../05-http-and-ajax.md/http-and-ajax.md.md)**		*	*	*	**[Next =>](../06-project-paint/project-paint.md)**
 
 ## Table of Contents
 
@@ -18,4 +18,4 @@
 
 **[⬆ back to top](#table-of-contents)**
 
-**[<= Back](../04-http/http.md)**		*	*	*	**[Next =>](../06-project-paint/project-paint.md)**
+**[<= Back](../05-http-and-ajax.md/http-and-ajax.md.md)**		*	*	*	**[Next =>](../06-project-paint/project-paint.md)**
