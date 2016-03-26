@@ -1,21 +1,15 @@
-#Forms
+# Forms
 
-**[<= Back](../05-http-and-ajax.md/http-and-ajax.md.md)**		*	*	*	**[Next =>](../06-project-paint/project-paint.md)**
+**[<= Back](../05-http-and-ajax/http-and-ajax.md.md)**		*	*	*	**[Next =>](../06-project-paint/project-paint.md)**
 
-## Table of Contents
+### Theory
 
-> Time: (~4h)
+1. [Eloquent JavaScript: Forms and Form Fields](http://eloquentjavascript.net/18_forms.html)
 
-1. [Forms and Form Fields](http://eloquentjavascript.net/18_forms.html)
+### Practice
 
-**Practice**
+#### Exercise: Conway`s Game of Life
 
-> Time: (~4h)
+* [Eloquent JavaScript: Conway`s Game of Life](http://eloquentjavascript.net/18_forms.html#h_wZdunPqDkM)
 
-1. Exercises
-	* Conway’s Game of Life
-
-
-**[⬆ back to top](#table-of-contents)**
-
-**[<= Back](../05-http-and-ajax.md/http-and-ajax.md.md)**		*	*	*	**[Next =>](../06-project-paint/project-paint.md)**
+**[<= Back](../05-http-and-ajax/http-and-ajax.md.md)**		*	*	*	**[Next =>](../06-project-paint/project-paint.md)**
