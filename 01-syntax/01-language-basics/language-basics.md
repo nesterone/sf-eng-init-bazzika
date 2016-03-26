@@ -25,6 +25,7 @@
 1. [Douglas Crockford: **JavaScript: The Good Parts**](https://www.youtube.com/watch?v=hQVTIJBZook) [1:03:47]
 1. [History Timeline](http://nesterone.github.io/myslides/jshistory/)
 1. [Browser History: Netscape](http://www.blooberry.com/indexdot/history/netscape.htm)
+1. [ITVDN JavaScript Essentials](http://itvdn.com/ru/video/javascript-essential)
 1. JavaScript for Web Developers: Language Basics
 
 
