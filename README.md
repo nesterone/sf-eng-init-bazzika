@@ -34,13 +34,12 @@ JavaScript and others learning materials which help you to become software engin
     1. [Project: A Paint Program](browser/06-project-paint/project-paint.md)
 1. [Node.js](nodejs)
     1. [Project: Skill-Sharing Website](dds)
-1. [Code Organization](organize-code/modules.md)
+1. [Code Organization](organize-code)
     1. [Code Style and Naming conventions](bootcamp/code-style.md)
     1. [Organize code](organize-code/modules.md)
     1. [Unit Tests](organize-code/unit-tests.md)
     1. Refactoring
     1. Continuous Deliver
-
 
 
 ### Part II
