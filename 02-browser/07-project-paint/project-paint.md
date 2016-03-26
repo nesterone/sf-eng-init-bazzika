@@ -1,29 +1,23 @@
 #Project: A Paint Program
 
-**[<= Back](http-and-forms.md)**		*	*	*	**[Next =>](aaa)**
+**[<= Back](../06-forms/forms.md)**		*	*	*	**[Next =>](../08-project-your-game/project-your-game.md)**
 
-## Table of Contents
+### Theory
 
-> Time: (~4h)
+1. [Eloquent JavaScript: Project: A Paint Program](http://eloquentjavascript.net/19_paint.html)
 
-1. [Project: A Paint Program](http://eloquentjavascript.net/19_paint.html)
+### Practice
 
-**Practice**
+#### Exercise: Rectangles
 
-> Time: (~4h)
+* [Eloquent JavaScript: Rectangles](http://eloquentjavascript.net/19_paint.html#h_AXnJJyTV3X)
 
-1. Exercises  
-	* Rectangles
-	* Color picker
-	* Flood fill
-1. Publish through Github as separate project
+#### Exercise: Color picker
 
-**Additional**
+* [Eloquent JavaScript: Color picker](http://eloquentjavascript.net/19_paint.html#h_kd7pYrPaOx)
 
-...
+#### Exercise: Flood fill
 
+* [Eloquent JavaScript: Flood fill](http://eloquentjavascript.net/19_paint.html#h_0M49T26QUl)
 
-**[⬆ back to top](#table-of-contents)**
-
-
-**[<= Back](http-and-forms.md)**		*	*	*	**[Next =>](aaa)**
+**[<= Back](..06-forms/forms.md)**		*	*	*	**[Next =>](../08-project-your-game/project-your-game.md)**
