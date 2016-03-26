@@ -22,6 +22,10 @@
   "homepage": "https://github.com/brotherhood-of-javascript/sf-eng-init#readme",
   "devDependencies": {
     "eslint": "^2.4.0",
-    "eslint-config-airbnb": "^6.1.0"
-  }
+    "eslint-config-airbnb": "^6.1.0",
+    "pre-commit": "^1.1.2"
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }
