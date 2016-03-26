@@ -1,4 +1,5 @@
-function asTabs(node) {
+function asTabs() {
   // Your code here.
 }
-asTabs(document.querySelector("#wrapper"));
+
+asTabs(document.querySelector('#wrapper'));

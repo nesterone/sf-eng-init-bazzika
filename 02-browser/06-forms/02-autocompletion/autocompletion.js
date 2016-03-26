@@ -1,9 +1,11 @@
 // Builds up an array with global variable names, like
 // 'alert', 'document', and 'scrollTo'
 
-var terms = [];
-for (var name in window){
-    terms.push(name);
-}
+// Hint
+// var terms = [];
+// var name = null;
+// for (name in window) {
+//
+// }
 
 // Your code here.

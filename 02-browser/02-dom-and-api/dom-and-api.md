@@ -45,6 +45,7 @@ Create you own DOM library and put it to [`lib`](./domjs) folder
 
 * provide 2-3 additional methods which you think would be very handy
 * provide description of library and all it's methods
+* 
 
 
 ### Additional

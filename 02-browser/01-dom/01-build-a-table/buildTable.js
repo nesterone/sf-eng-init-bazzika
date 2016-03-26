@@ -1,6 +1,6 @@
 var MOUNTAINS;
 
-function buildTable(data) {
+function buildTable() {
   // Your code here.
 }
 
