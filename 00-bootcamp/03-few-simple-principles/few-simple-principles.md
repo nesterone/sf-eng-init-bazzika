@@ -33,6 +33,10 @@ from [The Art of Unix Programming](http://www.catb.org/esr/writings/taoup/html/)
     * [Overengineering](https://en.wikipedia.org/wiki/Overengineering)
 1. [DRY, KISS, YAGNI (ru)](https://habrahabr.ru/post/144611/)
 
+Make your code easier, and all will be well or else... FLOP!
+
+![YAGNI](./yagni.jpg)
+
 #### Developer Tools
 
 [Chrome Dev Tools Overview](https://developer.chrome.com/devtools)
