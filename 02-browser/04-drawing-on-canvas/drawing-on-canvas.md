@@ -28,6 +28,14 @@
 
 Extend [`platform game`](../03-project-platform-game/platform-game/) to support canvas graphic display
 
+#### Challenge: Canvasing
+
+> It's not a must have item, pick it only if you have an extra time to make it done
+
+* [Canvasing](http://learnjs.io/canvassing/read/)
+
+Organize all your code and other assets in [04-canvasing](04-canvasing/)
+
 ### Additional
 
 1. [Bringing Your Game to Life in 10 Simple Steps](http://gamedevelopment.tutsplus.com/tutorials/bringing-your-game-to-life-in-10-simple-steps--cms-23447)
@@ -35,7 +43,6 @@ Extend [`platform game`](../03-project-platform-game/platform-game/) to support 
 ### References
 
 1. [HTML5 Graphics](http://www.html5rocks.com/en/features/graphics)
-1. [Canvasing](https://github.com/snorpey/glitch-canvas)
 1. [Canvas in Deeps](http://joshondesign.com/p/books/canvasdeepdive/toc.html)
 
 **[<= Back](../02-project-platform-game/project-platform-game.md)**		*	*	*	**[Next =>](../05-http/http.md)**
