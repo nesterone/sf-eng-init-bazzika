@@ -41,9 +41,8 @@ understand each jsfiddle sample in the book, if not, put your questions to corre
 
 * [DOM Enlightenment: Creating dom.js - a wishful jQuery inspired DOM Library for modern browers](http://domenlightenment.com/#12)
 
-Create you own DOM library and put it to [`lib`](./lib) folder
+Create you own DOM library and put it to [`lib`](./domjs) folder
 
-* give it a name
 * provide 2-3 additional methods which you think would be very handy
 * provide description of library and all it's methods
 
