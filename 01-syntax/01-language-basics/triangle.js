@@ -1,7 +1,7 @@
-var trigon = '';
+var mytrigon = '';
 var i;
 for (i = 0; i < 7; i++) {
-  trigon = trigon + '#';
-  console.log(trigon);
+  mytrigon = mytrigon + '#';
+  console.log(mytrigon);
 }
 
