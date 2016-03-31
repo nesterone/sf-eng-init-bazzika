@@ -1,3 +1,4 @@
+var size = 8;
 var chessLine = '';
 var outerLoop = 1;
 var innerLoop;
@@ -13,10 +14,10 @@ function spaceOrSharp(rowIndex) {
   return dividers;
 }
 
-for (; outerLoop <= 8; outerLoop++) {
+for (; outerLoop <= size; outerLoop++) {
   spaceOrSharp(outerLoop);
 
-  for (innerLoop = 1; innerLoop <= 8; innerLoop++) {
+  for (innerLoop = 1; innerLoop <= size; innerLoop++) {
     chessLine += dividers[innerLoop % 2];
   }
 
