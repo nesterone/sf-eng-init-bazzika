@@ -5,9 +5,9 @@ for (;digit <= 100; digit++) {
     console.log('FizzBuzz');
   } else if (digit % 3 === 0) {
     console.log('Fizz');
-  } else if (digit % 5 === 0){
+  } else if (digit % 5 === 0) {
     console.log('Buzz');
   } else {
-      console.log(digit);
+    console.log(digit);
   }
 }
