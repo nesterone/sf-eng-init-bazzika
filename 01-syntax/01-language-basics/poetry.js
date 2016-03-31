@@ -79,3 +79,21 @@ console.log('Tiger, tiger, burning bright');
 console.log('In the forests of the night,');
 console.log('What immortal hand or eye');
 console.log('Dare frame thy fearful symmetry?');
+
+// Second variant
+
+console.log('William Blake. 1757–1827\n\nThe Tiger\n\n'
+  + 'TIGER, tiger, burning bright\n'
+  + 'In the forests of the night,\nWhat immortal hand or eye\n'
+  + 'Could frame thy fearful symmetry?\n\nIn what distant deeps or skies\n'
+  + 'Burnt the fire of thine eyes?\nOn what wings dare he aspire?\n'
+  + 'What the hand dare seize the fire?\n\nAnd what shoulder and what art\n'
+  + 'Could twist the sinews of thy heart?\nAnd when thy heart began to beat,\n'
+  + 'What dread hand and what dread feet?\n\nWhat the hammer?what the chain?\n'
+  + 'In what furnace was thy brain?\nWhat the anvil? What dread grasp\n'
+  + 'Dare its deadly terrors clasp?\n\n'
+  + 'When the stars threw down their spears,\n'
+  + 'And water\'d heaven with their tears,\nDid He smile His work to see?\n'
+  + 'Did He who made the lamb make thee?\n\nTiger, tiger, burning bright\n'
+  + 'In the forests of the night,\nWhat immortal hand or eye\n'
+  + 'Dare frame thy fearful symmetry?');
