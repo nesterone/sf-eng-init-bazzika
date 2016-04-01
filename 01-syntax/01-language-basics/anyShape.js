@@ -2,6 +2,7 @@ var i;
 var j;
 var result = ' ########\n';
 var rand;
+var cow = '';
 
 for (i = 0; i < 10; i++) {
   for (j = 0; j < 10; j++) {
@@ -18,3 +19,13 @@ for (i = 0; i < 10; i++) {
 
 result += ' ######## ';
 console.log(result);
+
+// One more
+
+cow += ' ^__^\n';
+cow += ' (oo)_______\n';
+cow += ' (__)|       )\\/\\\n';
+cow += '    ||----w |\n';
+cow += '    ||     ||\n';
+
+console.log(cow);
