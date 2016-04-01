@@ -8,9 +8,8 @@ function isEven(count) {
     return true;
   } else if (count === 1) {
     return false;
-  } else {
-    return (isEven(count - 2));
   }
+  return (isEven(count - 2));
 }
 console.log(isEven(50));
 // → true
