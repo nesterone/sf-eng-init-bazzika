@@ -6,9 +6,8 @@
 function min(i, j) {
   if (i > j) {
     return j;
-  } else {
-    return i;
   }
+  return i;
 }
 console.log(min(0, 10));
 // → 0
