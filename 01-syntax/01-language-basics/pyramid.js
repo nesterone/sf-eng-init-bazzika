@@ -1,28 +1,21 @@
-var pyramidLine = '';
-var maxPyramidSize = 15;
+var pyramidSize = 11;
+var pyramid = '';
+var addBricks = 1;
+var bricksLength;
+var spaces;
+var rows;
 
-function buildPyramid(minLength, maxLength) {
-  var addSpaces = 1;
-  var addPieces = 1;
-  var getReadyValue;
-
-  if (minLength === maxPyramidSize + 2) {
-    getReadyValue = pyramidLine;
-  } else {
-    for (; addSpaces < maxLength / 2; addSpaces++) {
-      pyramidLine += ' ';
-    }
-
-    for (; addPieces <= minLength; addPieces++) {
-      pyramidLine += '^';
-    }
-
-    pyramidLine += '\n';
-
-    getReadyValue = buildPyramid(minLength + 2, maxLength - 2);
+for (rows = 0; rows < (pyramidSize / 2); rows++) {
+  for (spaces = 0; spaces < pyramidSize / 2 - rows; spaces++) {
+    pyramid += ' ';
   }
 
-  return getReadyValue;
+  for (bricksLength = 0; bricksLength < addBricks; bricksLength++) {
+    pyramid += '^';
+  }
+
+  addBricks += 2;
+  pyramid += '\n';
 }
 
-console.log(buildPyramid(1, maxPyramidSize));
+console.log(pyramid);
