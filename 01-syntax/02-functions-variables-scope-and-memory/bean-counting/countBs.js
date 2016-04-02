@@ -3,8 +3,15 @@
  *
  */
 /* global countBs */
-
-// → Your code here.
-
+function countBs(wordset) {
+  var i;
+  var count = 0;
+  for (i = 0; i <= wordset.length - 1; i++) {
+    if (wordset.charAt(i) === 'B') {
+      count++;
+    }
+  }
+  return count;
+}
 console.log(countBs('BBC'));
 // → 2
