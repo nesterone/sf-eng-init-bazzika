@@ -4,7 +4,18 @@
  */
 /* global countBs */
 
-// → Your code here.
+function countBs(text) {
+  var charCount;
+  var numberOfCharacters = 0;
+
+  for (charCount = 0; charCount < text.length; charCount++) {
+    if (text.charAt(charCount) === 'B') {
+      numberOfCharacters += 1;
+    }
+  }
+
+  return numberOfCharacters;
+}
 
 console.log(countBs('BBC'));
 // → 2
