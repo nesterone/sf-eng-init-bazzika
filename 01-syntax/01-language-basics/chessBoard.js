@@ -1,24 +1,24 @@
-var size = 8;
 var chessLine = '';
-var outerLoop = 1;
+var outerLoop;
 var innerLoop;
-var dividers = [];
+var leftDivider;
+var rightDivider;
 
-function spaceOrSharp(rowIndex) {
-  if (rowIndex % 2 !== 0) {
-    dividers = ['#', ' '];
+for (outerLoop = 1; outerLoop <= 8; outerLoop++) {
+  if (outerLoop % 2 !== 0) {
+    leftDivider = '#';
+    rightDivider = ' ';
   } else {
-    dividers = [' ', '#'];
+    leftDivider = ' ';
+    rightDivider = '#';
   }
 
-  return dividers;
-}
-
-for (; outerLoop <= size; outerLoop++) {
-  spaceOrSharp(outerLoop);
-
-  for (innerLoop = 1; innerLoop <= size; innerLoop++) {
-    chessLine += dividers[innerLoop % 2];
+  for (innerLoop = 1; innerLoop <= 8; innerLoop++) {
+    if (innerLoop % 2 === 0) {
+      chessLine += leftDivider;
+    } else {
+      chessLine += rightDivider;
+    }
   }
 
   chessLine += '\n';
