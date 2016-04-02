@@ -1,6 +1,6 @@
-var digit = 1;
+var digit;
 
-for (;digit <= 100; digit++) {
+for (digit = 1; digit <= 100; digit++) {
   if (digit % 3 === 0 && digit % 5 === 0) {
     console.log('FizzBuzz');
   } else if (digit % 3 === 0) {
