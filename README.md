@@ -24,23 +24,24 @@ JavaScript and others learning materials which help you to become software engin
     1. [Regexp](01-syntax/08-regexp/regexp.md)
     1. [Modules](01-syntax/09-modules/modules.md)
     1. [Project: A Programming Language](01-syntax/10-project-egg/project-egg.md)
-1. [Browser](browser)
+1. [Browser](02-browser)
     1. [Document Object Model](02-browser/00-dom/dom.md)
     1. [Handling Events](02-browser/01-handling-events/handling-events.md)
     1. [Project: A Platform Game](02-browser/02-project-platform-game/project-platform-game.md)
     1. [Drawing on Canvas](02-browser/03-drawing-on-canvas/drawing-on-canvas.md)
     1. [HTTP](02-browser/04-http/http.md)
     1. [Forms](02-browser/05-forms/forms.md)
-    1. [Project: A Paint Program](browser/06-project-paint/project-paint.md)
-1. [Node.js](nodejs)
-    1. [Project: Skill-Sharing Website](dds)
-1. [Code Organization](organize-code)
-    1. [Code Style and Naming conventions](bootcamp/code-style.md)
-    1. [Organize code](organize-code/modules.md)
-    1. [Unit Tests](organize-code/unit-tests.md)
+    1. [Project: A Paint Program](02-browser/06-project-paint/project-paint.md)
+1. [Node.js](03-nodejs)
+    1. [Learn Node.js basics](03-nodejs/00-learn-nodejs-basics/learn-nodejs-basics.md)
+    1. [Project: Skill-Sharing Website](03-nodejs/01-project-skill-sharing/project-skill-sharing.md)
+1. [Code Organization](04-code-organization)
+    1. [Code Style and Naming conventions](04-code-organization/code-style.md)
+    1. [Browserify](04-code-organization/browserify.md)
+    1. [Require.js](04-code-organization/requirejs.md)
+    1. [Unit Tests](04-code-organization/unit-tests.md)
     1. Refactoring
     1. Continuous Deliver
-
 
 ### Part II
 > Be aware it's not ready ;-)
