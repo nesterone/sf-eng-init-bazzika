@@ -4,8 +4,6 @@
  */
 /* global min */
 
-// → Your code here.
-
 function min(a, b) {
   if (a > b) {
     return b;
