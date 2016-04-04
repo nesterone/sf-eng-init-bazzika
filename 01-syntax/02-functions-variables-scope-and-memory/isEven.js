@@ -4,7 +4,19 @@
 */
 /* global isEven */
 
-// → Your code here.
+function isEven(number) {
+  var positiveNumber = number;
+
+  if (number < 0) {
+    positiveNumber *= -1;
+  }
+
+  if (positiveNumber === 0) {
+    return true;
+  }
+
+  return (positiveNumber === 1) ? false : isEven(positiveNumber - 2);
+}
 
 console.log(isEven(50));
 // → true
