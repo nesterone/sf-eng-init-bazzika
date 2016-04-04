@@ -1,17 +1,19 @@
-// Your code here
 var i;
+var date1 = new Date();
+var date2;
 
-for (i = 1; i <= 100; i++) {
-  if (i % 3 === 0) {
-    if (i % 5 === 0) {
-      console.log('FizzBuzz');
-    }
+for (i = 1; i <= 10000; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log('FizzBuzz');
+  } else if (i % 3 === 0) {
     console.log('Fizz');
+  } else if (i % 5 === 0) {
+    console.log('Buzz');
   } else {
-    if (i % 5 === 0) {
-      console.log('Buzz');
-    } else {
-      console.log(i);
-    }
+    console.log(i);
   }
 }
+
+date2 = new Date();
+
+console.log('Time: ' + (date2.getTime() - date1.getTime()));
