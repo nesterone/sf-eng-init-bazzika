@@ -45,7 +45,6 @@ Take care about tabs, newlines etc.
 
 */
 
-// Your code here
 console.log('William Blake. 1757–1827');
 
 console.log('The Tiger');
