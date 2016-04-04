@@ -11,5 +11,3 @@ for (i = 1; i <= 10000; i++) {
     console.log(i);
   }
 }
-
-console.log('Time: ' + (date2.getTime() - date1.getTime()));
