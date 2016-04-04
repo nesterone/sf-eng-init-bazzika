@@ -1,4 +1,3 @@
-// Your code here
 var size = 8;
 var board = '';
 var i;
@@ -17,3 +16,5 @@ for (j = 0; j < size; j++) {
   }
   board += '\n';
 }
+
+console.log(board);
