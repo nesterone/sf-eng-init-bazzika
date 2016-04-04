@@ -1,4 +1,3 @@
-// Your code here.
 var foo = 1;
 var bar = foo;
 var array;
