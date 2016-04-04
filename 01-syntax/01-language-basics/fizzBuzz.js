@@ -1,4 +1,6 @@
 var i;
+var date1 = new Date();
+var date2;
 
 for (i = 1; i <= 10000; i++) {
   if (i % 3 === 0 && i % 5 === 0) {
@@ -11,3 +13,7 @@ for (i = 1; i <= 10000; i++) {
     console.log(i);
   }
 }
+
+date2 = new Date();
+
+console.log('Time: ' + (date2.getTime() - date1.getTime()));
