@@ -15,5 +15,12 @@ function countChar(str, char) {
   return result;
 }
 
+function countBs(str) {
+  return countChar(str, 'B');
+}
+
 console.log(countChar('kakkerlak', 'k'));
 // → 4
+
+console.log(countBs('bb2B13BBC'));
+// → 3
