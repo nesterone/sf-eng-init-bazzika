@@ -4,7 +4,14 @@
  */
 /* global range */
 
-// → Your code here.
+function range(start, end) {
+  var arr = [];
+  var value = start;
+  for (value; value <= end; value++) {
+    arr.push(value);
+  }
+  return arr;
+}
 
 console.log(range(5, 2, -1));
 
