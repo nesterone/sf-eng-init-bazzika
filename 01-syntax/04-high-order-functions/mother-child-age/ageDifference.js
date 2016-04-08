@@ -17,6 +17,10 @@ ancestry.forEach(function (person) {
   byName[person.name] = person;
 });
 
-// → Your code here.
+console.log(average(ancestry.filter(function (property) {
+  return byName[property.mother];
+}).map(function (property) {
+  return property.born - byName[property.mother].born;
+})));
 
 // → 31.2
