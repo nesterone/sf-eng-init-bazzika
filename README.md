@@ -33,15 +33,16 @@ JavaScript and others learning materials which help you to become software engin
     1. [Forms](02-browser/06-forms/forms.md)
     1. [Project: A Paint Program](02-browser/07-project-paint/project-paint.md)
     1. [Project: Your Game](02-browser/08-project-your-game/project-your-game.md)
-1. [Node.js](nodejs)
-    1. [Project: Skill-Sharing Website](dds)
-1. [Code Organization](organize-code)
-    1. [Code Style and Naming conventions](bootcamp/code-style.md)
-    1. [Organize code](organize-code/modules.md)
-    1. [Unit Tests](organize-code/unit-tests.md)
+1. [Node.js](03-nodejs)
+    1. [Learn Node.js basics](03-nodejs/00-learn-nodejs-basics/learn-nodejs-basics.md)
+    1. [Project: Skill-Sharing Website](03-nodejs/01-project-skill-sharing/project-skill-sharing.md)
+1. [Code Organization](04-code-organization)
+    1. [Code Style and Naming conventions](04-code-organization/code-style.md)
+    1. [Browserify](04-code-organization/browserify.md)
+    1. [Require.js](04-code-organization/requirejs.md)
+    1. [Unit Tests](04-code-organization/unit-tests.md)
     1. Refactoring
     1. Continuous Deliver
-
 
 ### Part II
 > Be aware it's not ready ;-)
