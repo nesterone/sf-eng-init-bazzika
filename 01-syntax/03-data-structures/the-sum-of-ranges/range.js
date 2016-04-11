@@ -7,16 +7,17 @@
 function range(start, end, step) {
   var arr = [];
   var arrIndex = 0;
-  var arrCounter;
+  var arrCount;
+  var stepRange;
 
   if (start > end) {
-    step = step || -1;
+    stepRange = step || -1;
   } else {
-    step = step || 1;
+    stepRange = step || 1;
   }
 
-  for (arrCounter = start; arrCounter != end + step; arrCounter += step) {
-    arr[arrIndex] = arrCounter;
+  for (arrCount = start; arrCount !== end + stepRange; arrCount += stepRange) {
+    arr[arrIndex] = arrCount;
     arrIndex++;
   }
   return arr;
