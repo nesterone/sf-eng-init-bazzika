@@ -7,6 +7,11 @@
 function countChar(str, char) {
   var i;
   var result = 0;
+
+  if (typeof str === 'undefined' || typeof char === 'undefined') {
+    return 'Error! Please enter a string and any char to count';
+  }
+
   for (i = 0; i < str.length; i++) {
     if (str[i] === char) {
       result++;
@@ -24,3 +29,12 @@ console.log(countChar('kakkerlak', 'k'));
 
 console.log(countBs('bb2B13BBC'));
 // → 3
+
+console.log(countBs('bb2B13BBC'));
+// → 3
+
+console.log(countChar());
+// → error
+
+console.log(countChar('dewdewdw'));
+// → error
