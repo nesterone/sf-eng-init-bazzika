@@ -7,6 +7,10 @@
 function isEven(number) {
   var positiveNumber = number;
 
+  if (typeof number === 'undefined') {
+    return 'Error! Pass some arguments';
+  }
+
   if (number < 0) {
     positiveNumber *= -1;
   }
@@ -23,4 +27,8 @@ console.log(isEven(50));
 console.log(isEven(75));
 // → false
 console.log(isEven(-1));
-// → ??
+// → false
+console.log(isEven(0));
+// → true
+console.log(isEven());
+// → error
