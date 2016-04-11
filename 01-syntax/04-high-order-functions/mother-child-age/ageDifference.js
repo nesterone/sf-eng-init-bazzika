@@ -1,12 +1,13 @@
 /* global ancestry */
 
 var byName = {};
+var personsWithMother;
+var diffMotherAndKidAge;
 
 function average(array) {
   function plus(a, b) {
     return a + b;
   }
-
   return array.reduce(plus) / array.length;
 }
 
@@ -17,10 +18,15 @@ ancestry.forEach(function (person) {
   byName[person.name] = person;
 });
 
-console.log(average(ancestry.filter(function (property) {
-  return byName[property.mother];
-}).map(function (property) {
-  return property.born - byName[property.mother].born;
-})));
+personsWithMother = ancestry.filter(function (person) {
+  return byName[person.mother];
+});
+
+
+diffMotherAndKidAge = personsWithMother.map(function (person) {
+  return person.born - byName[person.mother].born;
+});
+
+console.log(average(diffMotherAndKidAge));
 
 // → 31.2
