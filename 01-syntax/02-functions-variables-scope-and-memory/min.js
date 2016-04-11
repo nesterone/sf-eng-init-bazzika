@@ -4,8 +4,17 @@
  */
 /* global min */
 
-// → Your code here.
+function min(firstValue, secondValue) {
+  if (firstValue < secondValue) {
+    return firstValue;
+  } else if (firstValue > secondValue) {
+    return secondValue;
+  }
+  return firstValue;
+}
 
+console.log(min(10, 10));
+// → 10
 console.log(min(0, 10));
 // → 0
 console.log(min(0, -10));
