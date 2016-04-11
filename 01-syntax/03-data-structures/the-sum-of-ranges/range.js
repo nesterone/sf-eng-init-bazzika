@@ -4,28 +4,27 @@
  */
 /* global range */
 
-function range(start, end, st) {
+function range(start, end, oneStep) {
   var arr = [];
   var begin = start;
   var fin = end;
-  var step = 1;
+  var step = oneStep || 1;
 
-  if (!isNaN(parseFloat(st))) {
-    step = st;
+  if (typeof start !== 'number' || typeof end !== 'number' || typeof oneStep !== 'number') {
+    return 'Error! Wrong input!!!';
   }
 
-  if (st > 0) {
-    for (begin; begin <= fin; begin += step) {
-      arr.push(begin);
-    }
-  } else {
-    for (begin; begin >= fin; begin += step) {
-      arr.push(begin);
-    }
+  for (begin; begin !== fin + step; begin += step) {
+    arr.push(begin);
   }
+
   return arr;
 }
 
 console.log(range(5, 2, -1));
 
 // → [5, 4, 3, 2]
+
+console.log(range(5, 'ffwe', -1));
+
+// → error
