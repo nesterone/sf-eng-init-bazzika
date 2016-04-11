@@ -7,19 +7,19 @@
 var arrayValue = [1, 2, 3, 4, 5];
 
 function reverseArrayInPlace(arr) {
-  var result = [];
+  var index = 0;
   var array = arr;
+  var temp;
   var i;
 
-  for (i = (arr.length - 1); i >= 0; i--) {
-    result.push(arr[i]);
+  for (i = (arr.length - 1); i >= arr.length / 2; i--) {
+    temp = arr[index];
+    array[index] = arr[i];
+    array[i] = temp;
+    index++;
   }
 
-  for (i = 0; i < arr.length; i++) {
-    array[i] = result[i];
-  }
-
-  return result;
+  return array;
 }
 
 reverseArrayInPlace(arrayValue);
