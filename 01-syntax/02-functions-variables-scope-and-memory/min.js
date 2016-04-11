@@ -5,6 +5,9 @@
 /* global min */
 
 function min(a, b) {
+  if (isNaN(a) || isNaN(b)) {
+    return 'Error! Wrong input';
+  }
   if (a > b) {
     return b;
   }
@@ -15,3 +18,11 @@ console.log(min(0, 10));
 // → 0
 console.log(min(0, -10));
 // → -10
+console.log(min(10, -10));
+// → -10
+console.log(min('frfr', -10));
+// → error
+console.log(min(-10));
+// → error
+console.log(min());
+// → error
