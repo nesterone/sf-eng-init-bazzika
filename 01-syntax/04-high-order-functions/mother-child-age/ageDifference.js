@@ -88,10 +88,10 @@ function average(array) {
   return array.reduce(plus) / array.length;
 }
 
-function findByName(person) {
+function findByName(personName) {
   var byName = null;
   ancestry.forEach(function(p) {
-    if (person === p.name) {
+    if (personName === p.name) {
       byName = p;
     }
   });
