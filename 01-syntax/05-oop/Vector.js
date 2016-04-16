@@ -1,1 +1,3 @@
-// Your code here.
+/* global Vector */
+
+// → Your code here.
