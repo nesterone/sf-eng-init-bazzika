@@ -35,6 +35,7 @@ We would try to work in Agile-Kanban style, there is some brief info
  
 1. [Manifesto for Agile Software Development](http://www.agilemanifesto.org/)
     * [Principles behind the Agile Manifesto](http://www.agilemanifesto.org/principles.html)
+1. [The New Methodology](http://martinfowler.com/articles/newMethodology.html)
 1. [Painless Meetings](http://egorfine.com/en/articles/painless-meetings/)
 1. [Agile](https://en.wikipedia.org/wiki/Agile_software_development)
        * [Scrum](http://tinyurl.com/pomn996)
