@@ -36,6 +36,7 @@
 | `bug`         | Defects in your exercise or project|
 | `tech-dept`   | Bad design, `code smells` in your project|
 | `setup`       | Installation or configuration of some software, tool etc|
+| `challenge`       | Usually not simple task, require additional afford to complete|
 
 
 ###### Estimation

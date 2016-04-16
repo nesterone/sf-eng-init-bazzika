@@ -1,4 +1,5 @@
-/* global ancestry */
+/* global ancestry ageDifference */
+
 var byName = {};
 var diff;
 function average(array) {
@@ -13,6 +14,8 @@ console.log(average([2, 2, 2]));
 ancestry.forEach(function (person) {
   byName[person.name] = person;
 });
+
+// TODO: you have to move your solution under `ageDifference` function
 diff = ancestry.filter(function (person) {
   return (byName[person.mother] !== null && byName[person.mother] !== undefined);
 }).map(function (person) {
