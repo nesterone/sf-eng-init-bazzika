@@ -1,3 +1,5 @@
+/* global ancestry lifeExpectancy */
+
 function average(array) {
   function plus(a, b) {
     return a + b;
@@ -9,6 +11,8 @@ console.log(average([2, 2, 2]));
 // → 2
 
 // → Your code here.
+
+console.log(lifeExpectancy(ancestry));
 
 // → 16: 43.5
 // → 17: 51.2
