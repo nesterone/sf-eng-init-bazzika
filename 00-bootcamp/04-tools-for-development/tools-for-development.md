@@ -7,12 +7,9 @@ but let's start with main stack.
 
 ## Setup
 
-### Terminal
+[Development environments for beginners](https://github.com/cityarcade/development-environments-for-beginners)
 
-Make sure that you have access to bash-like CLI
-
-* [Basic commands](https://github.com/cityarcade/development-environments-for-beginners/blob/master/chapters/04-terminal.md#basic-commands)
-* [Aliases and environment variables](https://github.com/cityarcade/development-environments-for-beginners/blob/master/chapters/04-terminal.md#aliases-and-environment-variables)
+> Skip section with `ruby` installation
 
 #### Git
 
