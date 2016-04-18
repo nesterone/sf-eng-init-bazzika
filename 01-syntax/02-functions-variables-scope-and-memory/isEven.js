@@ -8,7 +8,7 @@ function isEven(number) {
   var positiveNumber = number;
 
   if (typeof number === 'undefined') {
-    return 'Error! Pass some arguments';
+    throw new Error('Pass some arguments');
   }
 
   if (number < 0) {
