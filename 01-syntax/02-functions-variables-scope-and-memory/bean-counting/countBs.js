@@ -2,31 +2,16 @@
  *  [Bean Counting](http://eloquentjavascript.net/03_functions.html#h_XTmO7z7MPq)
  *
  */
-/* global countBs */
+/* global countB  countChar */
 
 function countBs(text) {
-  var charCount;
-  var numberOfCharacters = 0;
-
-  if (! text || text.length === 0 ||
-    (typeof text !== 'string' && text.constructor !== Array)) {
-    return 0;
-  }
-
-  for (charCount = 0; charCount < text.length; charCount++) {
-    if (text[charCount] === 'B') {
-      numberOfCharacters += 1;
-    }
-  }
-
-  return numberOfCharacters;
+  return countChar(text, 'B');
 }
 
 console.log(countBs('BBC'));
 // → 2
 console.log(countBs(['a', 'B', '0', 'B']));
 // → 2
-
 console.log(countBs({}));
 // → 0
 console.log(countBs(0));
