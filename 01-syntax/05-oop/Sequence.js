@@ -1,4 +1,6 @@
-function ArraySeq(arr) {
+/* global Sequence */
+
+function Sequence(arr) {
   var i;
   this.sequence = [];
   for (i = arr[0]; i <= arr[1]; i++) {
@@ -6,7 +8,7 @@ function ArraySeq(arr) {
   }
 }
 
-ArraySeq.prototype.printElements = function (quantity) {
+Sequence.prototype.printElements = function (quantity) {
   var i;
   var quantityToPrint = quantity;
   if (quantityToPrint > this.sequence.length) {
@@ -17,11 +19,11 @@ ArraySeq.prototype.printElements = function (quantity) {
   }
 };
 
-ArraySeq.prototype.getSum = function () {
+Sequence.prototype.getSum = function () {
   return this.sequence.reduce(function (a, b) { return a + b; });
 };
 
-ArraySeq.prototype.getElement = function (element) {
+Sequence.prototype.getElement = function (element) {
   var elem = element;
   if (element < 1) {
     elem = 0;
@@ -38,13 +40,13 @@ function RangeSeq(from, to) {
   }
 }
 
-RangeSeq.prototype.printElements = ArraySeq.prototype.printElements;
+RangeSeq.prototype.printElements = Sequence.prototype.printElements;
 
 function logFive(obj) {
   obj.printElements(5);
 }
 
-logFive(new ArraySeq([1, 2]));
+logFive(new Sequence([1, 2]));
 // → 1
 // → 2
 logFive(new RangeSeq(100, 1000));
@@ -53,7 +55,7 @@ logFive(new RangeSeq(100, 1000));
 // → 102
 // → 103
 // → 104
-console.log(new ArraySeq([1, 10]).getSum());
+console.log(new Sequence([1, 10]).getSum());
 // → 55
-console.log(new ArraySeq([1, 10]).getElement(3));
+console.log(new Sequence([1, 10]).getElement(3));
 // → 3
