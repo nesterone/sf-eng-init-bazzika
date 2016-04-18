@@ -9,7 +9,7 @@ function nth(list, number) {
   var deepList = list;
 
   if (number < 0) {
-    return 'Error! Number should be >= 0';
+    throw new Error('Number should be >= 0');
   }
 
   for (i = 0; i < number; i++) {
