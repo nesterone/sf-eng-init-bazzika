@@ -1,8 +1,4 @@
-/* global ancestry */
-
-var byName = {};
-var personsWithMother;
-var diffMotherAndKidAge;
+/* global ancestry ancestry ageDifference*/
 
 function average(array) {
   function plus(a, b) {
@@ -14,19 +10,26 @@ function average(array) {
 console.log(average([2, 2, 2]));
 // → 2
 
-ancestry.forEach(function (person) {
-  byName[person.name] = person;
-});
+function ageDifference(incomingAncestryArray) {
+  var byName = {};
+  var personsWithMother;
+  var diffMotherAndKidAge;
 
-personsWithMother = ancestry.filter(function (person) {
-  return byName[person.mother];
-});
+  incomingAncestryArray.forEach(function (person) {
+    byName[person.name] = person;
+  });
 
+  personsWithMother = incomingAncestryArray.filter(function (person) {
+    return byName[person.mother];
+  });
 
-diffMotherAndKidAge = personsWithMother.map(function (person) {
-  return person.born - byName[person.mother].born;
-});
+  diffMotherAndKidAge = personsWithMother.map(function (person) {
+    return person.born - byName[person.mother].born;
+  });
 
-console.log(average(diffMotherAndKidAge));
+  return average(diffMotherAndKidAge);
+}
+
+console.log(ageDifference(ancestry));
 
 // → 31.2
