@@ -6,7 +6,21 @@
 
 var arrayValue = [1, 2, 3, 4, 5];
 
-// → Your code here.
+function reverseArrayInPlace(arr) {
+  var index = 0;
+  var array = arr;
+  var temp;
+  var i;
+
+  for (i = (arr.length - 1); i >= arr.length / 2; i--) {
+    temp = arr[index];
+    array[index] = arr[i];
+    array[i] = temp;
+    index++;
+  }
+
+  return array;
+}
 
 reverseArrayInPlace(arrayValue);
 console.log(arrayValue);
