@@ -9,7 +9,7 @@ function countChar(str, char) {
   var result = 0;
 
   if (typeof str === 'undefined' || typeof char === 'undefined') {
-    return 'Error! Please enter a string and any char to count';
+    throw new Error('Please enter a string and any char to count');
   }
 
   for (i = 0; i < str.length; i++) {
