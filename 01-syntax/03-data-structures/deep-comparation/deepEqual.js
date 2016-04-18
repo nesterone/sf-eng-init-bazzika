@@ -7,15 +7,16 @@
 var obj;
 var obj2;
 
-function isObject(testObject) {
-  if (typeof testObject === 'object') return true;
-  return false;
-}
-
 function deepEqual(item1, item2) {
   var key1;
   var key2;
   var match;
+
+  function isObject(testObject) {
+    if (typeof testObject === 'object') return true;
+    return false;
+  }
+
   if (isObject(item1) && isObject(item2) && item1 && item2) {
     if (Object.keys(item1).length !== Object.keys(item2).length) return false;
     for (key1 in item1) {
