@@ -2,7 +2,7 @@
  *  [Bean Counting](http://eloquentjavascript.net/03_functions.html#h_XTmO7z7MPq)
  *
  */
-/* global countB  countChar */
+/* global countBs  countChar */
 
 function countBs(text) {
   return countChar(text, 'B');
