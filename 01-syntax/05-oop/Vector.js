@@ -3,15 +3,11 @@ function Vector(x, y) {
   this.y = y;
 };
 Vector.prototype.plus = function (anothervector) {
-  this.x = this.x + anothervector.x;
-  this.y = this.y + anothervector.y;
-  return this;
-}
+  return new Vector(this.x + anothervector.x, this.y + anothervector.y);
+};
 Vector.prototype.minus = function (anothervector) {
-  this.x = this.x - anothervector.x;
-  this.y = this.y - anothervector.y;
-  return this;
-}
+  return new Vector(this.x - anothervector.x, this.y - anothervector.y);
+};
 Object.defineProperty(Vector.prototype, 'length', {
   get: function () {
     return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
