@@ -11,7 +11,7 @@ function range(start, end, oneStep) {
   var step = oneStep || 1;
 
   if (typeof start !== 'number' || typeof end !== 'number' || typeof oneStep !== 'number') {
-    return 'Error! Wrong input!!!';
+    throw new Error('Wrong input!!!');
   }
 
   for (begin; begin !== fin + step; begin += step) {
