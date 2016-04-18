@@ -6,7 +6,7 @@
 
 function min(a, b) {
   if (isNaN(a) || isNaN(b)) {
-    return 'Error! Wrong input';
+    throw new Error('Wrong input');
   }
   if (a > b) {
     return b;
