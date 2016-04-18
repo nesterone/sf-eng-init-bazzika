@@ -1,4 +1,4 @@
-/* global ancestry */
+/* global ancestry ageDifference */
 
 var byName = {};
 
@@ -17,6 +17,8 @@ ancestry.forEach(function (person) {
   byName[person.name] = person;
 });
 
-// → Your code here.
+// → Your code here
+
+console.log(ageDifference(ancestry));
 
 // → 31.2
