@@ -90,7 +90,7 @@ function average(array) {
 
 function findByName(personName) {
   var byName = null;
-  ancestry.forEach(function(p) {
+  ancestry.forEach(function (p) {
     if (personName === p.name) {
       byName = p;
     }
@@ -99,7 +99,7 @@ function findByName(personName) {
 }
 
 function getAllDifferencies(arr) {
-  arr.forEach(function(person) {
+  arr.forEach(function (person) {
     var mother = findByName(person.mother);
     if (mother) {
       diff.push(person.born - mother.born);
