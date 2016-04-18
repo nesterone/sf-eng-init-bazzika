@@ -1,4 +1,4 @@
-/* global ancestry ancestry ageDifference*/
+/* global ancestry average ageDifference*/
 
 function average(array) {
   function plus(a, b) {
