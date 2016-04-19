@@ -92,6 +92,63 @@ console.log(
   }));
 // → true
 
+console.log(
+  deepEqual({
+    here: 1,
+    prop: 'string',
+    arr: {
+      nestedPropFirst: 1,
+      nestedPropSecond: [1, 2]
+    }
+  }, {
+    here: 1,
+    prop: 'string',
+    arr: {
+      nestedPropFirst: 1,
+      nestedPropSecond: [1, 2]
+    }
+  })
+);
+// → true
+
+console.log(
+  deepEqual({
+    here: 1,
+    prop: 'string',
+    arr: {
+      nestedPropFirst: 1,
+      nestedPropSecond: [1, 2]
+    }
+  }, {
+    here: 1,
+    prop: 'string',
+    arr: {
+      nestedPropFirst: 1,
+      nestedPropSecond: [1, 0]
+    }
+  })
+);
+// → false
+
+console.log(
+  deepEqual({
+    here: 1,
+    prop: 'string',
+    arr: {
+      nestedPropFirst: 1,
+      nestedPropSecond: [1, 2]
+    }
+  }, {
+    here: 1,
+    prop: 'string',
+    arr: {
+      nestedPropSecond: [1, 2],
+      nestedPropFirst: 1
+    }
+  })
+);
+// → true
+
 console.log(deepEqual(obj, obj));
 // → true
 
