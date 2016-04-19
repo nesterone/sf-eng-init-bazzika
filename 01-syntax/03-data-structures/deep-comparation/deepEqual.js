@@ -50,6 +50,48 @@ function deepEqual(firstObj, secondObj) {
   return true;
 }
 
+console.log(
+  deepEqual({
+    here: 1,
+    arr: [1, 2]
+  }, {
+    here: 1,
+    arr: [1, 2]
+  }));
+// → true
+
+console.log(
+  deepEqual({
+    here: 1,
+    arr: [1, 2]
+  }, {
+    here: 1,
+    arr: [1, 2, 3]
+  }));
+// → false
+
+console.log(
+  deepEqual({
+    here: 1,
+    arr: [1, 2, 5]
+  }, {
+    here: 1,
+    arr: [1, 2, 3]
+  }));
+// → false
+
+console.log(
+  deepEqual({
+    here: 1,
+    prop: 'string',
+    arr: [1, 2, 5]
+  }, {
+    prop: 'string',
+    arr: [1, 2, 5],
+    here: 1
+  }));
+// → true
+
 console.log(deepEqual(obj, obj));
 // → true
 
