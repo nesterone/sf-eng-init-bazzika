@@ -2,7 +2,7 @@
  *  [Deep comparation](file:///projects/Eloquent-JavaScript/html/04_data.html#h_IJBU+aXOIC)
  *
  */
-/* global deepEqual */
+/* global deepEqual obj */
 
 var obj = {
   here: {
@@ -15,6 +15,10 @@ function deepEqual(firstObj, secondObj) {
   var firstKey;
   var secondKey;
   var same;
+
+  function isObject(statement) {
+    return (statement && typeof statement === 'object');
+  }
 
   arguments[0] = firstObj || {};
   arguments[1] = secondObj || {};
@@ -30,10 +34,9 @@ function deepEqual(firstObj, secondObj) {
       same = false;
       for (secondKey in secondObj) {
         if (secondObj.hasOwnProperty(secondKey) &&
-          typeof firstObj[firstKey] === 'object' &&
-          typeof secondObj[secondKey] === 'object' &&
-          firstKey === secondKey &&
-          firstObj[firstKey] && secondObj[secondKey]) {
+          isObject(firstObj[firstKey]) &&
+          isObject(secondObj[secondKey]) &&
+          firstKey === secondKey) {
           same = deepEqual(firstObj[firstKey], secondObj[secondKey]);
         } else if (firstKey === secondKey) {
           same = (firstObj[firstKey] === secondObj[secondKey]);
@@ -49,6 +52,7 @@ function deepEqual(firstObj, secondObj) {
 
 console.log(deepEqual(obj, obj));
 // → true
+
 console.log(
   deepEqual(obj, {
     here: 1,
@@ -66,6 +70,7 @@ console.log(
   })
 );
 // → true
+
 console.log(
   deepEqual(obj, {
     here: {
@@ -75,6 +80,7 @@ console.log(
   })
 );
 // → false
+
 console.log(
   deepEqual({
     here: {
@@ -91,6 +97,7 @@ console.log(
   })
 );
 // → true
+
 console.log(
   deepEqual(obj, {
     here: {
@@ -101,6 +108,7 @@ console.log(
   })
 );
 // → false
+
 console.log(
   deepEqual(obj, {
     object: 10,
@@ -109,9 +117,12 @@ console.log(
     }
   }));
 // → false
+
 console.log(deepEqual(obj, null));
 // → false
+
 console.log(deepEqual(null, null));
 // → true
+
 console.log(deepEqual(undefined, obj));
 // → false
