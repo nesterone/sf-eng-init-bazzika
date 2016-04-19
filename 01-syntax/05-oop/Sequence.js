@@ -1,4 +1,4 @@
-/* global Sequence */
+/* global Sequence RangeSeq logFive*/
 
 function Sequence(arr) {
   this.arr = arr;
