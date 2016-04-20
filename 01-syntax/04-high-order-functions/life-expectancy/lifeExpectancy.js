@@ -1,34 +1,44 @@
-var epoch;
-var Century;
+/* global ancestry lifeExpectancy */
 function average(array) {
   function plus(a, b) {
     return a + b;
   }
-  return array.reduce(plus) / array.length;
-}
 
+  return array.reduce(plus)/array.length;
+}
 console.log(average([2, 2, 2]));
 // → 2
-var century = {};
-function ListCentury(person) {
-   var cur_century;
-  ancestry.forEach(function (person) {
-    cur_century = Math.ceil(died/100);
-    if (cur_century in century){
-      century[cur_century].push(person);
-    } else {
-      century[cur_century] = [];
-    }
-  });
-  return century;
-}
-for (cur_century in century){
-  var ages = century[cur_century].map(function (person) {
-    return person.died - person.born;
-  });
-  console.log(cur_century + average(ages));
-}
+function lifeExpectancy(ancestry) {
+  var curcentury;
+  var curages;
+  function groupBy(array, viaCentury) {
+    var century = {};
+    array.forEach(function (person) {
+      var keycentury;
+      keycentury = viaCentury(person);
+      if (keycentury in century) {
+        century[keycentury].push(person);
+      } else {
+        century[keycentury] = [];
+      }
+    });
+    return century;
+  }
 
+  curcentury = groupBy(ancestry, function (person) {
+    return Math.ceil(person.died / 100);
+  });
+  for (curages in curcentury) {
+    if (curcentury.hasOwnProperty(curages)) {
+      var ages;
+      ages = curcentury[curages].map(function (person) {
+        return person.died - person.born;
+      });
+    }
+  }
+  return console.log(curages + average(ages));
+}
+console.log(lifeExpectancy(ancestry));
 // → 16: 43.5
 // → 17: 51.2
 // → 18: 52.8
