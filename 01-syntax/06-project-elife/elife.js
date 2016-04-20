@@ -1,25 +1,26 @@
 /* global valley */
 
 var plan = ['###############################################',
-  '#   ###                   ###     #     o     #',
+  '#   ###          ****     ###     #     o     #',
   '#    #     ####       #                       #',
   '#         #    #      #        ######         #',
-  '#         #           #            ##     #   #',
-  '#         #   ###     #                 #     #',
+  '# **      #           #   ~        ##     #   #',
+  '# *       #   ###     #                 #     #',
   '#  W      #    #      #        W              #',
   '#          ####       ######                  #',
-  '#  #                               #          #',
-  '#         #                        #######    #',
-  '# # #           #                     ##      #',
-  '#               #                    ### o    #',
+  '#  #             0                 #       0  #',
+  '#      ** #                        #######    #',
+  '# # #           #         ***         ##      #',
+  '# 0           ~ #       *****        ### o    #',
   '#  ###          #                     ###     #',
-  '#                                             #',
-  '#       o            #       #                #',
+  '#          ***                      *         #',
+  '#*      o *****      #       #      ***       #',
   '###############################################'];
 
 var valley;
 var dirs;
 var directions = 'n ne e se s sw w nw'.split(' ');
+var actionTypes;
 
 function Vector(x, y) {
   this.x = x;
@@ -113,7 +114,11 @@ function RandomCritter() {
 RandomCritter.prototype.act = function (view) {
   this.direction = view.find('o');
   if (this.direction) {
-    return { type: 'eat', direction: this.direction };
+    return { type: 'kill', direction: this.direction };
+  }
+  this.direction = view.find('0');
+  if (this.direction) {
+    return { type: 'kill', direction: this.direction };
   }
   this.direction = view.find(' ');
   return { type: 'move', direction: this.direction };
@@ -195,7 +200,7 @@ World.prototype.letAct = function (critter, vector) {
       this.grid.set(dest, critter);
     }
   }
-  if (action && action.type === 'eat') {
+  if (action && action.type === 'kill') {
     dest = this.checkDestination(action, vector);
     if (dest) {
       this.grid.set(vector, null);
@@ -213,6 +218,134 @@ World.prototype.checkDestination = function (action, vector) {
   return null;
 };
 
+function dirPlus(dir, n) {
+  var index = directions.indexOf(dir);
+  return directions[(index + n + 8) % 8];
+}
+
+function WallFollower() {
+  this.dir = 's';
+}
+
+WallFollower.prototype.act = function (view) {
+  var start = this.dir;
+  if (view.look(dirPlus(this.dir, -3)) !== ' ') {
+    start = this.dir = dirPlus(this.dir, -2);
+  }
+  while (view.look(this.dir) !== ' ') {
+    this.dir = dirPlus(this.dir, 1);
+    if (this.dir === start) break;
+  }
+  return { type: 'move', direction: this.dir };
+};
+
 function Wall() {}
 
-valley = new World(plan, { '#': Wall, o: BouncingCritter, W: RandomCritter });
+function LifelikeWorld(map, legend) {
+  World.call(this, map, legend);
+}
+
+LifelikeWorld.prototype = Object.create(World.prototype);
+
+actionTypes = Object.create(null);
+
+actionTypes.grow = function (critter) {
+  var crit = critter;
+  crit.energy += 0.5;
+  return true;
+};
+
+actionTypes.move = function (critter, vector, action) {
+  var crit = critter;
+  var dest = this.checkDestination(action, vector);
+  if (dest === null ||
+    crit.energy <= 1 ||
+    this.grid.get(dest) !== null) return false;
+  crit.energy -= 1;
+  this.grid.set(vector, null);
+  this.grid.set(dest, crit);
+  return true;
+};
+
+actionTypes.eat = function (critter, vector, action) {
+  var crit = critter;
+  var dest = this.checkDestination(action, vector);
+  var atDest = dest !== null && this.grid.get(dest);
+  if (!atDest || atDest.energy === null) return false;
+  crit.energy += atDest.energy;
+  this.grid.set(dest, null);
+  return true;
+};
+
+actionTypes.kill = function (critter, vector) {
+  var dest;
+  var action = critter.act(new View(this, vector));
+  if (action && action.type === 'kill') {
+    dest = this.checkDestination(action, vector);
+    if (dest) {
+      this.grid.set(vector, null);
+      this.grid.set(dest, critter);
+    }
+  }
+};
+
+actionTypes.reproduce = function (critter, vector, action) {
+  var crit = critter;
+  var baby = getElementFromChar(this.legend,
+    crit.originChar);
+  var dest = this.checkDestination(action, vector);
+  if (dest === null ||
+    crit.energy <= 2 * baby.energy ||
+    this.grid.get(dest) !== null) return false;
+  crit.energy -= 2 * baby.energy;
+  this.grid.set(dest, baby);
+  return true;
+};
+
+function Plant() {
+  this.energy = 3 + Math.random() * 4;
+}
+Plant.prototype.act = function (view) {
+  var space;
+  if (this.energy > 15) {
+    space = view.find(' ');
+    if (space) return { type: 'reproduce', direction: space };
+  }
+  if (this.energy < 20) return { type: 'grow' };
+  return null;
+};
+
+function PlantEater() {
+  this.energy = 20;
+}
+PlantEater.prototype.act = function (view) {
+  var space = view.find(' ');
+  var plant;
+  if (this.energy > 60 && space) {
+    return { type: 'reproduce', direction: space };
+  }
+  plant = view.find('*');
+  if (plant) return { type: 'eat', direction: plant };
+  if (space) return { type: 'move', direction: space };
+  return null;
+};
+
+LifelikeWorld.prototype.letAct = function (critter, vector) {
+  var crit = critter;
+  var action = crit.act(new View(this, vector));
+  var handled = action && action.type in actionTypes &&
+      actionTypes[action.type].call(this, crit, vector, action);
+  if (!handled) {
+    crit.energy -= 0.2;
+    if (crit.energy <= 0) {
+      this.grid.set(vector, null);
+    }
+  }
+};
+
+valley = new LifelikeWorld(plan, { '#': Wall,
+  o: BouncingCritter,
+  '~': WallFollower,
+  '*': Plant,
+  0: PlantEater,
+  W: RandomCritter });
