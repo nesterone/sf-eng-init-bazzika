@@ -1,3 +1,5 @@
+/* global world */
+
 (function () {
   'use strict';
 
