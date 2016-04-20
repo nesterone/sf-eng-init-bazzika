@@ -1,4 +1,4 @@
-/* global world */
+/* global valley */
 
 var plan = ['###############################################',
   '#   ###                   ###     #     o     #',
@@ -6,10 +6,10 @@ var plan = ['###############################################',
   '#         #    #      #        ######         #',
   '#         #           #            ##     #   #',
   '#         #   ###     #                 #     #',
-  '# W       #    #      #        W              #',
+  '#  W      #    #      #        W              #',
   '#          ####       ######                  #',
   '#  #                               #          #',
-  '#         #            W           #######    #',
+  '#         #                        #######    #',
   '# # #           #                     ##      #',
   '#               #                    ### o    #',
   '#  ###          #                     ###     #',
@@ -17,7 +17,7 @@ var plan = ['###############################################',
   '#       o            #       #                #',
   '###############################################'];
 
-var world;
+var valley;
 var dirs;
 var directions = 'n ne e se s sw w nw'.split(' ');
 
@@ -48,9 +48,8 @@ function Grid(width, height) {
 }
 
 Grid.prototype.isInside = function (vector) {
-  if (vector.x < this.width && vector.y < this.height &&
-  vector.x >= 0 && vector.y >= 0) return true;
-  return false;
+  return (vector.x < this.width && vector.y < this.height &&
+  vector.x >= 0 && vector.y >= 0);
 };
 
 Grid.prototype.get = function (vector) {
@@ -137,7 +136,9 @@ View.prototype.findAll = function (ch) {
   var dir;
   var found = [];
   for (dir in dirs) {
-    if (this.look(dir) === ch) found.push(dir);
+    if (dirs.hasOwnProperty(dir)) {
+      if (this.look(dir) === ch) found.push(dir);
+    }
   }
   return found;
 };
@@ -156,9 +157,9 @@ function World(map, legend) {
   map.forEach(function (line, y) {
     for (x = 0; x < line.length; x++) {
       grid.set(new Vector(x, y),
-        getElementFromChar(legend, line[x]));
+        getElementFromChar(this.legend, line[x]));
     }
-  });
+  }, this);
 }
 
 World.prototype.toString = function () {
@@ -214,4 +215,4 @@ World.prototype.checkDestination = function (action, vector) {
 
 function Wall() {}
 
-world = new World(plan, { '#': Wall, o: BouncingCritter, W: RandomCritter });
+valley = new World(plan, { '#': Wall, o: BouncingCritter, W: RandomCritter });

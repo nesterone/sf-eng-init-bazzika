@@ -1,4 +1,4 @@
-/* global world */
+/* global valley */
 
 (function () {
   'use strict';
