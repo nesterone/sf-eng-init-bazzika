@@ -7,7 +7,7 @@ var plan = ['###############################################',
   '# **      #           #   ~        ##     #   #',
   '# *       #   ###     #   +             #     #',
   '#         #    #      #                       #',
-  '#          ####       ######                  #',
+  '#   S      ####       ######                  #',
   '#  #             0   W             #       0  #',
   '#      ** #                        #######    #',
   '# # #           #         ***         ##      #',
@@ -15,6 +15,11 @@ var plan = ['###############################################',
   '#  ###          #  +           @      ###     #',
   '#          ***        +             *         #',
   '#*      o *****      #       #      ***       #',
+  '#*                             S              #',
+  '#*                                            #',
+  '#* S    ######*   @  #       #      ***       #',
+  '#*      o *****              #      ***       #',
+  '# # #           #         ***         ##   @  #',
   '###############################################'];
 
 var dirs;
@@ -315,6 +320,19 @@ actionTypes.boom = function (critter, vector) {
   this.grid.set(vector, null);
 };
 
+actionTypes.restore = function (critter, vector) {
+  var key;
+  var tempCritter;
+  for (key in dirs) {
+    if (dirs.hasOwnProperty(key)) {
+      tempCritter = this.grid.get(vector.plus(dirs[key]));
+      if (tempCritter && tempCritter.energy) {
+        tempCritter.energy += 1;
+      }
+    }
+  }
+};
+
 function Plant() {
   this.energy = 3 + Math.random() * 4;
 }
@@ -346,7 +364,7 @@ PlantEater.prototype.act = function (view) {
     }
   }
   if (view.look(this.lastMove) === '#' || view.look(this.lastMove) === '0' ||
-  view.look(this.lastMove) === '+') {
+  view.look(this.lastMove) === '+' || view.look(this.lastMove) === 'S') {
     if (space) {
       this.lastMove = space;
       return { type: 'move', direction: this.lastMove };
@@ -373,10 +391,16 @@ function BoomPlant() {}
 
 BoomPlant.prototype.act = function () {
   var chanceToBoom = Math.random();
-  if (chanceToBoom < 0.005) {
+  if (chanceToBoom < 0.01) {
     return { type: 'boom', direction: new Vector(0, 0) };
   }
   return null;
+};
+
+function RestoreEnergyPlant() {}
+
+RestoreEnergyPlant.prototype.act = function () {
+  return { type: 'restore', direction: new Vector(0, 0) };
 };
 
 LifelikeWorld.prototype.letAct = function (critter, vector) {
@@ -399,4 +423,5 @@ window.valley = new LifelikeWorld(plan, { '#': Wall,
   0: PlantEater,
   W: RandomCritter,
   '@': Tiger,
-  '+': BoomPlant });
+  '+': BoomPlant,
+  S: RestoreEnergyPlant });
