@@ -29,7 +29,7 @@
     active = this;
     this.interval = setInterval(function () {
       self.tick();
-    }, 333);
+    }, 111);
   }
 
   Animated.prototype.clicked = function () {

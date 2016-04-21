@@ -6,7 +6,7 @@ var plan = ['###############################################',
   '#         #    #      #        ######         #',
   '# **      #           #   ~        ##     #   #',
   '# *       #   ###     #                 #     #',
-  '#  W      #    #      #        W              #',
+  '#         #    #      #                       #',
   '#          ####       ######                  #',
   '#  #             0                 #       0  #',
   '#      ** #                        #######    #',
@@ -17,7 +17,6 @@ var plan = ['###############################################',
   '#*      o *****      #       #      ***       #',
   '###############################################'];
 
-var valley;
 var dirs;
 var directions = 'n ne e se s sw w nw'.split(' ');
 var actionTypes;
@@ -317,17 +316,28 @@ Plant.prototype.act = function (view) {
 
 function PlantEater() {
   this.energy = 20;
+  this.lastMove = 's';
 }
 PlantEater.prototype.act = function (view) {
   var space = view.find(' ');
-  var plant;
-  if (this.energy > 60 && space) {
+  var plant = view.find('*');
+  var plantsAmount = view.findAll('*');
+  if (this.energy > 100 && space) {
     return { type: 'reproduce', direction: space };
   }
-  plant = view.find('*');
-  if (plant) return { type: 'eat', direction: plant };
-  if (space) return { type: 'move', direction: space };
-  return null;
+  if (plantsAmount.length > 1) {
+    if (plant) {
+      this.lastMove = plant;
+      return { type: 'eat', direction: this.lastMove };
+    }
+  }
+  if (view.look(this.lastMove) === '#' || view.look(this.lastMove) === '0') {
+    if (space) {
+      this.lastMove = space;
+      return { type: 'move', direction: this.lastMove };
+    }
+  }
+  return { type: 'move', direction: this.lastMove };
 };
 
 LifelikeWorld.prototype.letAct = function (critter, vector) {
@@ -343,7 +353,7 @@ LifelikeWorld.prototype.letAct = function (critter, vector) {
   }
 };
 
-valley = new LifelikeWorld(plan, { '#': Wall,
+window.valley = new LifelikeWorld(plan, { '#': Wall,
   o: BouncingCritter,
   '~': WallFollower,
   '*': Plant,
