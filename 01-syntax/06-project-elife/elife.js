@@ -340,21 +340,56 @@ PlantEater.prototype.act = function (view) {
   return undefined;
 };
 
-Window.valley = new LifelikeWorld(
-  ['############################',
-    '#####                 ######',
-    '##   ***                **##',
-    '#   *##**         **  O  *##',
-    '#    ***     O    ##**    *#',
-    '#       O         ##***    #',
-    '#                 ##**     #',
-    '#   O       #*             #',
-    '#*          #**       O    #',
-    '#***        ##**    O    **#',
-    '##****     ###***       *###',
-    '############################'],
+function CritterEater() {
+  this.energy = 30;
+}
+
+CritterEater.prototype.act = function (view) {
+  var space = view.find(' ');
+  var critter = view.find('o');
+  var plant = view.find('*');
+
+  if (this.energy > 60 && space) {
+    return { type: 'reproduce', direction: space };
+  }
+
+  if (critter) {
+    return { type: 'eat', direction: critter };
+  }
+
+  if (plant) {
+    return { type: 'eat', direction: plant };
+  }
+
+  if (space) {
+    return { type: 'move', direction: space };
+  }
+
+  return undefined;
+};
+
+window.valley = new LifelikeWorld(
+  ['#####################################',
+    '#####         V         ###    ######',
+    '##   ***                         **##',
+    '#   *##**         **  o           *##',
+    '#    ***     o      ##**           *#',
+    '#       o         ##***             #',
+    '#                 ##**      V       #',
+    '#                                   #',
+    '#                                   #',
+    '#   o       #*                      #',
+    '#*               #**       o        #',
+    '#***        ##**    o             **#',
+    '##****     ###***                *###',
+    '#    V                              #',
+    '#                                   #',
+    '#                        V          #',
+    '#                                   #',
+    '#####################################'],
   { '#': Wall,
-    O: PlantEater,
-    '*': Plant
+    o: PlantEater,
+    '*': Plant,
+    V: CritterEater
   }
 );
