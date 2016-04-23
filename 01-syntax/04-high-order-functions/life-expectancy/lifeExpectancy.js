@@ -1,11 +1,10 @@
 /* global ancestry lifeExpectancy */
 function lifeExpectancy(ancestry) {
   var currentCentury;
-  var currentAge;
   function groupBy(array, viaCentury) {
-    var century = {};
-    array.forEach(function (person) {
+    return array.reduce(function (memo, person) {
       var keyCentury;
+      var century = memo;
       keyCentury = viaCentury(person);
       if (keyCentury in century) {
         century[keyCentury].push(person);
@@ -13,28 +12,26 @@ function lifeExpectancy(ancestry) {
         century[keyCentury] = [];
         century[keyCentury].push(person);
       }
-    });
-    return century;
+      return century;
+    }, {});
   }
 
   currentCentury = groupBy(ancestry, function (person) {
     return Math.ceil(person.died / 100);
   });
-  for (currentAge in currentCentury) {
-    if (currentCentury.hasOwnProperty(currentAge)) {
-      currentCentury[currentAge] = currentCentury[currentAge].map(function (person) {
-        return person.died - person.born;
-      }).reduce(function average(a, b, index, array) {
-        var result;
-        if (index < array.length - 1) {
-          result = a + b;
-        } else {
-          result = Math.round(((a + b) / array.length) * 10) / 10;
-        }
-        return result;
-      });
-    }
-  }
+  Object.keys(currentCentury).forEach(function (age) {
+    currentCentury[age] = currentCentury[age].map(function (person) {
+      return person.died - person.born;
+    }).reduce(function average(a, b, index, array) {
+      var result;
+      if (index < array.length - 1) {
+        result = a + b;
+      } else {
+        result = Math.round(((a + b) / array.length) * 10) / 10;
+      }
+      return result;
+    });
+  });
   return currentCentury;
 }
 console.log(lifeExpectancy(ancestry));
