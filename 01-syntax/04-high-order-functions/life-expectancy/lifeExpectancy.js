@@ -4,13 +4,14 @@ function average(array) {
     return a + b;
   }
 
-  return array.reduce(plus)/array.length;
+  return array.reduce(plus) / array.length;
 }
 console.log(average([2, 2, 2]));
 // → 2
 function lifeExpectancy(ancestry) {
+  var ages;
   var curcentury;
-  var curages;
+  var currentAge;
   function groupBy(array, viaCentury) {
     var century = {};
     array.forEach(function (person) {
@@ -28,15 +29,15 @@ function lifeExpectancy(ancestry) {
   curcentury = groupBy(ancestry, function (person) {
     return Math.ceil(person.died / 100);
   });
-  for (curages in curcentury) {
-    if (curcentury.hasOwnProperty(curages)) {
-      var ages;
-      ages = curcentury[curages].map(function (person) {
+  for (currentAge in curcentury) {
+    if (curcentury.hasOwnProperty(currentAge)) {
+      ages = curcentury[currentAge].map(function (person) {
         return person.died - person.born;
       });
+      curcentury[currentAge] = ages;
     }
   }
-  return console.log(curages + average(ages));
+  return curcentury;
 }
 console.log(lifeExpectancy(ancestry));
 // → 16: 43.5
