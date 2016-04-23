@@ -21,6 +21,7 @@ function lifeExpectancy(ancestry) {
         century[keycentury].push(person);
       } else {
         century[keycentury] = [];
+        century[keycentury].push(person);
       }
     });
     return century;
@@ -34,7 +35,7 @@ function lifeExpectancy(ancestry) {
       ages = curcentury[currentAge].map(function (person) {
         return person.died - person.born;
       });
-      curcentury[currentAge] = ages;
+      curcentury[currentAge] = Math.round(average(ages) * 10) / 10;
     }
   }
   return curcentury;
