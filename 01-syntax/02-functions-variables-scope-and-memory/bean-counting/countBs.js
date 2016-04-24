@@ -4,7 +4,16 @@
  */
 /* global countBs */
 
-// → Your code here.
+function countBs(str) {
+  var i;
+  var result = 0;
+  for (i = 0; i < str.length; i++) {
+    if (str[i] === 'B') {
+      result++;
+    }
+  }
+  return result;
+}
 
 console.log(countBs('BBC'));
 // → 2
