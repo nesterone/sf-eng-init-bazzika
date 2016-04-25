@@ -4,14 +4,14 @@ function init() {
   var plan = ['####################################################',
     '#                 ####         ****              ###',
     '#   *  @  ##                 ########       oo    ##',
-    '#   *    ##        o o                 ****       *#',
-    '#       ##*                        ##########     *#',
+    '#   *    ##    W   o o                 ****       *#',
+    '#       ##*                &       ##########     *#',
     '#      ##***  *         ****                     **#',
-    '#* **  #  *  ***      #########                  **#',
+    '#* **  #  *  ***      #########          &       **#',
     '#* **  #      *               #   *              **#',
     '#     ##              #   o   #  ***          ######',
-    '#*            @       #       #   *        o  #    #',
-    '#*                    #  ######                 ** #',
+    '#*            @       #       #   *    W   o  #    #',
+    '#*      W             #  ######                 ** #',
     '###          ****          ***                  ** #',
     '#       o                        @         o       #',
     '#   *     ##  ##  ##  ##               ###      *  #',
@@ -119,8 +119,7 @@ function init() {
     return output;
   };
 
-  function Wall() {
-  }
+  function Wall() {}
 
   Grid.prototype.forEach = function (f, context) {
     var y;
@@ -326,6 +325,49 @@ function init() {
     return undefined;
   };
 
+  function TastyPlant() {
+    this.energy = 10;
+  }
+
+  TastyPlant.prototype.act = function (view) {
+    var space;
+
+    if (this.energy > 100) {
+      space = view.find(' ');
+      if (space) {
+        return { type: 'reproduce', direction: space };
+      }
+    }
+
+    if (this.energy <= 100) {
+      return { type: 'grow' };
+    }
+
+    return undefined;
+  };
+
+  function SwoopingPlant() {}
+
+  SwoopingPlant.prototype.act = function (view) {
+    var smartMeal = view.find('o');
+    var tigerMeal = view.find('@');
+    var plantMeal = view.find('*');
+
+    if (smartMeal) {
+      return { type: 'eat', direction: smartMeal };
+    }
+
+    if (tigerMeal) {
+      return { type: 'eat', direction: tigerMeal };
+    }
+
+    if (plantMeal) {
+      return { type: 'eat', direction: plantMeal };
+    }
+
+    return undefined;
+  };
+
   function SmartPlantEater() {
     this.energy = 20;
     this.dir = randomElement(directionNames);
@@ -334,6 +376,7 @@ function init() {
   SmartPlantEater.prototype.act = function (view) {
     var space = view.find(' ');
     var plant = view.find('*');
+    var tastyPlant = view.find('&');
 
     if (this.energy > 50 && space) {
       return { type: 'reproduce', direction: space };
@@ -341,6 +384,10 @@ function init() {
 
     if (plant && view.findAll('*').length > 1) {
       return { type: 'eat', direction: plant };
+    }
+
+    if (tastyPlant) {
+      return { type: 'eat', direction: tastyPlant };
     }
 
     if ((view.look(this.dir) === '#' || view.look(this.dir) === 'o') && space) {
@@ -377,7 +424,9 @@ function init() {
     o: SmartPlantEater,
     '*': Plant,
     '~': WallFollower,
-    '@': Tiger
+    '@': Tiger,
+    '&': TastyPlant,
+    W: SwoopingPlant
   });
 }
 
