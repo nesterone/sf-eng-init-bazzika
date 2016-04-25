@@ -1,4 +1,6 @@
-/* global ancestry average ageDifference*/
+/* global ancestry ageDifference*/
+
+var byName = {};
 
 function average(array) {
   function plus(a, b) {
@@ -11,24 +13,22 @@ function average(array) {
 console.log(average([2, 2, 2]));
 // → 2
 
-function ageDifference(incomingAncestryArray) {
-  var byName = {};
-  var personsWithMother;
-  var diffMotherAndKidAge;
+ancestry.forEach(function (person) {
+  byName[person.name] = person;
+});
 
-  incomingAncestryArray.forEach(function (person) {
-    byName[person.name] = person;
-  });
+function ageDifference(ancestry) {
+  var diffAge = [];
 
-  personsWithMother = incomingAncestryArray.filter(function (person) {
-    return byName[person.mother];
-  });
+  ancestry.reduce(function (sum, current) {
+    if (byName[current.mother]) {
+      diffAge.push(current.born - byName[current.mother].born);
+    }
 
-  diffMotherAndKidAge = personsWithMother.map(function (person) {
-    return person.born - byName[person.mother].born;
-  });
+    return undefined;
+  }, 0);
 
-  return average(diffMotherAndKidAge);
+  return average(diffAge);
 }
 
 console.log(ageDifference(ancestry));
