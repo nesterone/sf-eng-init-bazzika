@@ -38,4 +38,9 @@
  
 * [Eloquent JavaScript: Sequence interface](http://eloquentjavascript.net/06_object.html#h_a0w19Kx5iq)
 
+### Exercise: Override `toString`
+
+Provide your objects from previous tasks with 'toString' method  
+
+
 **[<= Back](../04-high-order-functions/high-order-functions.md)**		*	*	*	**[Next =>](../06-project-elife/project-elife.md)**
