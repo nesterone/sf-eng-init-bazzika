@@ -1,18 +1,16 @@
 /* global ancestry */
 
-function average(array) {
-  function plus(a, b) {
-    return a + b;
-  }
-  return array.reduce(plus) / array.length;
-}
-
-console.log(average([2, 2, 2]));
-// → 2
-
 function lifeExpectancy(incomingAncestry) {
   var ancestryByCentury = {};
   var arr = [];
+
+  function average(array) {
+    function plus(a, b) {
+      return a + b;
+    }
+
+    return array.reduce(plus) / array.length;
+  }
 
   incomingAncestry.reduce(function (sum, current) {
     var century = Math.ceil(current.died / 100);
