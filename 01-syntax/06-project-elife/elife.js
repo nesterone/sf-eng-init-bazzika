@@ -68,7 +68,6 @@ function elementFromChar(legend, ch) {
   element.originChar = ch;
   return element;
 }
-
 function charFromElement(element) {
   if (element === null) {
     return ' ';
@@ -177,7 +176,6 @@ World.prototype.checkDestination = function (action, vector) {
   }
   return dest;
 };
-
 function dirPlus(dir, n) {
   var index = directionNames.indexOf(dir);
   return directionNames[(index + n + 8) % 8];
@@ -292,6 +290,26 @@ SmartPlantEater.prototype.act = function (view) {
     } else if (space) {
       result = { type: 'move', direction: space };
     }
+  }
+  return result;
+};
+function Tiger() {
+  this.energy = 200;
+}
+Tiger.prototype.act = function (view) {
+  var allPlant;
+  var result;
+  var space = view.find(' ');
+  var plant = view.find('O');
+  if (this.energy > 500 && space) {
+    result = { type: 'reproduce', direction: space };
+  } else {
+    allPlant = view.findAll('O');
+  }
+  if (allPlant.length > 0) {
+    result = { type: 'eat', direction: plant };
+  } else if (space) {
+    result = { type: 'move', direction: space };
   }
   return result;
 };
