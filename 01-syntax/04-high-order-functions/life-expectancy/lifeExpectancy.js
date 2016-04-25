@@ -1,6 +1,4 @@
-/* global ancestry ancestryByCentury average lifeExpectancy */
-
-var ancestryByCentury = {};
+/* global ancestry */
 
 function average(array) {
   function plus(a, b) {
@@ -12,25 +10,24 @@ function average(array) {
 console.log(average([2, 2, 2]));
 // → 2
 
-function lifeExpectancy(ancestry) {
-  var century;
+function lifeExpectancy(incomingAncestry) {
+  var ancestryByCentury = {};
   var arr = [];
-  var key;
 
-  ancestry.forEach(function (property) {
-    century = Math.ceil(property.died / 100);
+  incomingAncestry.reduce(function (sum, current) {
+    var century = Math.ceil(current.died / 100);
+
     if (!ancestryByCentury[century]) {
       ancestryByCentury[century] = [];
     }
+    ancestryByCentury[century].push(current.died - current.born);
 
-    ancestryByCentury[century].push(property.died - property.born);
+    return undefined;
+  }, 0);
+
+  Object.keys(ancestryByCentury).forEach(function (key) {
+    arr.push(key + ': ' + average(ancestryByCentury[key]));
   });
-
-  for (key in ancestryByCentury) {
-    if (ancestryByCentury.hasOwnProperty(key)) {
-      arr.push(key + ': ' + average(ancestryByCentury[key]));
-    }
-  }
 
   return arr.join('\n');
 }
