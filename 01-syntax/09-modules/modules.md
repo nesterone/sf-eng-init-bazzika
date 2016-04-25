@@ -5,7 +5,7 @@
 ### Theory
 
 1. [Speaking JavaScript: Module Systems and Package Managers](http://speakingjs.com/es5/ch31.html)
-1. [Eloquent JavaScript: Modules](http://eloquentjavascript.net/06_object.html)
+1. [Eloquent JavaScript: Modules](http://eloquentjavascript.net/10_modules.html)
 
 ### Additional
 
