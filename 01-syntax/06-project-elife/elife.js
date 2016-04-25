@@ -1,6 +1,4 @@
-/* global valley */
-
-(function () {
+function init() {
   'use strict';
 
   var plan = ['#####################################',
@@ -390,11 +388,15 @@
     return undefined;
   };
 
-  window.valley = new LifelikeWorld(plan, {
+  return new LifelikeWorld(plan, {
     '#': Wall,
     o: PlantEater,
     '*': Plant,
     V: CritterEater,
     '~': WallFollower
   });
+}
+
+(function () {
+  init();
 }());
