@@ -1,6 +1,8 @@
-/* global repeat TextCell  */
+function TextCell(text) {
+  this.text = text.split('\n');
+}
 
-function repeat(string, times) {
+TextCell.repeat = function repeat(string, times) {
   var result = '';
   var index;
 
@@ -9,11 +11,7 @@ function repeat(string, times) {
   }
 
   return result;
-}
-
-function TextCell(text) {
-  this.text = text.split('\n');
-}
+};
 
 TextCell.prototype.minWidth = function () {
   return this.text.reduce(function (width, line) {
@@ -32,7 +30,7 @@ TextCell.prototype.draw = function (width, height) {
 
   for (index = 0; index < height; index++) {
     row = this.text[index] || '';
-    result.push(row + repeat(' ', width - row.length));
+    result.push(row + TextCell.repeat(' ', width - row.length));
   }
 
   return result;
