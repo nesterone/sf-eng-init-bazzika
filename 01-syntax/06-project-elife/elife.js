@@ -275,18 +275,19 @@ Plant.prototype.act = function (view) {
   }
   return result;
 };
-function PlantEater() {
-  this.energy = 20;
+function SmartPlantEater() {
+  this.energy = 40;
 }
-PlantEater.prototype.act = function (view) {
-  var plant;
+SmartPlantEater.prototype.act = function (view) {
+  var allPlant;
   var result;
   var space = view.find(' ');
-  if (this.energy > 60 && space) {
+  var plant = view.find('*');
+  if (this.energy > 90 && space) {
     result = { type: 'reproduce', direction: space };
   } else {
-    plant = view.find('*');
-    if (plant) {
+    allPlant = view.findAll('*');
+    if (allPlant.length > 1 && plant) {
       result = { type: 'eat', direction: plant };
     } else if (space) {
       result = { type: 'move', direction: space };
