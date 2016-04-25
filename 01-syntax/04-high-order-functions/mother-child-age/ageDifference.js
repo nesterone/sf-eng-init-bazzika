@@ -1,4 +1,4 @@
-/* global ancestry */
+/* global ancestry ageDifference*/
 
 var byName = {};
 
@@ -17,10 +17,20 @@ ancestry.forEach(function (person) {
   byName[person.name] = person;
 });
 
-console.log(average(ancestry.filter(function (property) {
-  return byName[property.mother];
-}).map(function (property) {
-  return property.born - byName[property.mother].born;
-})));
+function ageDifference(incomingAncestry) {
+  var diffAge = [];
+
+  incomingAncestry.reduce(function (sum, current) {
+    if (byName[current.mother]) {
+      diffAge.push(current.born - byName[current.mother].born);
+    }
+
+    return undefined;
+  }, 0);
+
+  return average(diffAge);
+}
+
+console.log(ageDifference(ancestry));
 
 // → 31.2
