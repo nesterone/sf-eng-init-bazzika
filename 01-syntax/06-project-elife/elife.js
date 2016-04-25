@@ -2,22 +2,22 @@ function init() {
   'use strict';
 
   var plan = ['#####################################',
-    '#####         V         ###    ######',
+    '#####                   ###    ######',
     '##   ***                        ~**##',
     '#   *##**         **  o           *##',
     '#    ***     o      ##**           *#',
     '#       o         ##***             #',
-    '#                 ##**      V       #',
+    '#                 ##**              #',
     '#                                   #',
     '#                                   #',
     '#   o       #*                      #',
     '#*           ~   #**       o        #',
     '#***        ##**    o             **#',
     '##****     ###***                *###',
-    '#    V                              #',
     '#                                   #',
-    '#                        V          #',
     '#                                   #',
+    '#          o                        #',
+    '#                              o    #',
     '#####################################'];
 
   var directions;
@@ -68,18 +68,6 @@ function init() {
   }
 
   directionNames = 'n ne e se s sw w nw'.split(' ');
-
-  function BouncingCritter() {
-    this.direction = randomElement(directionNames);
-  }
-
-  BouncingCritter.prototype.act = function (view) {
-    if (view.look(this.direction) !== ' ') {
-      this.direction = view.find(' ') || 's';
-    }
-
-    return { type: 'move', direction: this.direction };
-  };
 
   function elementFromChar(legend, ch) {
     var element;
@@ -267,7 +255,7 @@ function init() {
   };
 
   actionTypes.grow = function () {
-    arguments[0].energy += 0.5;
+    arguments[0].energy += 1;
 
     return true;
   };
@@ -323,76 +311,48 @@ function init() {
   Plant.prototype.act = function (view) {
     var space;
 
-    if (this.energy > 15) {
+    if (this.energy > 40) {
       space = view.find(' ');
       if (space) {
         return { type: 'reproduce', direction: space };
       }
     }
 
-    if (this.energy < 20) {
+    if (this.energy <= 40) {
       return { type: 'grow' };
     }
 
     return undefined;
   };
 
-  function PlantEater() {
+  function SmartPlantEater() {
     this.energy = 20;
+    this.dir = randomElement(directionNames);
   }
 
-  PlantEater.prototype.act = function (view) {
+  SmartPlantEater.prototype.act = function (view) {
     var space = view.find(' ');
     var plant = view.find('*');
 
-    if (this.energy > 60 && space) {
+    if (this.energy > 100 && space) {
       return { type: 'reproduce', direction: space };
     }
 
-    if (plant) {
+    if (plant && this.energy < 40 && view.find('*').length > 1) {
       return { type: 'eat', direction: plant };
     }
 
-    if (space) {
-      return { type: 'move', direction: space };
+    if (view.look(this.dir) !== ' ' && space) {
+      this.dir = randomElement(directionNames);
+      return { type: 'move', direction: this.dir };
     }
-
-    return undefined;
-  };
-
-  function CritterEater() {
-    this.energy = 30;
-  }
-
-  CritterEater.prototype.act = function (view) {
-    var space = view.find(' ');
-    var critter = view.find('o');
-    var plant = view.find('*');
-
-    if (this.energy > 60 && space) {
-      return { type: 'reproduce', direction: space };
-    }
-
-    if (critter) {
-      return { type: 'eat', direction: critter };
-    }
-
-    if (plant) {
-      return { type: 'eat', direction: plant };
-    }
-
-    if (space) {
-      return { type: 'move', direction: space };
-    }
-
-    return undefined;
+    return { type: 'move', direction: this.dir };
   };
 
   return new LifelikeWorld(plan, {
     '#': Wall,
-    o: PlantEater,
+    o: SmartPlantEater,
     '*': Plant,
-    V: CritterEater,
     '~': WallFollower
   });
 }
