@@ -1,7 +1,12 @@
-function init() {
+/* global valley getPlan animateWorld */
+
+function init(getType) {
   'use strict';
 
-  var plan = ['####################################################',
+  var directions;
+  var directionNames;
+  var actionTypes;
+  var wilderness = ['####################################################',
     '#                 ####         ****              ###',
     '#   *  @  ##                 ########       oo    ##',
     '#   *    ##    W   o o                 ****       *#',
@@ -19,10 +24,68 @@ function init() {
     '##  **  o   o  #  #    ***  ***        ###      ** #',
     '###               #   *****                    ****#',
     '####################################################'];
+  var smallArea = ['############################',
+    '#      #    #      o      ##',
+    '#                          #',
+    '#          #####           #',
+    '##         #   #    ##     #',
+    '###           ##     #     #',
+    '#           ###      #     #',
+    '#   ####                   #',
+    '#   ##       o             #',
+    '# o  #         o       ### #',
+    '#    #                     #',
+    '############################'];
+  var mountain = ['############################',
+    '#      #    #      o      ##',
+    '#             #            #',
+    '#            ###           #',
+    '##          #####    #     #',
+    '###                 ###    #',
+    '###                #####   #',
+    '#   #     #                #',
+    '#  ###   ###  o            #',
+    '# o            o       ### #',
+    '#                          #',
+    '############################'];
+  var sky = ['####################################################',
+    '#                              ****                #',
+    '#   *  @                                    oo     #',
+    '#   *          W   o o                 ****       *#',
+    '#         *                &                      *#',
+    '#        ***  *         ****                     **#',
+    '#* **     *  ***                         &       **#',
+    '#* **         *                   *              **#',
+    '#                         o      ***               #',
+    '#*            @                   *    W   o       #',
+    '#*      W                                       ** #',
+    '#            ****          ***                  ** #',
+    '#       o                        @         o       #',
+    '#   *                                           *  #',
+    '#   **                        *              o     #',
+    '#   **  o   o          ***  ***                 ** #',
+    '#                     *****                    ****#',
+    '####################################################'];
+  var swoopsPitfall = ['####################################################',
+    '#                              ****                #',
+    '#   *  @    ######              #####       oo     #',
+    '#   *            # o o       #      #  ****       *#',
+    '#         * #    #         & #    W #             *#',
+    '#        ***# *  #      **** #      #            **#',
+    '#* **     * #    #           ########    &       **#',
+    '#* **       #  W #                *              **#',
+    '#           ######        o      ***               #',
+    '#*    ######  @  #                *        o       #',
+    '#*      o  #                                    ** #',
+    '#    #     # ****          ***                  ** #',
+    '#    #  W  #                     @         o       #',
+    '#   *#######                       #  ###       *  #',
+    '#   **      #                  *   #    #     o     #',
+    '#   **  o   o          ***  ***    #    #       ** #',
+    '#                     *****        #  W #      ****#',
+    '####################################################'];
 
-  var directions;
-  var directionNames;
-  var actionTypes;
+  var areasContainer = [wilderness, smallArea, mountain, sky, swoopsPitfall];
 
   function Vector(x, y) {
     this.x = x;
@@ -119,7 +182,8 @@ function init() {
     return output;
   };
 
-  function Wall() {}
+  function Wall() {
+  }
 
   Grid.prototype.forEach = function (f, context) {
     var y;
@@ -346,7 +410,8 @@ function init() {
     return undefined;
   };
 
-  function SwoopingPlant() {}
+  function SwoopingPlant() {
+  }
 
   SwoopingPlant.prototype.act = function (view) {
     var smartMeal = view.find('o');
@@ -419,7 +484,7 @@ function init() {
     return { type: 'move', direction: this.dir };
   };
 
-  return new LifelikeWorld(plan, {
+  return new LifelikeWorld(areasContainer[getType], {
     '#': Wall,
     o: SmartPlantEater,
     '*': Plant,
@@ -430,6 +495,16 @@ function init() {
   });
 }
 
+window.onload = function () {
+  var areaSelector;
+
+  areaSelector = document.getElementsByTagName('select')[0];
+  areaSelector.onchange = function (event) {
+    document.body.removeChild(document.getElementsByTagName('div')[0]);
+    animateWorld(init(event.target.selectedIndex));
+  };
+};
+
 (function () {
-  init();
+  init(0);
 }());
