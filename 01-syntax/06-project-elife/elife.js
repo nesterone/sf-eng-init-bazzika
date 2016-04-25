@@ -1,24 +1,24 @@
 function init() {
   'use strict';
 
-  var plan = ['#####################################',
-    '#####                   ###    ######',
-    '##   ***                        ~**##',
-    '#   *##**         **  o           *##',
-    '#    ***     o      ##**           *#',
-    '#       o         ##***             #',
-    '#                 ##**              #',
-    '#                                   #',
-    '#                                   #',
-    '#   o       #*                      #',
-    '#*           ~   #**       o        #',
-    '#***        ##**    o             **#',
-    '##****     ###***                *###',
-    '#                                   #',
-    '#                                   #',
-    '#          o                        #',
-    '#                              o    #',
-    '#####################################'];
+  var plan = ['####################################################',
+    '#                 ####         ****              ###',
+    '#   *  @  ##                 ########       oo    ##',
+    '#   *    ##        o o                 ****       *#',
+    '#       ##*                        ##########     *#',
+    '#      ##***  *         ****                     **#',
+    '#* **  #  *  ***      #########                  **#',
+    '#* **  #      *               #   *              **#',
+    '#     ##              #   o   #  ***          ######',
+    '#*            @       #       #   *        o  #    #',
+    '#*                    #  ######                 ** #',
+    '###          ****          ***                  ** #',
+    '#       o                        @         o       #',
+    '#   *     ##  ##  ##  ##               ###      *  #',
+    '#   **         #              *       #####  o     #',
+    '##  **  o   o  #  #    ***  ***        ###      ** #',
+    '###               #   *****                    ****#',
+    '####################################################'];
 
   var directions;
   var directionNames;
@@ -119,7 +119,8 @@ function init() {
     return output;
   };
 
-  function Wall() {}
+  function Wall() {
+  }
 
   Grid.prototype.forEach = function (f, context) {
     var y;
@@ -334,18 +335,40 @@ function init() {
     var space = view.find(' ');
     var plant = view.find('*');
 
-    if (this.energy > 100 && space) {
+    if (this.energy > 50 && space) {
       return { type: 'reproduce', direction: space };
     }
 
-    if (plant && this.energy < 40 && view.find('*').length > 1) {
+    if (plant && view.findAll('*').length > 1) {
       return { type: 'eat', direction: plant };
+    }
+
+    if ((view.look(this.dir) === '#' || view.look(this.dir) === 'o') && space) {
+      this.dir = randomElement(directionNames);
+      return { type: 'move', direction: this.dir };
+    }
+
+    return { type: 'move', direction: this.dir };
+  };
+
+  function Tiger() {
+    this.energy = Infinity;
+    this.dir = randomElement(directionNames);
+  }
+
+  Tiger.prototype.act = function (view) {
+    var space = view.find(' ');
+    var critter = view.find('o');
+
+    if (critter) {
+      return { type: 'eat', direction: critter };
     }
 
     if (view.look(this.dir) !== ' ' && space) {
       this.dir = randomElement(directionNames);
       return { type: 'move', direction: this.dir };
     }
+
     return { type: 'move', direction: this.dir };
   };
 
@@ -353,7 +376,8 @@ function init() {
     '#': Wall,
     o: SmartPlantEater,
     '*': Plant,
-    '~': WallFollower
+    '~': WallFollower,
+    '@': Tiger
   });
 }
 
