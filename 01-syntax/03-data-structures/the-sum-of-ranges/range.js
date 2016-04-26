@@ -4,10 +4,9 @@
  */
 /* global range */
 function range(start, end, step) {
-  var i = 0;
+  var i = start || 0;
   var row = [];
   var grow = step;
-  i = start;
   if (typeof grow === 'undefined') {
     grow = 1;
   }
