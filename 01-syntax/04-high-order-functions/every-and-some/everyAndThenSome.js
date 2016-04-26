@@ -1,21 +1,23 @@
 /* global every some */
-function every(arr, method) {
+function every(arr, func) {
   var i;
   for (i = 0; i <= arr.length; i++) {
-    if (!method(arr[i])) {
+    if (!func(arr[i])) {
       return false;
     }
   }
   return true;
 }
-function some(arr, method) {
+function some(arr, func) {
+  var result;
   var i;
   for (i = 0; i <= arr.length; i++) {
-    if (method(arr[i])) {
-      return true;
+    if (func(arr[i])) {
+      result = true;
     }
-    return false;
+    result = false;
   }
+  return result;
 }
 console.log(every([NaN, NaN, NaN], isNaN));
 // → true
