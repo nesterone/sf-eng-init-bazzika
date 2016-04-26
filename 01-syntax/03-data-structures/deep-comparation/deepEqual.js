@@ -11,17 +11,16 @@ var obj = {
   object: 2
 };
 
-function deepEqual(firstObj, secondObj) {
+function deepEqual(obj1, obj2) {
   var firstKey;
   var secondKey;
   var same;
+  var firstObj = obj1 || {};
+  var secondObj = obj2 || {};
 
   function isObject(statement) {
     return (statement && typeof statement === 'object');
   }
-
-  arguments[0] = firstObj || {};
-  arguments[1] = secondObj || {};
 
   if (Object.keys(firstObj).length !== Object.keys(secondObj).length) {
     return false;
@@ -224,4 +223,106 @@ console.log(deepEqual(null, null));
 // → true
 
 console.log(deepEqual(undefined, obj));
+// → false
+
+console.log(
+  deepEqual([{
+    here: 1,
+    arr: [1, 2]
+  }, {
+    property: '5'
+  }], [{
+    here: 1,
+    arr: [1, 2]
+  }, {
+    property: '5'
+  }]));
+// → true
+
+console.log(
+  deepEqual([{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5
+    }]
+  }, {
+    property: '5'
+  }], [{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5
+    }]
+  }, {
+    property: '5'
+  }]));
+// → true
+
+console.log(
+  deepEqual([{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5
+    }]
+  }, {
+    property: '5'
+  }], [{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 4
+    }]
+  }, {
+    property: '5'
+  }]));
+// → false
+
+console.log(
+  deepEqual([{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5,
+      objProperty: {
+        a: 2,
+        b: 4
+      }
+    }]
+  }, {
+    property: '5'
+  }], [{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5,
+      objProperty: {
+        a: 2,
+        b: 4
+      }
+    }]
+  }, {
+    property: '5'
+  }]));
+// → true
+
+console.log(
+  deepEqual([{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5,
+      objProperty: {
+        a: 1,
+        b: 4
+      }
+    }]
+  }, {
+    property: '5'
+  }], [{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5,
+      objProperty: {
+        a: 2,
+        b: 4
+      }
+    }]
+  }, {
+    property: '5'
+  }]));
 // → false
