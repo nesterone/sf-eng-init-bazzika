@@ -1,1 +1,3 @@
-// Your code here.
+/* global StretchCell */
+
+// → Your code here.
