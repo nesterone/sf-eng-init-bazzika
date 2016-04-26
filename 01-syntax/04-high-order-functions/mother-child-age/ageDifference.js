@@ -1,4 +1,4 @@
-/* global ancestry */
+/* global ancestry ageDifference */
 
 var diff = [];
 
