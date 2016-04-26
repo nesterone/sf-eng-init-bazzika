@@ -294,19 +294,45 @@ SmartPlantEater.prototype.act = function (view) {
   return result;
 };
 function Tiger() {
-  this.energy = 200;
+  this.energy = 60;
 }
 Tiger.prototype.act = function (view) {
-  var allPlant;
+  var allCreatures;
   var result;
   var space = view.find(' ');
-  var plant = view.find('O');
-  if (this.energy > 500 && space) {
+  var creatures = view.find('O');
+  if (this.energy > 90 && space) {
     result = { type: 'reproduce', direction: space };
   } else {
-    allPlant = view.findAll('O');
+    allCreatures = view.findAll('O');
   }
-  if (allPlant.length > 0) {
+  if (allCreatures.length > 0) {
+    result = { type: 'eat', direction: creatures };
+  } else if (space) {
+    result = { type: 'move', direction: space };
+  }
+  return result;
+};
+function Owl() {
+  this.energy = 70;
+}
+Owl.prototype.act = function (view) {
+  var allTiger;
+  var result;
+  var relative = view.find('W');
+  var space = view.find(' ');
+  var tiger = view.find('@');
+  var plant = view.find('*');
+  if (this.energy > 100 && space) {
+    result = { type: 'reproduce', direction: space };
+  } else {
+    allTiger = view.findAll('@');
+  }
+  if (allTiger.length > 4) {
+    result = { type: 'eat', direction: tiger };
+  } else if (relative) {
+    result = { type: 'eat', direction: relative };
+  } else if (this.energy > 150) {
     result = { type: 'eat', direction: plant };
   } else if (space) {
     result = { type: 'move', direction: space };
