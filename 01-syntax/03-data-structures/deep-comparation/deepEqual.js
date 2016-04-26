@@ -98,3 +98,69 @@ console.log(deepEqual(obj2, {
   }
 }));
 // → false
+console.log(deepEqual({
+  one: [1, 2, 3],
+  two: [{ one: 1 }, { one: 1, two: 2 }]
+}, {
+  one: [1, 2, 3],
+  two: [{ one: 1 }, { one: 1, two: 2 }]
+}));
+// → true
+console.log(deepEqual({
+  one: [1, 2, 3],
+  two: [{ one: 2 }, { one: 1, two: 2 }]
+}, {
+  one: [1, 2, 3],
+  two: [{ one: 1 }, { one: 1, two: 2 }]
+}));
+// → false
+console.log(deepEqual({
+  one: [1, 2, 3],
+  two: [{ one: [{ pf: 1 }] }, { one: 1, two: 2 }]
+}, {
+  one: [1, 2, 3],
+  two: [{ one: [{ pf: 1 }] }, { one: 1, two: 2 }]
+}));
+// → true
+console.log(deepEqual({
+  one: [1, 2, 3],
+  two: [{ one: [{ pf: 1 }] }, { one: 1, two: 2 }]
+}, {
+  one: [1, 2, 3],
+  two: [{ one: [{ pf: 1, mmm: 3 }] }, { one: 1, two: 2 }]
+}));
+// → false
+console.log(deepEqual({
+  one: [1, 2, 3, 4],
+  two: [{ one: 1 }, { one: 1, two: 2 }]
+}, {
+  one: [1, 2, 3],
+  two: [{ one: 1 }, { one: 1, two: 2 }]
+}));
+// → false
+console.log(deepEqual({
+  one: [1, 2, 3],
+  two: [{ one: 1, two: { t: [1, { w: 2 }] } }, { one: 1, two: 2 }]
+}, {
+  one: [1, 2, 3],
+  two: [{ one: 1, two: { t: [1, { w: 2 }] } }, { one: 1, two: 2 }]
+}));
+// → true
+console.log(deepEqual({
+  one: [1, 2, 3],
+  two: [{ one: 1, two: { t: [1, { w: 2 }] } }, { one: 1, two: 2 }]
+}, {
+  one: [1, 2, 3],
+  two: [{ one: 1, two: { t: [1, { w: 2, k: 5 }] } }, { one: 1, two: 2 }]
+}));
+// → false
+console.log(deepEqual(undefined, {}));
+// → false
+console.log(deepEqual({}, {}));
+// → true
+console.log(deepEqual({ a: [{ b: [{ c: [1] }] }] },
+  { a: [{ b: [{ c: [1] }] }] }));
+// → true
+console.log(deepEqual({ a: [{ b: [{ c: [1] }] }] },
+  { a: [{ b: [{ c: [2] }] }] }));
+// → false
