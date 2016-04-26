@@ -1,37 +1,42 @@
-/* global Sequence RangeSeq logFive*/
-
 function Sequence(arr) {
   this.arr = arr;
-  this.position = 0;
+}
+
+function RangeSeq(start, end) {
+  var obj = new Sequence([]);
+  obj.fillObjArray(start, end);
+
+  return obj;
 }
 
 Sequence.prototype.fillObjArray = function (start, end) {
-  while (start <= end) {
-    this.arr.push(start);
-    arguments[0]++;
-  }
-};
+  var newStart = start;
 
-Sequence.prototype.iterator = function () {
-  if (this.position < this.arr.length) {
-    return this.arr[this.position++];
+  while (newStart <= end) {
+    this.arr.push(newStart);
+    newStart += 1;
   }
 
   return undefined;
 };
 
-function RangeSeq(start, end) {
-  var obj = new Sequence([]);
-  obj.fillObjArray(start, end);
-  return obj;
-}
+Sequence.prototype.toString = function (amount) {
+  var index = 0;
+  var properties = this.arr.entries();
+  var iterator = properties.next();
+  iterator.done = false;
+
+  while (index < amount && !iterator.done) {
+    console.log(iterator.value[1]);
+    iterator = properties.next();
+    index++;
+  }
+
+  return undefined;
+};
 
 function logFive(obj) {
-  var index;
-
-  for (index = obj.position; index < obj.arr.length && index < 5; index++) {
-    console.log(obj.iterator());
-  }
+  return obj.toString(5);
 }
 
 logFive(new Sequence([1, 2]));
