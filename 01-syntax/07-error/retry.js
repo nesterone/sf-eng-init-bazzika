@@ -12,7 +12,11 @@ function reliableMultiply(a, b) {
       result = primitiveMultiply(a, b);
       return result;
     } catch (err) {
-      console.log('Failed. Trying to multiply again...');
+      if (err instanceof MultiplicatorUnitFailure) {
+        console.log('Failed. Trying to multiply again...');
+      } else {
+        throw err;
+      }
     }
   }
 }
