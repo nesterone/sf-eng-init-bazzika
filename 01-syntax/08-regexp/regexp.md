@@ -13,7 +13,6 @@
 
 1. [Debug Regex](https://www.debuggex.com/)
 1. [Regex 101](https://regex101.com/#javascript)
-1. [Regex golf game](http://regex.alf.nu/)
 
 
 ### Practice
@@ -21,6 +20,10 @@
 #### Workshop: Regexp Adventure
 
 * [NodeSchool: regex-adventure](https://github.com/substack/regex-adventure)
+
+#### Challenge: Regexp Golf Game
+
+* [Regex golf game](http://regex.alf.nu/)
 
 #### Exercise: Regexp golf
 
