@@ -1,0 +1,15 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to left top, #57D8FF, #52757F);
+}
+
+h1, h2 {
+	text-shadow: 0.05vw 0.05vw 0.1vw #fff;
+	margin: 2% 0 0 2%;
+}
