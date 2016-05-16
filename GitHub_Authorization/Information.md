@@ -9,6 +9,8 @@ OAuth2 is a protocol that lets external apps request authorization to private de
 
 GitHub's OAuth implementation supports the standard authorization code grant type. This standard works like this:
 
+![img](http://content.screencast.com/users/BragaDmitriy/folders/Jing/media/3f02bd35-1b40-4f19-a22a-d0fb92ab56b5/2016-05-16_1059.png 'Authorization Code Flow')
+
 (A)  The client initiates the flow by directing the resource owner's
      user-agent to the authorization endpoint.  The client includes
      its client identifier, requested scope, local state, and a
@@ -40,6 +42,7 @@ GitHub's OAuth implementation supports the standard authorization code grant typ
      an access token and, optionally, a refresh token.
 
 Resources: 
+
 1. [Authorization Code Grant](https://tools.ietf.org/html/rfc6749#section-4.1)
 2. [Other Authentication Methods](https://developer.github.com/v3/auth/)
 3. [OAuth 2.0 простым и понятным языком](https://habrahabr.ru/company/mailru/blog/115163/)
@@ -59,6 +62,7 @@ I uploaded this implementation on hosting - http://braga.fedyunin.com.ua/
 You can also check it locally (but it won't work, because when I registered my application at github, I used http://braga.fedyunin.com.ua/ as application URL) [here](Authorization-with-JS/index.html)
 
 Resources: 
+
 1. [OAuth](https://developer.github.com/v3/oauth/)
 2. [Using CORS](http://www.html5rocks.com/en/tutorials/cors/)
 
@@ -73,6 +77,7 @@ The best solution for me is [JavaScript GitHub API for Node.JS](https://github.c
 I also add this module [here](/github-nodejs/)
 
 Resources:
+
 1. [octonode](https://github.com/pksunkara/octonode)
 2. [JavaScript GitHub API for Node.JS](https://github.com/mikedeboer/node-github)
 
@@ -85,6 +90,7 @@ Another way to make authentication with the help of GitHub is suggested by GitHu
 So I didn't add any code.
 
 Resources:
+
 1. [GitHub Basics of Authentication](https://developer.github.com/guides/basics-of-authentication/)
 
 
