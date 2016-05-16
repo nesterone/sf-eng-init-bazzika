@@ -95,3 +95,14 @@ Resources:
 1. [GitHub Basics of Authentication](https://developer.github.com/guides/basics-of-authentication/)
 
 
+### Conclusion
+
+During my research I read how authentification works on GitHub. 
+First, you have to register your application to get Client ID and Client Secret key. When you get it, you can use GitHub API.
+Among all the ways to use GitHub authentification that I found, I paid attention to 3 that I consieder to be the most useful.
+
+* Authentication using JavaScript is inconvinient but it works on client-side.
+* Authentication using NodeJS-GitHub Api is convinient and I think it's the best solution in our case
+* Authentication using Sinatra is recommended by GitHub documentation, but I couldn't test it, because it requires ruby and it's similar to the previous method
+
+![img](http://ivyr.github.io/img/logos/github.png 'logo')
