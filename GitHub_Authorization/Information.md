@@ -74,7 +74,8 @@ Resources:
 There are more ways to communicate with GitHub using Node.JS module which provides an object oriented wrapper for the GitHub v3 API.
 The best solution for me is [JavaScript GitHub API for Node.JS](https://github.com/mikedeboer/node-github). It provides clear functionality and has good documentation.
 
-I also add this module [here](/github-nodejs/)
+I registered another application on GitHub for this module. To check it, you can download all files from [JavaScript GitHub API for Node.JS](https://github.com/mikedeboer/node-github) and replace test/oauth.js file with the file I uploaded [here](/github-nodejs/test/oauth.js)
+Then if you open this file with the help of Node, you will be able to use GitHub authorization.
 
 Resources:
 
