@@ -8,7 +8,7 @@ function primitiveMultiply(a, b) {
 }
 function reliableMultiply(a, b) {
   try {
-    return reliableMultiply(a, b);
+    return primitiveMultiply(a, b);
   } catch (err) {
     if (err instanceof MultiplicatorUnitFailure) {
       return primitiveMultiply(a, b);
