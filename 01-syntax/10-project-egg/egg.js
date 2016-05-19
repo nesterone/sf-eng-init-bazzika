@@ -12,6 +12,14 @@ topEnv['*'] = function (a, b) { return a * b; };
 topEnv['%'] = function (a, b) { return a % b; };
 topEnv['>'] = function (a, b) { return a > b; };
 topEnv['<'] = function (a, b) { return a < b; };
+topEnv.array = function () {
+  if (arguments.length === 0) {
+    throw new SyntaxError('You should pass arguments when creating array');
+  }
+  return Array.prototype.slice.call(arguments);
+};
+topEnv.length = function (arr) { return arr.length; };
+topEnv.element = function (arr, i) { return arr[i]; };
 
 function skipSpace(text) {
   return text.trim();
@@ -142,12 +150,46 @@ specialForms.define = function (args, env) {
   return value;
 };
 
+specialForms.fun = function (args, env) {
+  var argNames;
+  var body;
+  var localEnv;
+  var i;
+  if (!args.length) {
+    throw new SyntaxError('Functions need a body');
+  }
+  function name(expr) {
+    if (expr.type !== 'word') {
+      throw new SyntaxError('Arg names must be words');
+    }
+    return expr.name;
+  }
+  argNames = args.slice(0, args.length - 1).map(name);
+  body = args[args.length - 1];
+
+  return function () {
+    if (arguments.length !== argNames.length) {
+      throw new TypeError('Wrong number of arguments');
+    }
+    localEnv = Object.create(env);
+    for (i = 0; i < arguments.length; i++) {
+      localEnv[argNames[i]] = arguments[i];
+    }
+    return evaluate(body, localEnv);
+  };
+};
+
 function run() {
   var env = Object.create(topEnv);
   var progr = Array.prototype.slice.call(arguments, 0).join('\n');
   return evaluate(parse(progr), env);
 }
 
+console.log(parse('+(a, 10)'));
+// → {type: "apply",
+//    operator: {type: "word", name: "+"},
+//    args: [{type: "word", name: "a"},
+//           {type: "value", value: 10}]}
 run('do(define(total, 0),',
   '   define(count, 1),',
   '   while(<(count, 11),',
@@ -155,8 +197,12 @@ run('do(define(total, 0),',
   '            define(count, +(count, 1)))),',
   '   println(total))');
 // → 55
-console.log(parse('+(a, 10)'));
-// → {type: "apply",
-//    operator: {type: "word", name: "+"},
-//    args: [{type: "word", name: "a"},
-//           {type: "value", value: 10}]}
+run('do(define(sum, fun(array,',
+  '     do(define(i, 0),',
+  '        define(sum, 0),',
+  '        while(<(i, length(array)),',
+  '          do(define(sum, +(sum, element(array, i))),',
+  '             define(i, +(i, 1)))),',
+  '        sum))),',
+  '   println(sum(array(1, 2, 3))))');
+// → 6
