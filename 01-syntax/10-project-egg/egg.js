@@ -22,6 +22,9 @@ topEnv.length = function (arr) { return arr.length; };
 topEnv.element = function (arr, i) { return arr[i]; };
 
 function skipSpace(text) {
+  if (text.match(/#/)) {
+    return text.replace(/#[\d\D\S\s]*\n/g, '');
+  }
   return text.trim();
 }
 
