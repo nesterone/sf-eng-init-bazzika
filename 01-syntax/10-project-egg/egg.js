@@ -189,10 +189,10 @@ function run() {
 }
 
 console.log(parse('+(a, 10)'));
-// → {type: "apply",
-//    operator: {type: "word", name: "+"},
-//    args: [{type: "word", name: "a"},
-//           {type: "value", value: 10}]}
+// → {type: 'apply',
+//    operator: {type: 'word', name: '+'},
+//    args: [{type: 'word', name: 'a'},
+//           {type: 'value', value: 10}]}
 run('do(define(total, 0),',
   '   define(count, 1),',
   '   while(<(count, 11),',
@@ -209,3 +209,6 @@ run('do(define(sum, fun(array,',
   '        sum))),',
   '   println(sum(array(1, 2, 3))))');
 // → 6
+run('do(define(f, fun(a, fun(b, +(a, b)))),',
+  '   print(f(4)(5)))');
+// → 9
