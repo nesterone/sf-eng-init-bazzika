@@ -3,8 +3,13 @@
  *
  */
 /* global arrayToList nth */
-
-// → Your code here.
-
+function nth(list, n) {
+  var array = [];
+  var node;
+  for (node = list; node; node = node.rest) {
+    array.push(node.value);
+  }
+  return array[n];
+}
 console.log(nth(arrayToList([10, 20, 30]), 1));
 // → 20

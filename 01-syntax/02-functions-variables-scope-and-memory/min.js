@@ -3,9 +3,12 @@
  *
  */
 /* global min */
-
-// → Your code here.
-
+function min(i, j) {
+  if (i > j) {
+    return j;
+  }
+  return i;
+}
 console.log(min(0, 10));
 // → 0
 console.log(min(0, -10));

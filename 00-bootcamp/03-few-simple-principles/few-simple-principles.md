@@ -28,10 +28,15 @@ from [The Art of Unix Programming](http://www.catb.org/esr/writings/taoup/html/)
     * [Dont Repeat Yourself](http://c2.com/cgi/wiki?DontRepeatYourself)
 1. [KISS](https://en.wikipedia.org/wiki/KISS_principle)
     * [Unix: Rule of Simplicity](http://www.catb.org/~esr/writings/taoup/html/ch01s06.html#id2877917)
+    ![Enstein](./Einstein.jpg)
 1. [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)
     * [YouArentGonnaNeedIt](http://c2.com/cgi/wiki?YouArentGonnaNeedIt)
     * [Overengineering](https://en.wikipedia.org/wiki/Overengineering)
 1. [DRY, KISS, YAGNI (ru)](https://habrahabr.ru/post/144611/)
+
+Make your code easier, and all will be well or else... FLOP!
+
+![YAGNI](./yagni.jpg)
 
 #### Developer Tools
 
