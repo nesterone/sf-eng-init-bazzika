@@ -1,4 +1,5 @@
-var grid = (function () {
+var elife={};
+elife.grid = (function () {
   var directions;
   var directionNames;
   function Vector(x, y) {
@@ -41,4 +42,4 @@ var grid = (function () {
     directionNames: directionNames
   };
 }());
-console.log(grid);
+console.log(elife.grid);
