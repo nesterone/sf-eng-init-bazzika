@@ -4,17 +4,112 @@
  */
 /* global deepEqual */
 
+var obj = {};
+
 // → Your code here.
 
-var obj = {
-  here: {
-    is: 'an'
-  },
-  object: 2
-};
+console.log(
+  deepEqual({
+    here: 1,
+    arr: [1, 2]
+  }, {
+    here: 1,
+    arr: [1, 2]
+  }));
+// → true
+
+console.log(
+  deepEqual({
+    here: 1,
+    arr: [1, 2]
+  }, {
+    here: 1,
+    arr: [1, 2, 3]
+  }));
+// → false
+
+console.log(
+  deepEqual({
+    here: 1,
+    arr: [1, 2, 5]
+  }, {
+    here: 1,
+    arr: [1, 2, 3]
+  }));
+// → false
+
+console.log(
+  deepEqual({
+    here: 1,
+    prop: 'string',
+    arr: [1, 2, 5]
+  }, {
+    prop: 'string',
+    arr: [1, 2, 5],
+    here: 1
+  }));
+// → true
+
+console.log(
+  deepEqual({
+    here: 1,
+    prop: 'string',
+    arr: {
+      nestedPropFirst: 1,
+      nestedPropSecond: [1, 2]
+    }
+  }, {
+    here: 1,
+    prop: 'string',
+    arr: {
+      nestedPropFirst: 1,
+      nestedPropSecond: [1, 2]
+    }
+  })
+);
+// → true
+
+console.log(
+  deepEqual({
+    here: 1,
+    prop: 'string',
+    arr: {
+      nestedPropFirst: 1,
+      nestedPropSecond: [1, 2]
+    }
+  }, {
+    here: 1,
+    prop: 'string',
+    arr: {
+      nestedPropFirst: 1,
+      nestedPropSecond: [1, 0]
+    }
+  })
+);
+// → false
+
+console.log(
+  deepEqual({
+    here: 1,
+    prop: 'string',
+    arr: {
+      nestedPropFirst: 1,
+      nestedPropSecond: [1, 2]
+    }
+  }, {
+    here: 1,
+    prop: 'string',
+    arr: {
+      nestedPropSecond: [1, 2],
+      nestedPropFirst: 1
+    }
+  })
+);
+// → true
 
 console.log(deepEqual(obj, obj));
 // → true
+
 console.log(
   deepEqual(obj, {
     here: 1,
@@ -22,6 +117,7 @@ console.log(
   })
 );
 // → false
+
 console.log(
   deepEqual(obj, {
     here: {
@@ -31,3 +127,161 @@ console.log(
   })
 );
 // → true
+
+console.log(
+  deepEqual(obj, {
+    here: {
+      is: 'an'
+    },
+    object: 5
+  })
+);
+// → false
+
+console.log(
+  deepEqual({
+    here: {
+      is: 'an',
+      obj: 5
+    },
+    object: 2
+  }, {
+    here: {
+      is: 'an',
+      obj: 5
+    },
+    object: 2
+  })
+);
+// → true
+
+console.log(
+  deepEqual(obj, {
+    here: {
+      is: 'an'
+    },
+    object: 2,
+    testProperty: 5
+  })
+);
+// → false
+
+console.log(
+  deepEqual(obj, {
+    object: 10,
+    here: {
+      is: 'an'
+    }
+  }));
+// → false
+
+console.log(deepEqual(obj, null));
+// → false
+
+console.log(deepEqual(null, null));
+// → true
+
+console.log(deepEqual(undefined, obj));
+// → false
+
+console.log(
+  deepEqual([{
+    here: 1,
+    arr: [1, 2]
+  }, {
+    property: '5'
+  }], [{
+    here: 1,
+    arr: [1, 2]
+  }, {
+    property: '5'
+  }]));
+// → true
+
+console.log(
+  deepEqual([{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5
+    }]
+  }, {
+    property: '5'
+  }], [{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5
+    }]
+  }, {
+    property: '5'
+  }]));
+// → true
+
+console.log(
+  deepEqual([{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5
+    }]
+  }, {
+    property: '5'
+  }], [{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 4
+    }]
+  }, {
+    property: '5'
+  }]));
+// → false
+
+console.log(
+  deepEqual([{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5,
+      objProperty: {
+        a: 2,
+        b: 4
+      }
+    }]
+  }, {
+    property: '5'
+  }], [{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5,
+      objProperty: {
+        a: 2,
+        b: 4
+      }
+    }]
+  }, {
+    property: '5'
+  }]));
+// → true
+
+console.log(
+  deepEqual([{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5,
+      objProperty: {
+        a: 1,
+        b: 4
+      }
+    }]
+  }, {
+    property: '5'
+  }], [{
+    here: 1,
+    arr: [1, 2, {
+      someProp: 5,
+      objProperty: {
+        a: 2,
+        b: 4
+      }
+    }]
+  }, {
+    property: '5'
+  }]));
+// → false
