@@ -1,0 +1,7 @@
+{
+  "name": "DevTools Tab Creator",
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "devtools_page": "index.html",
+  "icons": { "128": "./img/favicon.png"}
+}
