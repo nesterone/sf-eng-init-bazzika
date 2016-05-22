@@ -1,3 +1,5 @@
+/* global elife */
+
 var elife={};
 elife.grid = (function () {
   var directions;
