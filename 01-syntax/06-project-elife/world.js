@@ -1,6 +1,7 @@
 /* global elife */
 
 elife.world = (function () {
+  var actionTypes;
   function randomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
   }
@@ -106,6 +107,50 @@ elife.world = (function () {
   }
   LifelikeWorld.prototype = Object.create(World.prototype);
   actionTypes = Object.create(null);
+
+  actionTypes.grow = function (critter) {
+    var creatures = critter;
+    creatures.energy += 0.5;
+    return true;
+  };
+  actionTypes.move = function (critter, vector, action) {
+    var creatures = critter;
+    var dest = this.checkDestination(action, vector);
+    if (dest === null ||
+      creatures.energy <= 1 ||
+      this.grid.get(dest) !== null) {
+      return false;
+    }
+    creatures.energy -= 1;
+    this.grid.set(vector, null);
+    this.grid.set(dest, critter);
+    return true;
+  };
+  actionTypes.eat = function (critter, vector, action) {
+    var creatures = critter;
+    var dest = this.checkDestination(action, vector);
+    var atDest = dest !== null && this.grid.get(dest);
+    if (!atDest || atDest.energy === null) {
+      return false;
+    }
+    creatures.energy += atDest.energy;
+    this.grid.set(dest, null);
+    return true;
+  };
+  actionTypes.reproduce = function (critter, vector, action) {
+    var creatures = critter;
+    var baby = elementFromChar(this.legend,
+      creatures.originChar);
+    var dest = this.checkDestination(action, vector);
+    if (dest === null ||
+      creatures.energy <= 2 * baby.energy ||
+      this.grid.get(dest) !== null) {
+      return false;
+    }
+    creatures.energy -= 2 * baby.energy;
+    this.grid.set(dest, baby);
+    return true;
+  };
   LifelikeWorld.prototype.letAct = function (critter, vector) {
     var creatures = critter;
     var action = creatures.act(new View(this, vector));

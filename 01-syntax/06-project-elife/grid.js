@@ -1,6 +1,5 @@
 /* global elife */
 
-var elife={};
 elife.grid = (function () {
   var directions;
   var directionNames;
@@ -25,6 +24,19 @@ elife.grid = (function () {
   };
   Grid.prototype.set = function (vector, value) {
     this.space[vector.x + this.width * vector.y] = value;
+  };
+  Grid.prototype.forEach = function (f, context) {
+    var y;
+    var x;
+    var value;
+    for (y = 0; y < this.height; y++) {
+      for (x = 0; x < this.width; x++) {
+        value = this.space[x + y * this.width];
+        if (value !== null) {
+          f.call(context, value, new Vector(x, y));
+        }
+      }
+    }
   };
   directions = {
     n: new Vector(0, -1),

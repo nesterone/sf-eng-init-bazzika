@@ -1,14 +1,16 @@
 <!doctype html>
 <head>
+    <script>var elife={};</script>
     <script src="grid.js"></script>
     <script src="world.js"></script>
     <script src="simpleEcosystem.js"></script>
+    <script src="ecosystem.js"></script>
     <script src="elife.js"></script>
     <script src="animateworld.js"></script>
 </head>
 <body>
 <script>
-    animateWorld(new LifelikeWorld(
+    elife.animateWorld(new elife.world.LifelikeWorld(
             ['####################################################',
                 '#     W           ####         ****   @          ###',
                 '#   *  @  ##                 ########       OO    ##',
@@ -27,11 +29,11 @@
                 '##  **  O   O  #  #    ***  ***        ###      ** #',
                 '###   @           #   *****        W           ****#',
                 '####################################################'],
-            {'#': Wall,
-                '@': Tiger,
-                O: SmartPlantEater, // from previous exercise
-                '*': Plant,
-                'W': Owl}
+            {'#': elife.simpleEcosystem.Wall,
+                '@': elife.ecosystem.Tiger,
+                O: elife.ecosystem.SmartPlantEater, // from previous exercise
+                '*': elife.ecosystem.Plant,
+                'W': elife.ecosystem.Owl}
     ));
 </script>
 </body>
