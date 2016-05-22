@@ -121,9 +121,6 @@ elife.world = (function () {
     }
   };
   return {
-    randomElement: randomElement,
-    elementFromChar: elementFromChar,
-    charFromElement: charFromElement,
     World: World,
     View: View,
     LifelikeWorld: LifelikeWorld,
