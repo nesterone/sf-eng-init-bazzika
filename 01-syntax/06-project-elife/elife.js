@@ -1,18 +1,18 @@
 /* global valley */
 
 var plan = ['###############################################',
-  '#   ###          ****     ###     #     o     #',
+  '#@0 ###          ****     ###     #     o     #',
   '#    #     ####       #                       #',
   '#         #    #      #        ######         #',
   '# **      #           #   ~        ##     #   #',
   '# *       #   ###     #                 #     #',
   '#         #    #      #                       #',
   '#          ####       ######                  #',
-  '#  #             0                 #       0  #',
+  '#  #             0   W             #       0  #',
   '#      ** #                        #######    #',
   '# # #           #         ***         ##      #',
   '# 0           ~ #       *****        ### o    #',
-  '#  ###          #                     ###     #',
+  '#  ###          #              @      ###     #',
   '#          ***                      *         #',
   '#*      o *****      #       #      ***       #',
   '###############################################'];
@@ -116,6 +116,10 @@ RandomCritter.prototype.act = function (view) {
     return { type: 'kill', direction: this.direction };
   }
   this.direction = view.find('0');
+  if (this.direction) {
+    return { type: 'kill', direction: this.direction };
+  }
+  this.direction = view.find('@');
   if (this.direction) {
     return { type: 'kill', direction: this.direction };
   }
@@ -340,11 +344,25 @@ PlantEater.prototype.act = function (view) {
   return { type: 'move', direction: this.lastMove };
 };
 
+function Tiger() {
+  this.energy = 50;
+  this.direction = getRandomElement(directions);
+}
+Tiger.prototype.act = function (view) {
+  this.direction = view.find('0');
+  if (this.direction) {
+    this.energy += 50;
+    return { type: 'kill', direction: this.direction };
+  }
+  this.direction = view.find(' ');
+  return { type: 'move', direction: this.direction };
+};
+
 LifelikeWorld.prototype.letAct = function (critter, vector) {
   var crit = critter;
   var action = crit.act(new View(this, vector));
   var handled = action && action.type in actionTypes &&
-      actionTypes[action.type].call(this, crit, vector, action);
+    actionTypes[action.type].call(this, crit, vector, action);
   if (!handled) {
     crit.energy -= 0.2;
     if (crit.energy <= 0) {
@@ -358,4 +376,5 @@ window.valley = new LifelikeWorld(plan, { '#': Wall,
   '~': WallFollower,
   '*': Plant,
   0: PlantEater,
-  W: RandomCritter });
+  W: RandomCritter,
+  '@': Tiger });
