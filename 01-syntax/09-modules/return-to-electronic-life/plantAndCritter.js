@@ -2,48 +2,47 @@
 
 var plantAndCritter = (function () {
   'use strict';
+  var dirPlus;
 
-  var lifeObject = {
-    WallFollower: function () {
-      this.dir = 's';
-    },
+  function WallFollower() {
+    this.dir = 's';
+  }
 
-    Plant: function () {
-      this.energy = 3 + Math.random() * 4;
-    },
+  function Plant() {
+    this.energy = 3 + Math.random() * 4;
+  }
 
-    TastyPlant: function () {
-      this.energy = 10;
-    },
+  function TastyPlant() {
+    this.energy = 10;
+  }
 
-    SwoopingPlant: function () {},
+  function SwoopingPlant() {}
 
-    SmartPlantEater: function () {
-      this.energy = 20;
-      this.dir = worldCreate.randomElement(lifeArea.directionNames);
-    },
+  function SmartPlantEater() {
+    this.energy = 20;
+    this.dir = worldCreate.randomElement(lifeArea.directionNames);
+  }
 
-    Tiger: function () {
-      this.energy = Infinity;
-      this.dir = worldCreate.randomElement(lifeArea.directionNames);
-    }
-  };
+  function Tiger() {
+    this.energy = Infinity;
+    this.dir = worldCreate.randomElement(lifeArea.directionNames);
+  }
 
-  lifeObject.dirPlus = function (dir, n) {
+  dirPlus = function (dir, n) {
     var ind = lifeArea.directionNames.indexOf(dir);
 
     return lifeArea.directionNames[(ind + n + 8) % 8];
   };
 
-  lifeObject.WallFollower.prototype.act = function (view) {
+  WallFollower.prototype.act = function (view) {
     var start = this.dir;
 
-    if (view.look(lifeObject.dirPlus(this.dir, -3)) !== ' ') {
-      start = this.dir = lifeObject.dirPlus(this.dir, -2);
+    if (view.look(dirPlus(this.dir, -3)) !== ' ') {
+      start = this.dir = dirPlus(this.dir, -2);
     }
 
     while (view.look(this.dir) !== ' ') {
-      this.dir = lifeObject.dirPlus(this.dir, 1);
+      this.dir = dirPlus(this.dir, 1);
 
       if (this.dir === start) {
         break;
@@ -53,7 +52,7 @@ var plantAndCritter = (function () {
     return { type: 'move', direction: this.dir };
   };
 
-  lifeObject.Plant.prototype.act = function (view) {
+  Plant.prototype.act = function (view) {
     var space;
 
     if (this.energy > 40) {
@@ -70,7 +69,7 @@ var plantAndCritter = (function () {
     return undefined;
   };
 
-  lifeObject.TastyPlant.prototype.act = function (view) {
+  TastyPlant.prototype.act = function (view) {
     var space;
 
     if (this.energy > 100) {
@@ -87,7 +86,7 @@ var plantAndCritter = (function () {
     return undefined;
   };
 
-  lifeObject.SwoopingPlant.prototype.act = function (view) {
+  SwoopingPlant.prototype.act = function (view) {
     var smartMeal = view.find('o');
     var tigerMeal = view.find('@');
     var plantMeal = view.find('*');
@@ -107,7 +106,7 @@ var plantAndCritter = (function () {
     return undefined;
   };
 
-  lifeObject.SmartPlantEater.prototype.act = function (view) {
+  SmartPlantEater.prototype.act = function (view) {
     var space = view.find(' ');
     var plant = view.find('*');
     var tastyPlant = view.find('&');
@@ -132,7 +131,7 @@ var plantAndCritter = (function () {
     return { type: 'move', direction: this.dir };
   };
 
-  lifeObject.Tiger.prototype.act = function (view) {
+  Tiger.prototype.act = function (view) {
     var space = view.find(' ');
     var critter = view.find('o');
 
@@ -148,7 +147,15 @@ var plantAndCritter = (function () {
     return { type: 'move', direction: this.dir };
   };
 
-  return lifeObject;
+  return {
+    WallFollower: WallFollower,
+    Plant: Plant,
+    TastyPlant: TastyPlant,
+    SwoopingPlant: SwoopingPlant,
+    SmartPlantEater: SmartPlantEater,
+    Tiger: Tiger,
+    dirPlus: dirPlus
+  };
 }());
 
 if (plantAndCritter) {

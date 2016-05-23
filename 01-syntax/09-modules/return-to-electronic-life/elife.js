@@ -1,4 +1,4 @@
-/* global animateWorld plantAndCritter worldCreate lifeBehave */
+/* global animate plantAndCritter worldCreate lifeBehave */
 
 function init(getType) {
   'use strict';
@@ -101,10 +101,8 @@ window.onload = function () {
   areaSelector = document.getElementsByTagName('select')[0];
   areaSelector.onchange = function (event) {
     document.body.removeChild(document.getElementsByTagName('div')[0]);
-    animateWorld(init(event.target.selectedIndex));
+    animate.animateWorld(init(event.target.selectedIndex));
   };
-};
 
-(function () {
-  init(0);
-}());
+  animate.animateWorld(init(0));
+};

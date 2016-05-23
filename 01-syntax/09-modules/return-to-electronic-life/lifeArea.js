@@ -1,48 +1,49 @@
 var lifeArea = (function () {
-  var areaObject = {
-    Vector: function (x, y) {
-      this.x = x;
-      this.y = y;
-    },
+  var directions;
+  var directionNames;
 
-    Grid: function (width, height) {
-      this.space = new Array(width * height);
-      this.width = width;
-      this.height = height;
-    },
+  function Vector(x, y) {
+    this.x = x;
+    this.y = y;
+  }
 
-    directionNames: ['n', 'ne', 'e', 'se', 's', 'sw', 'w', 'nw']
+  function Grid(width, height) {
+    this.space = new Array(width * height);
+    this.width = width;
+    this.height = height;
+  }
+
+  directionNames = ['n', 'ne', 'e', 'se', 's', 'sw', 'w', 'nw'];
+
+  directions = {
+    n: new Vector(0, -1),
+    ne: new Vector(1, -1),
+    e: new Vector(1, 0),
+    se: new Vector(1, 1),
+    s: new Vector(0, 1),
+    sw: new Vector(-1, 1),
+    w: new Vector(-1, 0),
+    nw: new Vector(-1, -1)
   };
 
-  areaObject.directions = {
-    n: new areaObject.Vector(0, -1),
-    ne: new areaObject.Vector(1, -1),
-    e: new areaObject.Vector(1, 0),
-    se: new areaObject.Vector(1, 1),
-    s: new areaObject.Vector(0, 1),
-    sw: new areaObject.Vector(-1, 1),
-    w: new areaObject.Vector(-1, 0),
-    nw: new areaObject.Vector(-1, -1)
-  };
-
-  areaObject.Vector.prototype.plus = function (other) {
+  Vector.prototype.plus = function (other) {
     return new lifeArea.Vector(this.x + other.x, this.y + other.y);
   };
 
-  areaObject.Grid.prototype.isInside = function (vector) {
+  Grid.prototype.isInside = function (vector) {
     return vector.x >= 0 && vector.x < this.width &&
       vector.y >= 0 && vector.y < this.height;
   };
 
-  areaObject.Grid.prototype.get = function (vector) {
+  Grid.prototype.get = function (vector) {
     return this.space[vector.x + this.width * vector.y];
   };
 
-  areaObject.Grid.prototype.set = function (vector, value) {
+  Grid.prototype.set = function (vector, value) {
     this.space[vector.x + this.width * vector.y] = value;
   };
 
-  areaObject.Grid.prototype.forEach = function (f, context) {
+  Grid.prototype.forEach = function (f, context) {
     var y;
     var x;
     var value;
@@ -52,12 +53,17 @@ var lifeArea = (function () {
         value = this.space[x + y * this.width];
 
         if (value !== null) {
-          f.call(context, value, new areaObject.Vector(x, y));
+          f.call(context, value, new Vector(x, y));
         }
       }
     }
   };
-  return areaObject;
+  return {
+    Vector: Vector,
+    Grid: Grid,
+    directions: directions,
+    directionNames: directionNames
+  };
 }());
 
 if (lifeArea) {

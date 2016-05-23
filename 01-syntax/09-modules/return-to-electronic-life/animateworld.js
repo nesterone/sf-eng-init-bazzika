@@ -1,7 +1,8 @@
-(function () {
+var animate = (function () {
   'use strict';
 
   var active = null;
+  var animateWorld;
 
   function Animated(world) {
     var outer = (window.__sandbox ? window.__sandbox.output.div : document.body);
@@ -58,8 +59,18 @@
     this.button.style.color = 'red';
   };
 
-  window.animateWorld = function (world) {
+  animateWorld = function (world) {
     var animated = new Animated(world);
     console.log(animated);
   };
+
+  return {
+    Animated: Animated,
+    animateWorld: animateWorld,
+    active: active
+  };
 }());
+
+if (animate) {
+  console.log('animatedWorld module is loaded!');
+}

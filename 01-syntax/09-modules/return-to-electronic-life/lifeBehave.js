@@ -2,22 +2,20 @@
 
 var lifeBehave = (function () {
   'use strict';
+  var actionTypes;
 
-  var behavior = {
-    LifelikeWorld: function (map, legend) {
-      worldCreate.World.call(this, map, legend);
-    },
+  function LifelikeWorld(map, legend) {
+    worldCreate.World.call(this, map, legend);
+  }
 
-    actionTypes: Object.create(null)
+  actionTypes = Object.create(null);
 
-  };
+  LifelikeWorld.prototype = Object.create(worldCreate.World.prototype);
 
-  behavior.LifelikeWorld.prototype = Object.create(worldCreate.World.prototype);
-
-  behavior.LifelikeWorld.prototype.letAct = function (critter, vector) {
+  LifelikeWorld.prototype.letAct = function (critter, vector) {
     var action = critter.act(new worldCreate.View(this, vector));
-    var handled = action && action.type in behavior.actionTypes &&
-      behavior.actionTypes[action.type].call(this, critter, vector, action);
+    var handled = action && action.type in actionTypes &&
+      actionTypes[action.type].call(this, critter, vector, action);
     if (!handled) {
       arguments[0].energy -= 0.2;
       if (critter.energy <= 0) {
@@ -26,13 +24,13 @@ var lifeBehave = (function () {
     }
   };
 
-  behavior.actionTypes.grow = function () {
+  actionTypes.grow = function () {
     arguments[0].energy += 1;
 
     return true;
   };
 
-  behavior.actionTypes.move = function (critter, vector, action) {
+  actionTypes.move = function (critter, vector, action) {
     var destination = this.checkDestination(action, vector);
 
     if (destination === null || critter.energy <= 1 ||
@@ -47,7 +45,7 @@ var lifeBehave = (function () {
     return true;
   };
 
-  behavior.actionTypes.eat = function (critter, vector, action) {
+  actionTypes.eat = function (critter, vector, action) {
     var destination = this.checkDestination(action, vector);
     var atDestination;
     atDestination = (destination !== null && this.grid.get(destination));
@@ -62,7 +60,7 @@ var lifeBehave = (function () {
     return true;
   };
 
-  behavior.actionTypes.reproduce = function (critter, vector, action) {
+  actionTypes.reproduce = function (critter, vector, action) {
     var baby = worldCreate.elementFromChar(this.legend, critter.originChar);
     var destination = this.checkDestination(action, vector);
 
@@ -76,7 +74,10 @@ var lifeBehave = (function () {
     return true;
   };
 
-  return behavior;
+  return {
+    LifelikeWorld: LifelikeWorld,
+    actionTypes: actionTypes
+  };
 }());
 
 if (lifeBehave) {
