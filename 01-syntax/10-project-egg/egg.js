@@ -4,7 +4,7 @@ var topEnv = {};
 
 topEnv.true = true;
 topEnv.false = false;
-topEnv.println = function (value) { console.log(value); };
+topEnv.print = function (value) { console.log(value); };
 topEnv['+'] = function (a, b) { return a + b; };
 topEnv['-'] = function (a, b) { return a - b; };
 topEnv['/'] = function (a, b) { return a / b; };
@@ -182,6 +182,26 @@ specialForms.fun = function (args, env) {
   };
 };
 
+specialForms.set = function (args, env) {
+  var value;
+  var environment = env;
+  if (args.length !== 2 && args[0].type !== 'word') {
+    throw new SyntaxError('Incorrect use of define');
+  }
+  value = evaluate(args[1], env);
+  while (typeof Object.getPrototypeOf(environment) === 'object') {
+    if (Object.getPrototypeOf(environment) === null) {
+      throw new ReferenceError('Variable is not defined. Cannot update undefined variable');
+    }
+    if (Object.getPrototypeOf(environment).hasOwnProperty.call(environment, args[0].name)) {
+      environment[args[0].name] = value;
+      break;
+    }
+    environment = Object.getPrototypeOf(environment);
+  }
+  return value;
+};
+
 function run() {
   var env = Object.create(topEnv);
   var progr = Array.prototype.slice.call(arguments, 0).join('\n');
@@ -198,7 +218,7 @@ run('do(define(total, 0),',
   '   while(<(count, 11),',
   '         do(define(total, +(total, count)),',
   '            define(count, +(count, 1)))),',
-  '   println(total))');
+  '   print(total))');
 // → 55
 run('do(define(sum, fun(array,',
   '     do(define(i, 0),',
@@ -207,8 +227,15 @@ run('do(define(sum, fun(array,',
   '          do(define(sum, +(sum, element(array, i))),',
   '             define(i, +(i, 1)))),',
   '        sum))),',
-  '   println(sum(array(1, 2, 3))))');
+  '   print(sum(array(1, 2, 3))))');
 // → 6
 run('do(define(f, fun(a, fun(b, +(a, b)))),',
   '   print(f(4)(5)))');
 // → 9
+run('do(define(x, 4),',
+  '   define(setx, fun(val, set(x, val))),',
+  '   setx(50),',
+  '   print(x))');
+// → 50
+run('set(quux, true)');
+// → ReferenceError Variable is not defined. Cannot update undefined variable
