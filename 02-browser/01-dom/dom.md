@@ -14,14 +14,6 @@
 
 * [Eloquent JavaScript: Build a table](http://eloquentjavascript.net/09_regexp.html#h_vDM8PzwQWU)
 
-#### Exercise: Quoting Style
-
-* [Eloquent JavaScript: Quoting Style](http://eloquentjavascript.net/09_regexp.html#h_dTiEW14oG0)
-
-#### Exercise: Numbers again
-
-* [Eloquent JavaScript: Numbers again](http://eloquentjavascript.net/09_regexp.html#h_izldJoT3uv)
-
 #### Exercise: Censored Keyboard
 
 * [Eloquent JavaScript: Censored Keyboard](http://eloquentjavascript.net/09_regexp.html#h_vDM8PzwQWU)
