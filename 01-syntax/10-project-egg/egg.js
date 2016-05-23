@@ -12,6 +12,7 @@ topEnv['*'] = function (a, b) { return a * b; };
 topEnv['%'] = function (a, b) { return a % b; };
 topEnv['>'] = function (a, b) { return a > b; };
 topEnv['<'] = function (a, b) { return a < b; };
+topEnv['=='] = function (a, b) { return a === b; };
 topEnv.array = function () {
   if (arguments.length === 0) {
     throw new SyntaxError('You should pass arguments when creating array');
@@ -208,34 +209,4 @@ function run() {
   return evaluate(parse(progr), env);
 }
 
-console.log(parse('+(a, 10)'));
-// → {type: 'apply',
-//    operator: {type: 'word', name: '+'},
-//    args: [{type: 'word', name: 'a'},
-//           {type: 'value', value: 10}]}
-run('do(define(total, 0),',
-  '   define(count, 1),',
-  '   while(<(count, 11),',
-  '         do(define(total, +(total, count)),',
-  '            define(count, +(count, 1)))),',
-  '   print(total))');
-// → 55
-run('do(define(sum, fun(array,',
-  '     do(define(i, 0),',
-  '        define(sum, 0),',
-  '        while(<(i, length(array)),',
-  '          do(define(sum, +(sum, element(array, i))),',
-  '             define(i, +(i, 1)))),',
-  '        sum))),',
-  '   print(sum(array(1, 2, 3))))');
-// → 6
-run('do(define(f, fun(a, fun(b, +(a, b)))),',
-  '   print(f(4)(5)))');
-// → 9
-run('do(define(x, 4),',
-  '   define(setx, fun(val, set(x, val))),',
-  '   setx(50),',
-  '   print(x))');
-// → 50
-run('set(quux, true)');
-// → ReferenceError Variable is not defined. Cannot update undefined variable
+console.log(run);
