@@ -16,7 +16,9 @@ var box = {
 };
 
 function withBoxUnlocked(body) {
-  if (box.locked) {
+  var isLocked = box.locked;
+
+  if (isLocked) {
     box.unlock();
   }
 
@@ -25,7 +27,9 @@ function withBoxUnlocked(body) {
   } catch (error) {
     console.log(error.message);
   } finally {
-    box.lock();
+    if (isLocked) {
+      box.lock();
+    }
   }
 }
 
