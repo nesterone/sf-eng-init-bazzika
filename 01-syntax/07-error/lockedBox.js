@@ -16,9 +16,10 @@ function withBoxUnlocked(body) {
     body();
   } catch (err) {
     console.log(err.message);
-  }
-  if (lockStatus) {
-    box.lock();
+  } finally {
+    if (lockStatus) {
+      box.lock();
+    }
   }
 }
 
