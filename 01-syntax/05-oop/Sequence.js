@@ -16,8 +16,6 @@ Sequence.prototype.fillObjArray = function (start, end) {
     this.arr.push(newStart);
     newStart += 1;
   }
-
-  return undefined;
 };
 
 Sequence.prototype.toString = function (amount) {
@@ -31,8 +29,6 @@ Sequence.prototype.toString = function (amount) {
     iterator = properties.next();
     index++;
   }
-
-  return undefined;
 };
 
 function logFive(obj) {
