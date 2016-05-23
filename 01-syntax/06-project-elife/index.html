@@ -4,7 +4,61 @@
     <script src="animateworld.js"></script>
 </head>
 <body>
+    <textarea rows="30" cols="100" id="txt">
+        Draw a map!
+
+        Use only:
+
+        # - rock
+        0 - usual critter
+        @ - tiger (eats critters)
+        W - random critter that eats all critters and can't die
+        * - plant to restore energy
+        + - plant that explodes randomly
+        S - plant that restores energy for other critters
+        ~ - critter that runs near walls
+
+        P.S. don't forget to delete this hint.
+
+        You can also use this map (just delete hints and empty places):
+
+###############################################
+#   ###          ****     ###     #     o     #
+#    #     ####       #                       #
+#         #    #      #        ######         #
+# **      #           #   ~        ##     #   #
+# *       #   ###     #                 #     #
+#         #    #      #                       #
+#          ####       ######                  #
+#  #             0                 #       0  #
+#      ** #                        #######    #
+# # #           #         ***         ##      #
+# 0           ~ #       *****        ### o    #
+#  ###          #                     ###     #
+#          ***                      *         #
+#*      o *****      #       #      ***       #
+###############################################</textarea>
+    <button onclick="submitMap();" id="buttn">OK!</button>
 <script>
-    animateWorld(valley);
+    function Wall() {}
+    function submitMap() {
+        var textArea = document.getElementById('txt');
+        var button = document.getElementById('buttn');
+        var result = textArea.value;
+        plan = result.split('\n');
+        window.valley = new LifelikeWorld(plan, { '#': Wall,
+            o: BouncingCritter,
+            '~': WallFollower,
+            '*': Plant,
+            0: PlantEater,
+            W: RandomCritter,
+            '@': Tiger,
+            '+': BoomPlant,
+            S: RestoreEnergyPlant
+        });
+        textArea.parentNode.removeChild(textArea);
+        buttn.parentNode.removeChild(buttn);
+        animateWorld(valley);
+    }
 </script>
 </body>

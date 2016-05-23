@@ -1,5 +1,3 @@
-/* global valley */
-
 (function () {
   'use strict';
 
@@ -29,7 +27,7 @@
     active = this;
     this.interval = setInterval(function () {
       self.tick();
-    }, 111);
+    }, 333);
   }
 
   Animated.prototype.clicked = function () {

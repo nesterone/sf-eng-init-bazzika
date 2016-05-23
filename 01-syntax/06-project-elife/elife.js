@@ -1,22 +1,5 @@
 /* global valley */
 
-var plan = ['###############################################',
-  '#   ###          ****     ###     #     o     #',
-  '#    #     ####       #                       #',
-  '#         #    #      #        ######         #',
-  '# **      #           #   ~        ##     #   #',
-  '# *       #   ###     #                 #     #',
-  '#         #    #      #                       #',
-  '#          ####       ######                  #',
-  '#  #             0                 #       0  #',
-  '#      ** #                        #######    #',
-  '# # #           #         ***         ##      #',
-  '# 0           ~ #       *****        ### o    #',
-  '#  ###          #                     ###     #',
-  '#          ***                      *         #',
-  '#*      o *****      #       #      ***       #',
-  '###############################################'];
-
 var dirs;
 var directions = 'n ne e se s sw w nw'.split(' ');
 var actionTypes;
@@ -116,6 +99,10 @@ RandomCritter.prototype.act = function (view) {
     return { type: 'kill', direction: this.direction };
   }
   this.direction = view.find('0');
+  if (this.direction) {
+    return { type: 'kill', direction: this.direction };
+  }
+  this.direction = view.find('@');
   if (this.direction) {
     return { type: 'kill', direction: this.direction };
   }
@@ -238,8 +225,6 @@ WallFollower.prototype.act = function (view) {
   return { type: 'move', direction: this.dir };
 };
 
-function Wall() {}
-
 function LifelikeWorld(map, legend) {
   World.call(this, map, legend);
 }
@@ -301,6 +286,29 @@ actionTypes.reproduce = function (critter, vector, action) {
   return true;
 };
 
+actionTypes.boom = function (critter, vector) {
+  var key;
+  for (key in dirs) {
+    if (dirs.hasOwnProperty(key)) {
+      this.grid.set(vector.plus(dirs[key]), null);
+    }
+  }
+  this.grid.set(vector, null);
+};
+
+actionTypes.restore = function (critter, vector) {
+  var key;
+  var tempCritter;
+  for (key in dirs) {
+    if (dirs.hasOwnProperty(key)) {
+      tempCritter = this.grid.get(vector.plus(dirs[key]));
+      if (tempCritter && tempCritter.energy) {
+        tempCritter.energy += 1;
+      }
+    }
+  }
+};
+
 function Plant() {
   this.energy = 3 + Math.random() * 4;
 }
@@ -331,7 +339,8 @@ PlantEater.prototype.act = function (view) {
       return { type: 'eat', direction: this.lastMove };
     }
   }
-  if (view.look(this.lastMove) === '#' || view.look(this.lastMove) === '0') {
+  if (view.look(this.lastMove) === '#' || view.look(this.lastMove) === '0' ||
+    view.look(this.lastMove) === '+' || view.look(this.lastMove) === 'S') {
     if (space) {
       this.lastMove = space;
       return { type: 'move', direction: this.lastMove };
@@ -340,11 +349,41 @@ PlantEater.prototype.act = function (view) {
   return { type: 'move', direction: this.lastMove };
 };
 
+function Tiger() {
+  this.energy = 50;
+  this.direction = getRandomElement(directions);
+}
+Tiger.prototype.act = function (view) {
+  this.direction = view.find('0');
+  if (this.direction) {
+    this.energy += 50;
+    return { type: 'kill', direction: this.direction };
+  }
+  this.direction = view.find(' ');
+  return { type: 'move', direction: this.direction };
+};
+
+function BoomPlant() {}
+
+BoomPlant.prototype.act = function () {
+  var chanceToBoom = Math.random();
+  if (chanceToBoom < 0.01) {
+    return { type: 'boom', direction: new Vector(0, 0) };
+  }
+  return null;
+};
+
+function RestoreEnergyPlant() {}
+
+RestoreEnergyPlant.prototype.act = function () {
+  return { type: 'restore', direction: new Vector(0, 0) };
+};
+
 LifelikeWorld.prototype.letAct = function (critter, vector) {
   var crit = critter;
   var action = crit.act(new View(this, vector));
   var handled = action && action.type in actionTypes &&
-      actionTypes[action.type].call(this, crit, vector, action);
+    actionTypes[action.type].call(this, crit, vector, action);
   if (!handled) {
     crit.energy -= 0.2;
     if (crit.energy <= 0) {
@@ -352,10 +391,3 @@ LifelikeWorld.prototype.letAct = function (critter, vector) {
     }
   }
 };
-
-window.valley = new LifelikeWorld(plan, { '#': Wall,
-  o: BouncingCritter,
-  '~': WallFollower,
-  '*': Plant,
-  0: PlantEater,
-  W: RandomCritter });
