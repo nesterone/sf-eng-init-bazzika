@@ -1,7 +1,5 @@
 /* global ancestry ageDifference */
 
-var diff = [];
-
 function average(array) {
   function plus(a, b) { return a + b; }
   return array.reduce(plus) / array.length;
@@ -18,6 +16,7 @@ function findByName(personName) {
 }
 
 function getAllDifferencies(arr) {
+  var diff = [];
   arr.forEach(function (person) {
     var mother = findByName(person.mother);
     if (mother) {
