@@ -2,19 +2,24 @@
 
 var plan = ['###############################################',
   '#@0 ###          ****     ###     #     o     #',
-  '#    #     ####       #                       #',
-  '#         #    #      #        ######         #',
+  '#   +#     ####       #                       #',
+  '#         #    #      #        #####+         #',
   '# **      #           #   ~        ##     #   #',
-  '# *       #   ###     #                 #     #',
+  '# *       #   ###     #   +             #     #',
   '#         #    #      #                       #',
-  '#          ####       ######                  #',
+  '#   S      ####       ######                  #',
   '#  #             0   W             #       0  #',
   '#      ** #                        #######    #',
   '# # #           #         ***         ##      #',
-  '# 0           ~ #       *****        ### o    #',
-  '#  ###          #              @      ###     #',
-  '#          ***                      *         #',
+  '# 0           ~ #       *****        +## o    #',
+  '#  ###          #  +           @      ###     #',
+  '#          ***        +             *         #',
   '#*      o *****      #       #      ***       #',
+  '#*                             S              #',
+  '#*                                            #',
+  '#* S    ######*   @  #       #      ***       #',
+  '#*      o *****              #      ***       #',
+  '# # #           #         ***         ##   @  #',
   '###############################################'];
 
 var dirs;
@@ -305,6 +310,29 @@ actionTypes.reproduce = function (critter, vector, action) {
   return true;
 };
 
+actionTypes.boom = function (critter, vector) {
+  var key;
+  for (key in dirs) {
+    if (dirs.hasOwnProperty(key)) {
+      this.grid.set(vector.plus(dirs[key]), null);
+    }
+  }
+  this.grid.set(vector, null);
+};
+
+actionTypes.restore = function (critter, vector) {
+  var key;
+  var tempCritter;
+  for (key in dirs) {
+    if (dirs.hasOwnProperty(key)) {
+      tempCritter = this.grid.get(vector.plus(dirs[key]));
+      if (tempCritter && tempCritter.energy) {
+        tempCritter.energy += 1;
+      }
+    }
+  }
+};
+
 function Plant() {
   this.energy = 3 + Math.random() * 4;
 }
@@ -335,7 +363,8 @@ PlantEater.prototype.act = function (view) {
       return { type: 'eat', direction: this.lastMove };
     }
   }
-  if (view.look(this.lastMove) === '#' || view.look(this.lastMove) === '0') {
+  if (view.look(this.lastMove) === '#' || view.look(this.lastMove) === '0' ||
+  view.look(this.lastMove) === '+' || view.look(this.lastMove) === 'S') {
     if (space) {
       this.lastMove = space;
       return { type: 'move', direction: this.lastMove };
@@ -358,6 +387,22 @@ Tiger.prototype.act = function (view) {
   return { type: 'move', direction: this.direction };
 };
 
+function BoomPlant() {}
+
+BoomPlant.prototype.act = function () {
+  var chanceToBoom = Math.random();
+  if (chanceToBoom < 0.01) {
+    return { type: 'boom', direction: new Vector(0, 0) };
+  }
+  return null;
+};
+
+function RestoreEnergyPlant() {}
+
+RestoreEnergyPlant.prototype.act = function () {
+  return { type: 'restore', direction: new Vector(0, 0) };
+};
+
 LifelikeWorld.prototype.letAct = function (critter, vector) {
   var crit = critter;
   var action = crit.act(new View(this, vector));
@@ -377,4 +422,6 @@ window.valley = new LifelikeWorld(plan, { '#': Wall,
   '*': Plant,
   0: PlantEater,
   W: RandomCritter,
-  '@': Tiger });
+  '@': Tiger,
+  '+': BoomPlant,
+  S: RestoreEnergyPlant });
