@@ -16,4 +16,7 @@ var month = (function () {
   };
 }());
 
-console.log(month);
+console.log(month.name(2));
+// → March
+console.log(month.number('November'));
+// → 10
