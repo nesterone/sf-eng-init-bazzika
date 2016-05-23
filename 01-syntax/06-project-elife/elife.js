@@ -1,27 +1,5 @@
 /* global valley */
 
-var plan = ['###############################################',
-  '#@0 ###          ****     ###     #     o     #',
-  '#   +#     ####       #                       #',
-  '#         #    #      #        #####+         #',
-  '# **      #           #   ~        ##     #   #',
-  '# *       #   ###     #   +             #     #',
-  '#         #    #      #                       #',
-  '#   S      ####       ######                  #',
-  '#  #             0   W             #       0  #',
-  '#      ** #                        #######    #',
-  '# # #           #         ***         ##      #',
-  '# 0           ~ #       *****        +## o    #',
-  '#  ###          #  +           @      ###     #',
-  '#          ***        +             *         #',
-  '#*      o *****      #       #      ***       #',
-  '#*                             S              #',
-  '#*                                            #',
-  '#* S    ######*   @  #       #      ***       #',
-  '#*      o *****              #      ***       #',
-  '# # #           #         ***         ##   @  #',
-  '###############################################'];
-
 var dirs;
 var directions = 'n ne e se s sw w nw'.split(' ');
 var actionTypes;
@@ -247,8 +225,6 @@ WallFollower.prototype.act = function (view) {
   return { type: 'move', direction: this.dir };
 };
 
-function Wall() {}
-
 function LifelikeWorld(map, legend) {
   World.call(this, map, legend);
 }
@@ -364,7 +340,7 @@ PlantEater.prototype.act = function (view) {
     }
   }
   if (view.look(this.lastMove) === '#' || view.look(this.lastMove) === '0' ||
-  view.look(this.lastMove) === '+' || view.look(this.lastMove) === 'S') {
+    view.look(this.lastMove) === '+' || view.look(this.lastMove) === 'S') {
     if (space) {
       this.lastMove = space;
       return { type: 'move', direction: this.lastMove };
@@ -415,13 +391,3 @@ LifelikeWorld.prototype.letAct = function (critter, vector) {
     }
   }
 };
-
-window.valley = new LifelikeWorld(plan, { '#': Wall,
-  o: BouncingCritter,
-  '~': WallFollower,
-  '*': Plant,
-  0: PlantEater,
-  W: RandomCritter,
-  '@': Tiger,
-  '+': BoomPlant,
-  S: RestoreEnergyPlant });
