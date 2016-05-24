@@ -224,3 +224,4 @@ run('do(define(x, 4),',
 // → 50
 run('set(quux, true)');
 // → Some kind of ReferenceError
+// Change
