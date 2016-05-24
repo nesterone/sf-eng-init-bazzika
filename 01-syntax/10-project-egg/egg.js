@@ -1,8 +1,12 @@
 /* eslint no-new-func: 0 */
 var parseApply;
-var skipSpace;
 var specialForms = Object.create(null);
 var topEnv = {};
+function skipSpace(string) {
+  var first = string.search(/\S/);
+  if (first === -1) return '';
+  return string.slice(first);
+}
 function parseExpression(progr) {
   var program = skipSpace(progr);
   var match;
@@ -25,11 +29,6 @@ function parseExpression(progr) {
   }
   return parseApply(expr, program.slice(match[0].length));
 }
-skipSpace = function (string) {
-  var first = string.search(/\S/);
-  if (first === -1) return '';
-  return string.slice(first);
-};
 parseApply = function (expr, progr) {
   var expression;
   var arg;
@@ -106,8 +105,6 @@ specialForms.while = function (args, env) {
   while (evaluate(args[0], env) !== false) {
     evaluate(args[1], env);
   }
-  // Since undefined does not exist in Egg, we return false,
-  // for lack of a meaningful result.
   return false;
 };
 
