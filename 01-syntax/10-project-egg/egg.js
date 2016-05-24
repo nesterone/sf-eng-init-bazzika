@@ -238,12 +238,6 @@ specialForms.fun = function (args, env) {
 };
 
 
-run('do(define(sum, fun(array,',
-  '     do(define(i, 0),',
-  '        define(sum, 0),',
-  '        while(<(i, length(array)),',
-  '          do(define(sum, +(sum, element(array, i))),',
-  '             define(i, +(i, 1)))),',
-  '        sum))),',
-  '   print(sum(array(1, 2, 3))))');
-// → 6
+run('do(define(f, fun(a, fun(b, +(a, b)))),',
+  '   print(f(4)(5)))');
+// → 9
