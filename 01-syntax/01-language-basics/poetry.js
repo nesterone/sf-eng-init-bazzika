@@ -44,7 +44,18 @@
  Take care about tabs, newlines etc.
 
  */
-var poetry = "\t\tWilliam Blake. 1757–1827\n\n\t\t\tThe Tiger\n\n\tTIGER, tiger, burning bright\n\tIn the forests of the night,\n\tWhat immortal hand or eye\n\tCould frame thy fearful symmetry?\n\n\tIn what distant deeps or skies\n\tBurnt the fire of thine eyes?\n\tOn what wings dare he aspire?\n\tWhat the hand dare seize the fire?\n\n\tAnd what shoulder and what art\n\tCould twist the sinews of thy heart?\n\tAnd when thy heart began to beat,\n\tWhat dread hand and what dread feet?\n\n\tWhat the hammer? what the chain?\n\tIn what furnace was thy brain?\n\tWhat the anvil? What dread grasp\n\tDare its deadly terrors clasp?\n\n\tWhen the stars threw down their spears,\n\tAnd water'd heaven with their tears,\n\tDid He smile His work to see?\n\tDid He who made the lamb make thee?\n\n\tTiger, tiger, burning bright\n\tIn the forests of the night,\n\tWhat immortal hand or eye\n\tDare frame thy fearful symmetry?";
+var poetry = '\t\tWilliam Blake. 1757–1827\n\n\t\t\tThe Tiger\n\n\tTIGER, tiger,' +
+  ' burning bright\n\tIn the forests of the night,\n\tWhat immortal hand or eye\n' +
+  '\tCould frame thy fearful symmetry?\n\n\tIn what distant deeps or skies\n\tBurnt ' +
+  'the fire of thine eyes?\n\tOn what wings dare he aspire?\n\tWhat the hand dare ' +
+  'seize the fire?\n\n\tAnd what shoulder and what art\n\tCould twist the sinews of ' +
+  'thy heart?\n\tAnd when thy heart began to beat,\n\tWhat dread hand and what dread ' +
+  'feet?\n\n\tWhat the hammer? what the chain?\n\tIn what furnace was thy brain?\n\t' +
+  'What the anvil? What dread grasp\n\tDare its deadly terrors clasp?\n\n\t' +
+  'When the stars threw down their spears,\n\tAnd water\'d heaven with their tears,\n\t' +
+  'Did He smile His work to see?\n\tDid He who made the lamb make thee?\n\n\t' +
+  'Tiger, tiger, burning bright\n\tIn the forests of the night,\n\t' +
+  'What immortal hand or eye\n\tDare frame thy fearful symmetry?';
 console.log(poetry);
 /* Second variant */
 console.log('\n\n\t\tWilliam Blake. 1757–1827');
@@ -71,11 +82,11 @@ console.log('\tWhat the anvil? What dread grasp');
 console.log('\tDare its deadly terrors clasp?');
 console.log('');
 console.log('\tWhen the stars threw down their spears,');
-console.log("\tAnd water'd heaven with their tears,");
+console.log('\tAnd water\'d heaven with their tears,');
 console.log('\tDid He smile His work to see?');
 console.log('\tDid He who made the lamb make thee?');
 console.log('');
 console.log('\tTiger, tiger, burning bright');
 console.log('\tIn the forests of the night,');
 console.log('\tWhat immortal hand or eye');
-console.log('\tDare frame thy fearful symmetry?"');
+console.log('\tDare frame thy fearful symmetry?');
