@@ -126,6 +126,23 @@ specialForms.define = function (args, env) {
   enviroment[args[0].name] = value;
   return value;
 };
+specialForms.set = function (args, env) {
+  var value;
+  var localName;
+  var scope;
+  if (args.length !== 2 || args[0].type !== 'word') {
+    throw new SyntaxError('Bad use of define');
+  }
+  value = evaluate(args[1], env);
+  localName = args[0].name;
+  for (scope = env; scope; scope = Object.getPrototypeOf(scope)) {
+    if (Object.prototype.hasOwnProperty.call(scope, localName)) {
+      scope[localName] = value;
+      return value;
+    }
+  }
+  throw new ReferenceError('Setting undefined variable ' + localName);
+};
 topEnv.true = true;
 topEnv.false = false;
 
@@ -200,3 +217,10 @@ console.log(parse('a # one\n   # two\n()'));
 // → {type: "apply",
 //    operator: {type: "word", name: "a"},
 //    args: []}
+run('do(define(x, 4),',
+  '   define(setx, fun(val, set(x, val))),',
+  '   setx(50),',
+  '   print(x))');
+// → 50
+run('set(quux, true)');
+// → Some kind of ReferenceError
