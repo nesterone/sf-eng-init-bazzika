@@ -3,9 +3,9 @@ var parseApply;
 var specialForms = Object.create(null);
 var topEnv = {};
 function skipSpace(string) {
-  var first = string.search(/\S/);
-  if (first === -1) return '';
-  return string.slice(first);
+  var regEx = string.match(/^(\s|#.*)*/);
+  if (regEx === -1) return '';
+  return string.slice(regEx[0].length);
 }
 function parseExpression(progr) {
   var program = skipSpace(progr);
@@ -192,3 +192,11 @@ run('do(define(sum, fun(array,',
   '             define(i, +(i, 1)))),',
   '        sum))),',
   '   print(sum(array(1, 2, 3))))');
+
+console.log(parse('# hello\nx'));
+// → {type: "word", name: "x"}
+
+console.log(parse('a # one\n   # two\n()'));
+// → {type: "apply",
+//    operator: {type: "word", name: "a"},
+//    args: []}
