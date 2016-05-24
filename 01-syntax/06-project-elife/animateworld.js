@@ -1,3 +1,5 @@
+/* global elife */
+
 (function () {
   'use strict';
 
@@ -58,7 +60,7 @@
     this.button.style.color = 'red';
   };
 
-  window.animateWorld = function (world) {
+  elife.animateWorld = function (world) {
     var animated = new Animated(world);
     console.log(animated);
   };
