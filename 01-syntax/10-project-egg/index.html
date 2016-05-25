@@ -2,44 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Egg Programming Language</title>
-
-    <script type="text/egg">
-       do(
-            define(
-                plusOne,
-                fun(a, +(a, 1))
-            ),
-            print(plusOne(10))
-        )
-    </script>
-    <!--Result: 11 -->
-
-    <script type="text/egg">
-        do(
-            define(
-                pow,
-                fun(
-                    base,
-                    exp,
-                    if(==(exp, 0),
-                        1,
-                        *(base, pow(base, -(exp, 1)))
-                    )
-                )
-            ),
-            print(pow(2, 10))
-        )
-    </script>
-    <!--Result: 1024 -->
-
-
 </head>
 <body>
-
     <script src="egg.js"></script>
     <script src="eggTags.js"></script>
-
 </body>
 </html>
 

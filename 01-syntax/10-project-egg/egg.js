@@ -237,14 +237,29 @@ specialForms.fun = function (args, env) {
   };
 };
 
-if (run) {
-  console.log('run is loaded');
-}
+specialForms.set = function (args, environment) {
+  var currentScope = environment;
 
-console.log(parse('# hello\nx'));
-// → {type: "word", name: "x"}
+  if (args.length !== 2 || args[0].type !== 'word') {
+    throw new SyntaxError('Incorrect using of define');
+  }
 
-console.log(parse('a # one\n   # two\n()'));
-// → {type: "apply",
-//    operator: {type: "word", name: "a"},
-//    args: []}
+  while (currentScope) {
+    if (Object.prototype.hasOwnProperty.call(currentScope, args[0].name)) {
+      currentScope[args[0].name] = evaluate(args[1], environment);
+      return currentScope[args[0].name];
+    }
+    currentScope = Object.getPrototypeOf(currentScope);
+  }
+
+  throw new ReferenceError('Variable ' + args[0].name + ' was\'t declared ');
+};
+
+run('do(define(x, 4),',
+  '   define(setx, fun(val, set(x, val))),',
+  '   setx(50),',
+  '   print(x))');
+// → 50
+
+run('set(quux, true)');
+// → Some kind of ReferenceError
