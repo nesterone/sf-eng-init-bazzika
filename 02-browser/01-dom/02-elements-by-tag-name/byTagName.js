@@ -1,7 +1,22 @@
 var paragraph = document.querySelector('p');
 
-function byTagName() {
-  // Your code here.
+function byTagName(element, tag) {
+  var result = [];
+  function countElements(el) {
+    var i;
+    if (el.nodeType === document.ELEMENT_NODE) {
+      for (i = 0; i < el.childNodes.length; i++) {
+        if (el.childNodes[i].tagName === tag.toUpperCase()) {
+          result.push(el.childNodes[i]);
+        }
+        if (el.childNodes[i].nodeName !== '#text') {
+          countElements(el.childNodes[i]);
+        }
+      }
+    }
+  }
+  countElements(element);
+  return result;
 }
 
 console.log(byTagName(document.body, 'h1').length);
