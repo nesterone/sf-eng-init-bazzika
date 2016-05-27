@@ -1,6 +1,24 @@
 /* global every some */
 
-// → Your code here.
+function every(arr, fn) {
+  var i;
+  for (i = 0; i < arr.length; i++) {
+    if (!fn(arr[i])) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function some(arr, fn) {
+  var i;
+  for (i = 0; i < arr.length; i++) {
+    if (fn(arr[i])) {
+      return true;
+    }
+  }
+  return false;
+}
 
 console.log(every([NaN, NaN, NaN], isNaN));
 // → true
