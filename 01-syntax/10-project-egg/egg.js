@@ -255,11 +255,6 @@ specialForms.set = function (args, environment) {
   throw new ReferenceError('Variable ' + args[0].name + ' was\'t declared ');
 };
 
-run('do(define(x, 4),',
-  '   define(setx, fun(val, set(x, val))),',
-  '   setx(50),',
-  '   print(x))');
-// → 50
-
-run('set(quux, true)');
-// → Some kind of ReferenceError
+if (run) {
+  console.log('run is loaded!');
+}
