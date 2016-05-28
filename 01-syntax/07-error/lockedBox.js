@@ -13,9 +13,14 @@ var box = {
   }
 };
 function withBoxUnlocked(body) {
+  var result;
+  if (!box.locked) {
+    result = body();
+    return result;
+  }
   box.unlock();
   try {
-    body();
+    result = body();
   } catch (e) {
     if (!box.locked) {
       console.log(e);
@@ -23,6 +28,7 @@ function withBoxUnlocked(body) {
   } finally {
     box.lock();
   }
+  return result;
 }
 withBoxUnlocked(function () {
   box.content.push('gold piece');
