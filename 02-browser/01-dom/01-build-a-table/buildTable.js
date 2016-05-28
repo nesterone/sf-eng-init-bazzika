@@ -10,35 +10,32 @@ var MOUNTAINS = [
 function buildTable(array) {
   var table = document.createElement('table');
   var row = document.createElement('tr');
-  var i;
-  var j;
   var cell;
-  var header;
   var textNode;
   var regularCell;
   var cellContent;
-  for (i = 0; i <= 2; i++) {
+  var columnNames = Object.keys(array[0]);
+  columnNames.forEach(function (name) {
     cell = document.createElement('th');
-    header = Object.keys(array[0])[i];
-    textNode = document.createTextNode(header);
+    textNode = document.createTextNode(name);
     cell.appendChild(textNode);
     row.appendChild(cell);
-  }
+  });
   table.appendChild(row);
-  for (i = 0; i < array.length - 1; i++) {
+  array.forEach(function (rowObject) {
     row = document.createElement('tr');
-    for (j = 0; j <= 2; j++) {
+    columnNames.forEach(function (name) {
       regularCell = document.createElement('td');
-      cellContent = array[i][Object.keys(array[i])[j]];
+      cellContent = rowObject[name];
       textNode = document.createTextNode(cellContent);
       regularCell.appendChild(textNode);
       row.appendChild(regularCell);
       if (typeof cellContent === 'number') {
         regularCell.style.textAlign = 'right';
       }
-    }
+    });
     table.appendChild(row);
-  }
+  });
   return table;
 }
 document.body.appendChild(buildTable(MOUNTAINS));
