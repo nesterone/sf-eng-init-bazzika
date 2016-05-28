@@ -25,11 +25,14 @@ function require(name) {
   var module = {
     exports: exports
   };
+
   if (name in require.cache) {
     return require.cache[name];
   }
-  code(exports, module);
+
   require.cache[name] = module.exports;
+  code(exports, module);
+
   return module.exports;
 }
 
