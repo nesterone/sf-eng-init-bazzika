@@ -1,7 +1,7 @@
 function Vector(x, y) {
   this.x = x;
   this.y = y;
-};
+}
 Vector.prototype.plus = function (anothervector) {
   return new Vector(this.x + anothervector.x, this.y + anothervector.y);
 };

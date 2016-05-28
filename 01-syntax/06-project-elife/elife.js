@@ -1,6 +1,7 @@
+/* global elife */
+
 (function () {
   var myWorld;
-  var actionTypes;
   var plan = ['############################',
     '#      #    #      o      ##',
     '#                          #',

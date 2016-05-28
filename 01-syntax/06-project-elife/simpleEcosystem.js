@@ -21,7 +21,7 @@ elife.simpleEcosystem = (function () {
     if (view.look(this.direction) !== ' ') {
       this.direction = view.find(' ') || 's';
     }
-    return {type: 'move', direction: this.direction};
+    return { type: 'move', direction: this.direction };
   };
   function WallFollower() {
     this.dir = 's';
@@ -36,12 +36,12 @@ elife.simpleEcosystem = (function () {
       this.dir = dirPlus(this.dir, 1);
       if (this.dir === start) break;
     }
-    return {type: 'move', direction: this.dir};
+    return { type: 'move', direction: this.dir };
   };
   return {
     Wall: Wall,
     BouncingCritter: BouncingCritter,
     WallFollower: WallFollower
-  }
+  };
 }());
 console.log(elife.simpleEcosystem);

@@ -5,6 +5,7 @@ elife.world = (function () {
   function randomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
   }
+
   function elementFromChar(legend, ch) {
     var element;
     if (ch === ' ') {
@@ -14,12 +15,40 @@ elife.world = (function () {
     element.originChar = ch;
     return element;
   }
+
   function charFromElement(element) {
     if (element === null) {
       return ' ';
     }
     return element.originChar;
   }
+
+  function View(world, vector) {
+    this.world = world;
+    this.vector = vector;
+  }
+  View.prototype.look = function (dir) {
+    var target = this.vector.plus(elife.grid.directions[dir]);
+    if (this.world.grid.isInside(target)) {
+      return charFromElement(this.world.grid.get(target));
+    }
+    return '#';
+  };
+  View.prototype.findAll = function (ch) {
+    var found = [];
+    var dir;
+    for (dir in elife.grid.directions) {
+      if (this.look(dir) === ch) {
+        found.push(dir);
+      }
+    }
+    return found;
+  };
+  View.prototype.find = function (ch) {
+    var found = this.findAll(ch);
+    if (found.length === 0) return null;
+    return randomElement(found);
+  };
   function World(map, legend) {
     var grid = new elife.grid.Grid(map[0].length, map.length);
     this.grid = grid;
@@ -75,32 +104,6 @@ elife.world = (function () {
       }
     }
     return dest;
-  };
-  function View(world, vector) {
-    this.world = world;
-    this.vector = vector;
-  }
-  View.prototype.look = function (dir) {
-    var target = this.vector.plus(elife.grid.directions[dir]);
-    if (this.world.grid.isInside(target)) {
-      return charFromElement(this.world.grid.get(target));
-    }
-    return '#';
-  };
-  View.prototype.findAll = function (ch) {
-    var found = [];
-    var dir;
-    for (dir in elife.grid.directions) {
-      if (this.look(dir) === ch) {
-        found.push(dir);
-      }
-    }
-    return found;
-  };
-  View.prototype.find = function (ch) {
-    var found = this.findAll(ch);
-    if (found.length === 0) return null;
-    return randomElement(found);
   };
   function LifelikeWorld(map, legend) {
     World.call(this, map, legend);
