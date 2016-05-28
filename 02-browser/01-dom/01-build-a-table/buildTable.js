@@ -14,14 +14,14 @@ function buildTable(array) {
   var j;
   var cell;
   var header;
-  var text;
+  var textNode;
   var regularCell;
   var cellContent;
   for (i = 0; i <= 2; i++) {
     cell = document.createElement('th');
     header = Object.keys(array[0])[i];
-    text = document.createTextNode(header);
-    cell.appendChild(text);
+    textNode = document.createTextNode(header);
+    cell.appendChild(textNode);
     row.appendChild(cell);
   }
   table.appendChild(row);
@@ -30,9 +30,12 @@ function buildTable(array) {
     for (j = 0; j <= 2; j++) {
       regularCell = document.createElement('td');
       cellContent = array[i][Object.keys(array[i])[j]];
-      text = document.createTextNode(cellContent);
-      regularCell.appendChild(text);
+      textNode = document.createTextNode(cellContent);
+      regularCell.appendChild(textNode);
       row.appendChild(regularCell);
+      if (!isNaN(Number(cellContent))) {
+        regularCell.style.textAlign = 'right';
+      }
     }
     table.appendChild(row);
   }
