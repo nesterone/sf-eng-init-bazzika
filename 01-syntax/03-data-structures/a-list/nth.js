@@ -4,7 +4,32 @@
  */
 /* global arrayToList nth */
 
-// → Your code here.
+function nth(list, number) {
+  var i;
+  var deepList = list;
+
+  if (number < 0) {
+    throw new Error('Number should be >= 0');
+  }
+
+  for (i = 0; i < number; i++) {
+    if (deepList) {
+      deepList = deepList.rest;
+    }
+  }
+  if (deepList) {
+    return deepList.value;
+  }
+  return undefined;
+}
 
 console.log(nth(arrayToList([10, 20, 30]), 1));
 // → 20
+console.log(nth(arrayToList([10, 20, 30]), 0));
+// → 10
+console.log(nth(arrayToList([10, 20, 30]), 2));
+// → 30
+console.log(nth(arrayToList([10, 20, 30]), 6));
+// → error
+console.log(nth(arrayToList([10, 20, 30]), -1));
+// → error

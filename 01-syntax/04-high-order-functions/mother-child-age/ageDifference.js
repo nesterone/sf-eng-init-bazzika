@@ -1,24 +1,30 @@
 /* global ancestry ageDifference */
 
-var byName = {};
-
 function average(array) {
-  function plus(a, b) {
-    return a + b;
-  }
-
+  function plus(a, b) { return a + b; }
   return array.reduce(plus) / array.length;
 }
 
-console.log(average([2, 2, 2]));
-// → 2
+function findByName(personName) {
+  var byName = null;
+  ancestry.forEach(function (p) {
+    if (personName === p.name) {
+      byName = p;
+    }
+  });
+  return byName;
+}
 
-ancestry.forEach(function (person) {
-  byName[person.name] = person;
-});
+function getAllDifferencies(arr) {
+  var diff = [];
+  arr.forEach(function (person) {
+    var mother = findByName(person.mother);
+    if (mother) {
+      diff.push(person.born - mother.born);
+    }
+  });
+  console.log(average(diff));
+}
 
-// → Your code here
-
-console.log(ageDifference(ancestry));
-
+getAllDifferencies(ancestry);
 // → 31.2
