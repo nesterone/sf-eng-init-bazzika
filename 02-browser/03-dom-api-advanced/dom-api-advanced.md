@@ -1,6 +1,6 @@
 # DOM and API
 
-**[<= Back](../01-dom/dom.md)**		*	*	*	**[Next =>](../01-handling-events/handling-events.md)**
+**[<= Back](../02-basic-html-css-jquery/basic-html-css-jquery.md)**		*	*	*	**[Next =>](../04-http-and-ajax/http-and-ajax.md)**
 
 ### Theory
 
@@ -52,4 +52,4 @@ Create you own DOM library and put it to [`lib`](./domjs) folder
 
 ...
 
-**[<= Back](../01-dom/dom.md)**		*	*	*	**[Next =>](../01-handling-events/handling-events.md)**
+**[<= Back](../02-basic-html-css-jquery/basic-html-css-jquery.md)**		*	*	*	**[Next =>](../04-http-and-ajax/http-and-ajax.md)**

@@ -1,6 +1,6 @@
 #Project: A Platform Game
 
-***[<= Back](../02-dom-and-api/dom-and-api.md)**		*	*	*	**[Next =>](../04-drawing-on-canvas/drawing-on-canvas.md)**
+***[<= Back](../05-forms/forms.md)**		*	*	*	**[Next =>](../08-drawing-on-canvas/drawing-on-canvas.md)**
 
 ### Theory
 
@@ -23,4 +23,5 @@ Make sure that resulted code is compliant with our code style.
 
 1. [HTML5 Games](http://www.lessmilk.com/tutorials)
 
-***[<= Back](../02-dom-and-api/dom-and-api.md)**		*	*	*	**[Next =>](../04-drawing-on-canvas/drawing-on-canvas.md)**
+***[<= Back](../05-forms/forms.md)**		*	*	*	**[Next =>](../08-drawing-on-canvas/drawing-on-canvas.md)**
+
