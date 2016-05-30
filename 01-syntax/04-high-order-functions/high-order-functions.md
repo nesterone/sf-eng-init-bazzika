@@ -37,6 +37,10 @@
 
 * [Every and then some](http://eloquentjavascript.net/05_higher_order.html#h_jr7hZiuR7+)
 
+#### Challenge: Curring in Javascript
+
+* [Curring in Javascript](https://github.com/kishorsharma/currying-workshopper)
+
 ### References
 
 >If you want to seriously study this area, then this book is for you 

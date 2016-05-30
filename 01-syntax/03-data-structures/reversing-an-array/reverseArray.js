@@ -6,7 +6,17 @@
 
 var arrayValue = [1, 2, 3, 4, 5];
 
-// → Your code here.
+function reverseArray(inputArray) {
+  var newArray = [];
+  var newArrIndex = 0;
+  var inputArrIndex;
+
+  for (inputArrIndex = inputArray.length - 1; inputArrIndex >= 0; inputArrIndex--) {
+    newArray[newArrIndex] = inputArray[inputArrIndex];
+    newArrIndex += 1;
+  }
+  return newArray;
+}
 
 console.log(reverseArray(['A', 'B', 'C']));
 // → ['C', 'B', 'A'];
