@@ -21,6 +21,10 @@
 
 ### Practice
 
+#### Workshop: JSON APIs and Ajax
+
+* [freeCodeCamp: JSON APIs and Ajax](https://www.freecodecamp.com/challenges/trigger-click-events-with-jquery) 
+
 #### Workshop: Promise it wont hurt
 
 * [NodeSchool: Promise it wont hurt](https://github.com/stevekane/promise-it-wont-hurt) 
