@@ -3,34 +3,34 @@
 var worldCreate = (function () {
   'use strict';
 
-  var worldObject = {
-    randomElement: function (array) {
-      return array[Math.floor(Math.random() * array.length)];
-    },
+  var elementFromChar;
+  var charFromElement;
 
-    World: function (map, legend) {
-      var x;
-      var gridWorld = new lifeArea.Grid(map[0].length, map.length);
-      this.grid = gridWorld;
-      this.legend = legend;
+  function randomElement(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
 
-      map.forEach(function (line, y) {
-        for (x = 0; x < line.length; x++) {
-          gridWorld.set(new lifeArea.Vector(x, y),
-            worldObject.elementFromChar(legend, line[x]));
-        }
-      });
-    },
+  function World(map, legend) {
+    var x;
+    var gridWorld = new lifeArea.Grid(map[0].length, map.length);
+    this.grid = gridWorld;
+    this.legend = legend;
+    map.forEach(function (line, y) {
+      for (x = 0; x < line.length; x++) {
+        gridWorld.set(new lifeArea.Vector(x, y),
+        elementFromChar(legend, line[x]));
+      }
+    });
+  }
 
-    Wall: function () {},
+  function Wall() {}
 
-    View: function (worldView, vector) {
-      this.world = worldView;
-      this.vector = vector;
-    }
-  };
+  function View(worldView, vector) {
+    this.world = worldView;
+    this.vector = vector;
+  }
 
-  worldObject.elementFromChar = function (legend, ch) {
+  elementFromChar = function (legend, ch) {
     var element;
 
     if (ch === ' ') {
@@ -42,7 +42,7 @@ var worldCreate = (function () {
     return element;
   };
 
-  worldObject.charFromElement = function (element) {
+  charFromElement = function (element) {
     if (element === null) {
       return ' ';
     }
@@ -50,7 +50,7 @@ var worldCreate = (function () {
     return element.originChar;
   };
 
-  worldObject.World.prototype.toString = function () {
+  World.prototype.toString = function () {
     var output = '';
     var y;
     var x;
@@ -59,7 +59,7 @@ var worldCreate = (function () {
     for (y = 0; y < this.grid.height; y++) {
       for (x = 0; x < this.grid.width; x++) {
         element = this.grid.get(new lifeArea.Vector(x, y));
-        output += worldObject.charFromElement(element);
+        output += charFromElement(element);
       }
       output += '\n';
     }
@@ -67,7 +67,7 @@ var worldCreate = (function () {
     return output;
   };
 
-  worldObject.World.prototype.turn = function () {
+  World.prototype.turn = function () {
     var acted = [];
     this.grid.forEach(function (critter, vector) {
       if (critter.act && acted.indexOf(critter) === -1) {
@@ -77,9 +77,9 @@ var worldCreate = (function () {
     }, this);
   };
 
-  worldObject.World.prototype.letAct = function (critter, vector) {
+  World.prototype.letAct = function (critter, vector) {
     var destination;
-    var action = critter.act(new worldObject.View(this, vector));
+    var action = critter.act(new View(this, vector));
     if (action && action.type === 'move') {
       destination = this.checkDestination(action, vector);
       if (destination && this.grid.get(destination) === null) {
@@ -89,7 +89,7 @@ var worldCreate = (function () {
     }
   };
 
-  worldObject.World.prototype.checkDestination = function (action, vector) {
+  World.prototype.checkDestination = function (action, vector) {
     var destination;
     if (lifeArea.directions.hasOwnProperty(action.direction)) {
       destination = vector.plus(lifeArea.directions[action.direction]);
@@ -100,16 +100,16 @@ var worldCreate = (function () {
     return destination;
   };
 
-  worldObject.View.prototype.look = function (dir) {
+  View.prototype.look = function (dir) {
     var target = this.vector.plus(lifeArea.directions[dir]);
     if (this.world.grid.isInside(target)) {
-      return worldObject.charFromElement(this.world.grid.get(target));
+      return charFromElement(this.world.grid.get(target));
     }
 
     return '#';
   };
 
-  worldObject.View.prototype.findAll = function (ch) {
+  View.prototype.findAll = function (ch) {
     var found = [];
     var dir;
 
@@ -122,17 +122,24 @@ var worldCreate = (function () {
     return found;
   };
 
-  worldObject.View.prototype.find = function (ch) {
+  View.prototype.find = function (ch) {
     var found = this.findAll(ch);
 
     if (found.length === 0) {
       return null;
     }
 
-    return worldObject.randomElement(found);
+    return randomElement(found);
   };
 
-  return worldObject;
+  return {
+    randomElement: randomElement,
+    World: World,
+    Wall: Wall,
+    View: View,
+    elementFromChar: elementFromChar,
+    charFromElement: charFromElement
+  };
 }());
 
 if (worldCreate) {
