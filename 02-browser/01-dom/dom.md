@@ -1,6 +1,6 @@
 # Document Object Model
 
-**[<= Back](../00-how-browsers-work/how-browsers-work.md)**		*	*	*	**[Next =>](../01-dom-and-api/dom-and-api.md)**
+**[<= Back](../00-how-browsers-work/how-browsers-work.md)**		*	*	*	**[Next =>](../02-basic-html-css-jquery/basic-html-css-jquery.md)**
 
 ### Theory
 
@@ -38,4 +38,5 @@
 
 ...
 
-**[<= Back](../00-how-browsers-work/how-browsers-work.md)**		*	*	*	**[Next =>](../01-dom-and-api/dom-and-api.md)**
+**[<= Back](../00-how-browsers-work/how-browsers-work.md)**		*	*	*	**[Next =>](../02-basic-html-css-jquery/basic-html-css-jquery.md)**
+
