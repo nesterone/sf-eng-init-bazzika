@@ -1,6 +1,6 @@
 # Document Object Model
 
-**[<= Back](../00-how-browsers-work/how-browsers-work.md)**		*	*	*	**[Next =>](../01-dom-and-api/dom-and-api.md)**
+**[<= Back](../00-how-browsers-work/how-browsers-work.md)**		*	*	*	**[Next =>](../02-basic-html-css-jquery/basic-html-css-jquery.md)**
 
 ### Theory
 
@@ -12,30 +12,31 @@
 
 #### Exercise: Build a table
 
-* [Eloquent JavaScript: Build a table](http://eloquentjavascript.net/09_regexp.html#h_vDM8PzwQWU)
+* [Eloquent JavaScript: Build a table](http://eloquentjavascript.net/13_dom.html#h_g/5UC3zznV)
 
-#### Exercise: Quoting Style
+#### Elements by tag name
 
-* [Eloquent JavaScript: Quoting Style](http://eloquentjavascript.net/09_regexp.html#h_dTiEW14oG0)
+* [Eloquent JavaScript: Elements by tag name](http://eloquentjavascript.net/13_dom.html#h_VSftnyRTsV)
 
-#### Exercise: Numbers again
+#### The cat’s hat
 
-* [Eloquent JavaScript: Numbers again](http://eloquentjavascript.net/09_regexp.html#h_izldJoT3uv)
+* [Eloquent JavaScript: The cat’s hat](http://eloquentjavascript.net/13_dom.html#h_ye4Ws9YmoI)
 
 #### Exercise: Censored Keyboard
 
-* [Eloquent JavaScript: Censored Keyboard](http://eloquentjavascript.net/09_regexp.html#h_vDM8PzwQWU)
+* [Eloquent JavaScript: Censored Keyboard](http://eloquentjavascript.net/14_event.html#h_Lhbs8f7VGD)
 
 #### Exercise: Mouse Trail
 
-* [Eloquent JavaScript: Mouse Trail](http://eloquentjavascript.net/09_regexp.html#h_dTiEW14oG0)
+* [Eloquent JavaScript: Mouse Trail](http://eloquentjavascript.net/14_event.html#h_NOgRH0Y9st)
 
 #### Exercise: Tabs
 
-* [Eloquent JavaScript: Tabs](http://eloquentjavascript.net/09_regexp.html#h_izldJoT3uv)
+* [Eloquent JavaScript: Tabs](http://eloquentjavascript.net/14_event.html#h_Kk1WKx2anJ)
 
 ### Additional
 
 ...
 
-**[<= Back](../00-how-browsers-work/how-browsers-work.md)**		*	*	*	**[Next =>](../01-dom-and-api/dom-and-api.md)**
+**[<= Back](../00-how-browsers-work/how-browsers-work.md)**		*	*	*	**[Next =>](../02-basic-html-css-jquery/basic-html-css-jquery.md)**
+

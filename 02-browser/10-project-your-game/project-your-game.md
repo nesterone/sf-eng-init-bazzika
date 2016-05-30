@@ -1,6 +1,6 @@
 # Project: Your Game
 
-**[<= Back](../../02-browser/08-project-your-game/project-your-game.md)**		*	*	*	**[Next =>](../../03-nodejs/00-learn-nodejs-basics/learn-nodejs-basics.md)**
+**[<= Back](../09-project-paint/project-paint.md)**		*	*	*	**[Next =>](../../04-nodejs/00-learn-nodejs-basics/learn-nodejs-basics.md)**
 
 ### Intro
 
@@ -30,4 +30,4 @@ List of games:
 * fill README.md with appropriate info, it`s very important part of the project 
 * game should be enjoyable ;-)
 
-**[<= Back](../../02-browser/08-project-your-game/project-your-game.md)**		*	*	*	**[Next =>](../../03-nodejs/00-learn-nodejs-basics/learn-nodejs-basics.md)**
+**[<= Back](../09-project-paint/project-paint.md)**		*	*	*	**[Next =>](../../04-nodejs/00-learn-nodejs-basics/learn-nodejs-basics.md)**

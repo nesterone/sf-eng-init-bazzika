@@ -35,6 +35,7 @@ We would try to work in Agile-Kanban style, there is some brief info
  
 1. [Manifesto for Agile Software Development](http://www.agilemanifesto.org/)
     * [Principles behind the Agile Manifesto](http://www.agilemanifesto.org/principles.html)
+1. [The New Methodology](http://martinfowler.com/articles/newMethodology.html)
 1. [Painless Meetings](http://egorfine.com/en/articles/painless-meetings/)
 1. [Agile](https://en.wikipedia.org/wiki/Agile_software_development)
        * [Scrum](http://tinyurl.com/pomn996)
@@ -47,7 +48,11 @@ We would try to work in Agile-Kanban style, there is some brief info
 
 ## Practice
 
-#### Exercise 1  
+### Workshop: How to Markdown
+
+* [NodeSchool: How to Markdown](https://github.com/denysdovhan/how-to-markdown)
+
+#### Exercise: Setup Jing  
 
 You may have some problem in workflow or UI bug, one of the way to explain is to create `screenshot` or record `screencast`
 
@@ -64,7 +69,7 @@ You may have some problem in workflow or UI bug, one of the way to explain is to
     * provide screencast as link in description to your issue
     * name of the issue should be meaningful
 
-#### Exercise 2
+#### Exercise: Article in Markdown
 
 You requested to prepare article about benefits of Agile Development vs Waterfall Development.
 Looks like article would consist of headings, paragraphs, links, lists and quotes, there are maybe images or even tables
