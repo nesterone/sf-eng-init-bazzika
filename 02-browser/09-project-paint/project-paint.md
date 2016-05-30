@@ -1,6 +1,6 @@
 #Project: A Paint Program
 
-**[<= Back](../06-forms/forms.md)**		*	*	*	**[Next =>](../08-project-your-game/project-your-game.md)**
+**[<= Back](../08-drawing-on-canvas/drawing-on-canvas.md)**		*	*	*	**[Next =>](../10-project-your-game/project-your-game.md)**
 
 ### Theory
 
@@ -20,4 +20,5 @@
 
 * [Eloquent JavaScript: Flood fill](http://eloquentjavascript.net/19_paint.html#h_0M49T26QUl)
 
-**[<= Back](..06-forms/forms.md)**		*	*	*	**[Next =>](../08-project-your-game/project-your-game.md)**
+**[<= Back](../08-drawing-on-canvas/drawing-on-canvas.md)**		*	*	*	**[Next =>](../10-project-your-game/project-your-game.md)**
+

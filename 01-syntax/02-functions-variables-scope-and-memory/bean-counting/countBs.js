@@ -8,6 +8,7 @@ function countBs(text) {
   return countChar(text, 'B');
 }
 
+
 console.log(countBs('BBC'));
 // → 2
 console.log(countBs(['a', 'B', '0', 'B']));

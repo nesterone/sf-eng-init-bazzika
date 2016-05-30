@@ -1,6 +1,6 @@
 # HTTP and AJAX
 
-**[<= Back](../03-drawing-on-canvas/drawing-on-canvas.md)**		*	*	*	**[Next =>](../05-forms/forms.md)**
+**[<= Back](../03-dom-api-advanced/dom-and-api.md)**		*	*	*	**[Next =>](../05-forms/forms.md)**
 
 ### Theory
 
@@ -44,4 +44,4 @@ Record screencast on how you're using `Fiddler` or `Charles` for that
 
 **[⬆ back to top](#table-of-contents)**
 
-**[<= Back](../03-drawing-on-canvas/drawing-on-canvas.md)**		*	*	*	**[Next =>](../05-forms/forms.md)**
+**[<= Back](../03-dom-api-advanced/dom-and-api.md)**		*	*	*	**[Next =>](../05-forms/forms.md)**

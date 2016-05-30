@@ -1,4 +1,4 @@
-#Software Engineer Initiation
+# Software Engineer Initiation
 
 JavaScript and others learning materials which help you to become software engineer.
 
@@ -26,23 +26,24 @@ JavaScript and others learning materials which help you to become software engin
     1. [Project: A Programming Language](01-syntax/10-project-egg/project-egg.md)
 1. [Browser](02-browser/00-how-browsers-work/how-browsers-work.md)
     1. [Document Object Model](02-browser/01-dom/dom.md)
-    1. [DOM and API](02-browser/02-dom-and-api/dom-and-api.md)
-    1. [Project: A Platform Game](02-browser/03-project-platform-game/project-platform-game.md)
-    1. [Drawing on Canvas](02-browser/04-drawing-on-canvas/drawing-on-canvas.md)
-    1. [HTTP and AJAX](02-browser/05-http-and-ajax/http-and-ajax.md)
-    1. [Forms](02-browser/06-forms/forms.md)
-    1. [Project: A Paint Program](02-browser/07-project-paint/project-paint.md)
-    1. [Project: Your Game](02-browser/08-project-your-game/project-your-game.md)
-1. [Node.js](03-nodejs)
-    1. [Learn Node.js basics](03-nodejs/00-learn-nodejs-basics/learn-nodejs-basics.md)
-    1. [Project: Skill-Sharing Website](03-nodejs/01-project-skill-sharing/project-skill-sharing.md)
-1. [Code Organization](04-code-organization)
-    1. [Code Style and Naming conventions](04-code-organization/code-style.md)
-    1. [Browserify](04-code-organization/browserify.md)
-    1. [Require.js](04-code-organization/requirejs.md)
-    1. [Unit Tests](04-code-organization/unit-tests.md)
+    1. [Basic HTML, CSS, jQuery](02-browser/02-basic-html-css-jquery/basic-html-css-jquery.md)
+    1. [DOM API Advanced](02-browser/03-dom-api-advanced/dom-api-advanced.md)
+    1. [HTTP and AJAX](02-browser/04-http-and-ajax/http-and-ajax.md)
+    1. [Forms](02-browser/05-forms/forms.md)
+    1. [Project: A Platform Game](02-browser/07-project-platform-game/project-platform-game.md)
+    1. [Drawing on Canvas](02-browser/08-drawing-on-canvas/drawing-on-canvas.md)
+    1. [Project: A Paint Program](02-browser/09-project-paint/project-paint.md)
+    1. [Project: Your Game](02-browser/10-project-your-game/project-your-game.md)
+1. [Code Organization](03-code-organization)
+    1. [Code Style and Naming conventions](03-code-organization/code-style.md)
+    1. [Browserify](03-code-organization/browserify.md)
+    1. [Require.js](03-code-organization/requirejs.md)
+    1. [Unit Tests](03-code-organization/unit-tests.md)
     1. Refactoring
     1. Continuous Deliver
+1. [Node.js](04-nodejs)
+    1. [Learn Node.js basics](03-nodejs/00-learn-nodejs-basics/learn-nodejs-basics.md)
+    1. [Project: Skill-Sharing Website](03-nodejs/01-project-skill-sharing/project-skill-sharing.md)
 
 ### Part II
 > Be aware it's not ready ;-)
