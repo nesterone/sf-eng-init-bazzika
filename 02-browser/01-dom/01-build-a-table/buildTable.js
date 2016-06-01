@@ -1,14 +1,4 @@
-var MOUNTAINS = [
-  { name: 'Kilimanjaro', height: 5895, country: 'Tanzania' },
-  { name: 'Everest', height: 8848, country: 'Nepal' },
-  { name: 'Mount Fuji', height: 3776, country: 'Japan' },
-  { name: 'Mont Blanc', height: 4808, country: 'Italy/France' },
-  { name: 'Vaalserberg', height: 323, country: 'Netherlands' },
-  { name: 'Denali', height: 6168, country: 'United States' },
-  { name: 'Popocatepetl', height: 5465, country: 'Mexico' }
-];
-
-function buildTable() {
+function buildTable(data) {
   var i;
   var cell;
   var row;
@@ -17,13 +7,13 @@ function buildTable() {
   var table = document.createElement('TABLE');
   var heading = document.createElement('TR');
 
-  if (MOUNTAINS.length === 0) {
+  if (data.length === 0) {
     throw new SyntaxError('Array should contain any objects to display');
   }
 
   // Generate heading (th) from object
-  for (key in MOUNTAINS[0]) {
-    if (MOUNTAINS[0].hasOwnProperty(key)) {
+  for (key in data[0]) {
+    if (data[0].hasOwnProperty(key)) {
       cell = document.createElement('TH');
       innerCell = document.createTextNode(key);
       cell.appendChild(innerCell);
@@ -33,13 +23,13 @@ function buildTable() {
   }
 
   // Display items from array
-  for (i = 0; i < MOUNTAINS.length; i++) {
+  for (i = 0; i < data.length; i++) {
     row = document.createElement('TR');
-    for (key in MOUNTAINS[i]) {
-      if (MOUNTAINS[i].hasOwnProperty(key)) {
+    for (key in data[i]) {
+      if (data[i].hasOwnProperty(key)) {
         cell = document.createElement('TD');
-        innerCell = document.createTextNode(MOUNTAINS[i][key]);
-        if (!isNaN(MOUNTAINS[i][key])) {
+        innerCell = document.createTextNode(data[i][key]);
+        if (!isNaN(data[i][key])) {
           cell.style.textAlign = 'right';
         }
         cell.appendChild(innerCell);
@@ -51,4 +41,12 @@ function buildTable() {
   return table;
 }
 
-document.body.appendChild(buildTable(MOUNTAINS));
+document.body.appendChild(buildTable([
+  { name: 'Kilimanjaro', height: 5895, country: 'Tanzania' },
+  { name: 'Everest', height: 8848, country: 'Nepal' },
+  { name: 'Mount Fuji', height: 3776, country: 'Japan' },
+  { name: 'Mont Blanc', height: 4808, country: 'Italy/France' },
+  { name: 'Vaalserberg', height: 323, country: 'Netherlands' },
+  { name: 'Denali', height: 6168, country: 'United States' },
+  { name: 'Popocatepetl', height: 5465, country: 'Mexico' }
+]));
