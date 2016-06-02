@@ -2,26 +2,49 @@
 <html>
 <head>
     <title>Tabs</title>
+
     <style>
-        .trail {
-            position: absolute;
-            height: 6px; width: 6px;
-            border-radius: 3px;
-            background: teal;
-        }
-        body {
-            height: 300px;
-        }
+		.trail {
+		    position: absolute;
+		    height: 6px; width: 6px;
+		    border-radius: 3px;
+		    background: teal;
+		}
+
+		body {
+		    height: 300px;
+		}
+
+		#wrapper {
+		    box-sizing: border-box;
+		    width: 60vw;
+		    height: 50vh;
+		    border: 2px solid #000;
+		    border-top: none;
+		    text-align: center;
+		    background: linear-gradient(to bottom, #ccc 10%, #eee);
+		}
+
+		div:not(#wrapper) {
+		    display: none;
+		}
+
+		button {
+		    position: relative;
+		    top: 0;
+		    width: 20vw;
+		    height: 2vw;
+		    border: 2px solid #000;
+		    background-color: #ccc;
+		}
     </style>
 </head>
 <body>
-
     <div id="wrapper">
         <div data-tabname="one">Tab one</div>
         <div data-tabname="two">Tab two</div>
         <div data-tabname="three">Tab three</div>
     </div>
-
     <script src="asTabs.js"></script>
 </body>
 </html>
