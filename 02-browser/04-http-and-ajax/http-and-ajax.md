@@ -18,6 +18,7 @@
 1. [Video: I .promise() to show you .when() to use Deferreds](http://www.youtube.com/watch?v=juRtEEsHI9E) [26:53]
 1. [The World Wide Web: A very short personal history](https://www.w3.org/People/Berners-Lee/ShortHistory.html)
 1. [Using Web Debugging Proxies](http://code.tutsplus.com/tutorials/using-web-debugging-proxies--net-29828)
+1. [Creating Responsive Applications Using jQuery Deferred and Promises](https://msdn.microsoft.com/en-us/magazine/gg723713.aspx?f=255&MSPPError=-2147217396)
 
 ### Practice
 
