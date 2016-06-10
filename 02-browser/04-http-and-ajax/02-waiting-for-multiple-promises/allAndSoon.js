@@ -1,8 +1,26 @@
 /* global Promise */
 
-function all() {
-  return new Promise(function () {
-    // Your code here.
+function all(promises) {
+  return new Promise(function (success, reject) {
+    var promiseResult = [];
+    var waits = promises.length;
+
+    promises.forEach(function (current, index) {
+      current.then(function (isDone) {
+        promiseResult[index] = isDone;
+        waits -= 1;
+
+        if (!waits) {
+          success(promiseResult);
+        }
+      }, function (errorValue) {
+        reject(new Error(errorValue));
+      });
+    });
+
+    if (!promises.length) {
+      success(promiseResult);
+    }
   });
 }
 
@@ -20,7 +38,6 @@ function fail() {
   });
 }
 
-// Test code.
 all([]).then(function (array) {
   console.log('This should be []:', array);
 });
