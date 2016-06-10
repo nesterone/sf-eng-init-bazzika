@@ -4,7 +4,7 @@
 
 ### Theory
 
-1. [Speaking JavaScript: Functions](http://speakingjs.com/es5/ch14.html)
+1. [Speaking JavaScript: Functions](http://speakingjs.com/es5/ch15.html)
 1. [Eloquent JavaScript: High-order Functions](http://eloquentjavascript.net/05_higher_order.html)
 1. [Functions Explained](http://markdaggett.com/blog/2013/02/15/functions-explained/)
 
@@ -36,6 +36,10 @@
 #### Exercise:  Every and then some
 
 * [Every and then some](http://eloquentjavascript.net/05_higher_order.html#h_jr7hZiuR7+)
+
+#### Challenge: Curring in Javascript
+
+* [Curring in Javascript](https://github.com/kishorsharma/currying-workshopper)
 
 ### References
 

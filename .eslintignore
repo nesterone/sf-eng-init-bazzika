@@ -1,0 +1,10 @@
+#Workspace
+.idea/
+
+#Course
+04-nodejs/
+03-code-organization/
+05-es6-syntax/
+
+#Patterns
+**/node_modules/**
