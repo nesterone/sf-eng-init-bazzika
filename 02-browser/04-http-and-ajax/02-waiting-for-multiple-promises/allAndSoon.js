@@ -1,8 +1,24 @@
 /* global Promise */
 
-function all() {
-  return new Promise(function () {
-    // Your code here.
+function all(promises) {
+  return new Promise(function (resolve, reject) {
+    var count = 0;
+    var i;
+    var result = [];
+    if (promises.length === 0) {
+      resolve(promises);
+    }
+    for (i = 0; i < promises.length; i++) {
+      promises[i].then(function (val) { // eslint-disable-line
+        count++;
+        result.push(val);
+        if (count === promises.length) {
+          resolve(result);
+        }
+      }, function (val) {
+        reject(new Error(val));
+      });
+    }
   });
 }
 
