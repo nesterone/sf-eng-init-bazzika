@@ -15,12 +15,15 @@
 1. [Regex 101](https://regex101.com/#javascript)
 1. [Mathias Bynens: JavaScript ♥ Unicode](https://vimeo.com/76597193) [26:12]
 
-
 ### Practice
 
 #### Workshop: Regexp Adventure
 
 * [NodeSchool: regex-adventure](https://github.com/substack/regex-adventure)
+
+#### Challenge: Regexp Golf Game
+
+* [Regex golf game](http://regex.alf.nu/)
 
 #### Exercise: Regexp golf
 

@@ -34,4 +34,8 @@ Make sure that resulted code is compliant with our code style
 * [Eloquent JavaScript: Fixing Scope](http://eloquentjavascript.net/11_language.html#h_Y9ZDMshYCQ)
 
 
+<<<<<<< HEAD
+**[<= Back](../09-modules/modules.md)**		*	*	*	**[Next =>](../../02-browser/00-how-browsers-work/how-browsers-work.md)**
+=======
 **[<= Back](../09-modules/modules.md)**		*	*	*	**[Next =>](../../02-browser/00-how-browsers-work/how-browsers-work.md.md)**
+>>>>>>> 3be563e98613f530257ac5d7ea0cdb902778ca2e
