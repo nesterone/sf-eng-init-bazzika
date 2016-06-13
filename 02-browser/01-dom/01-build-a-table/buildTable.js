@@ -1,41 +1,41 @@
 var MOUNTAINS = [
-  { name: 'Kilimanjaro', height: '5895', country: 'Tanzania' },
-  { name: 'Everest', height: '8848', country: 'Nepal' },
-  { name: 'Mount Fuji', height: '3776', country: 'Japan' },
-  { name: 'Mont Blanc', height: '4808', country: 'Italy/France' },
-  { name: 'Vaalserberg', height: '323', country: 'Netherlands' },
-  { name: 'Denali', height: '6168', country: 'United States' },
-  { name: 'Popocatepetl', height: '5465', country: 'Mexico' }
+  { name: 'Kilimanjaro', height: 5895, country: 'Tanzania' },
+  { name: 'Everest', height: 8848, country: 'Nepal' },
+  { name: 'Mount Fuji', height: 3776, country: 'Japan' },
+  { name: 'Mont Blanc', height: 4808, country: 'Italy/France' },
+  { name: 'Vaalserberg', height: 323, country: 'Netherlands' },
+  { name: 'Denali', height: 6168, country: 'United States' },
+  { name: 'Popocatepetl', height: 5465, country: 'Mexico' }
 ];
 function buildTable(array) {
   var table = document.createElement('table');
   var row = document.createElement('tr');
-  var i;
-  var j;
   var cell;
-  var header;
-  var text;
+  var textNode;
   var regularCell;
   var cellContent;
-  for (i = 0; i <= 2; i++) {
+  var columnNames = Object.keys(array[0]);
+  columnNames.forEach(function (name) {
     cell = document.createElement('th');
-    header = Object.keys(array[0])[i];
-    text = document.createTextNode(header);
-    cell.appendChild(text);
+    textNode = document.createTextNode(name);
+    cell.appendChild(textNode);
     row.appendChild(cell);
-  }
+  });
   table.appendChild(row);
-  for (i = 0; i < array.length - 1; i++) {
+  array.forEach(function (rowObject) {
     row = document.createElement('tr');
-    for (j = 0; j <= 2; j++) {
+    columnNames.forEach(function (name) {
       regularCell = document.createElement('td');
-      cellContent = array[i][Object.keys(array[i])[j]];
-      text = document.createTextNode(cellContent);
-      regularCell.appendChild(text);
+      cellContent = rowObject[name];
+      textNode = document.createTextNode(cellContent);
+      regularCell.appendChild(textNode);
       row.appendChild(regularCell);
-    }
+      if (typeof cellContent === 'number') {
+        regularCell.style.textAlign = 'right';
+      }
+    });
     table.appendChild(row);
-  }
+  });
   return table;
 }
 document.body.appendChild(buildTable(MOUNTAINS));
