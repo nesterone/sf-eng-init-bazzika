@@ -35,12 +35,10 @@ JavaScript and others learning materials which help you to become software engin
     1. [Project: A Paint Program](02-browser/09-project-paint/project-paint.md)
     1. [Project: Your Game](02-browser/10-project-your-game/project-your-game.md)
 1. [Code Organization](03-code-organization)
-    1. [Code Style and Naming conventions](03-code-organization/code-style.md)
-    1. [Browserify](03-code-organization/browserify.md)
-    1. [Require.js](03-code-organization/requirejs.md)
     1. [Unit Tests](03-code-organization/unit-tests.md)
-    1. Refactoring
-    1. Continuous Deliver
+    1. [Design Patterns]()
+    1. [Build Application Part 1]
+    2. [Build Application Part 2]
 1. [Node.js](04-nodejs)
     1. [Learn Node.js basics](03-nodejs/00-learn-nodejs-basics/learn-nodejs-basics.md)
     1. [Project: Skill-Sharing Website](03-nodejs/01-project-skill-sharing/project-skill-sharing.md)
