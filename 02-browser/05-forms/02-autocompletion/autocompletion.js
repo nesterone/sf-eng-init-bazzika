@@ -1,11 +1,27 @@
-// Builds up an array with global variable names, like
-// 'alert', 'document', and 'scrollTo'
+/* global $ */
 
-// Hint
-// var terms = [];
-// var name = null;
-// for (name in window) {
-//
-// }
+var terms = [];
+var name;
 
-// Your code here.
+for (name in window) {
+  if (window.hasOwnProperty('name')) {
+    terms.push(name);
+  }
+}
+
+$('#field').on('input', function () {
+  var inputText = $(this).val();
+
+  $('#suggestions').text('').prop('disabled', true);
+
+  $.each(terms, function (index, value) {
+    if (value.indexOf(inputText) === 0 && inputText.length) {
+      $('#suggestions').text(value);
+    }
+  });
+});
+
+$('#suggestions').click(function () {
+  $('#field').val($(this).text());
+  $(this).text('');
+});
