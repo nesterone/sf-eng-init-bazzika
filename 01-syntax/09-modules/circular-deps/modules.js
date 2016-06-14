@@ -43,7 +43,7 @@ function define(depNames, moduleFunction) {
   var deps = depNames.map(getModule);
 
   function whenDepsLoaded() {
-    var isEveryDeps = !deps.every(function (m) {
+    var isEveryDeps = deps.every(function (m) {
       return m.loaded;
     });
     var args = deps.map(function (m) {
