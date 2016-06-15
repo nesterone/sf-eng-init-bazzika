@@ -28,8 +28,8 @@ function require(name) {
   if (name in require.cache) {
     return require.cache[name];
   }
-  code(exports, module);
   require.cache[name] = module.exports;
+  code(exports, module);
   return module.exports;
 }
 
