@@ -14,9 +14,22 @@ Make sure that you logged in [freeCodeCamp](https://www.freecodecamp.com/about) 
 
 * [freeCodeCamp: Responsive Design with Bootstrap](https://www.freecodecamp.com/challenges/use-responsive-design-with-bootstrap-fluid-containers)
 
+### Workshop: Code School - Front-end Foundations 1
+
+* [Code School: Front-end Foundations 1](https://www.codeschool.com/courses/front-end-foundations)
+
+### Workshop: Code School - Front-end formations 2
+
+* [Code School: Front-end Formations 2](https://www.codeschool.com/courses/front-end-formations)
+
 ### Workshop: freeCodeCamp - jQuery
 
 * [freeCodeCamp: jQuery](https://www.freecodecamp.com/challenges/learn-how-script-tags-and-document-ready-work)
+
+### Workshop: Code School - Try jQuery
+
+* [Code School: Try jQuery](http://try.jquery.com/)
+
 
 ### Project: freeCodeCamp  - Building a Tribute Page
 

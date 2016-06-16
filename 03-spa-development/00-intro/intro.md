@@ -20,9 +20,6 @@ Because of Backbone.js usually relay on next libs, let's remind our self what th
 ### Workshop: NodeSchool - Lodash
 * [NodeSchool: Lodash](https://github.com/mdunisch/lololodash)
 
-### Workshop: Code School: Try jQuery
-* [Code School: Try jQuery](http://try.jquery.com/)
-
 ### Question: What the difference between single-page and multi-page application ? 
 
 
