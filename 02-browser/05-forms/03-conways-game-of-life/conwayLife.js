@@ -12,7 +12,6 @@ var plan = ['############################',
   '############################'];
 var directions;
 var world;
-var directionNames;
 var nextButton = document.getElementById('next');
 var autoButton = document.getElementById('run');
 var interval;
@@ -65,14 +64,7 @@ directions = {
 
 function Wall() {}
 
-function randomElement(array) {
-  return array[Math.floor(Math.random() * array.length)];
-}
-
-directionNames = 'n ne e se s sw w nw'.split(' ');
-
 function Life() {
-  this.direction = randomElement(directionNames);
   this.life = 1;
 }
 
@@ -80,12 +72,9 @@ Life.prototype.act = function (view) {
   var neighbours = view.findAll('o').length;
   if (this.life === 1 && (neighbours < 2 || neighbours > 3)) this.life = 0;
   if (this.life === 0 && neighbours === 3) this.life = 1;
-  if (view.look(this.direction) !== ' ') this.direction = view.find(' ') || 's';
-  return { type: 'move', direction: this.direction };
 };
 
 function Dead() {
-  this.direction = randomElement(directionNames);
   this.life = 0;
 }
 
@@ -93,7 +82,6 @@ Dead.prototype.act = function (view) {
   var neighbours = view.findAll('o').length;
   if (this.life === 1 && (neighbours < 2 || neighbours > 3)) this.life = 0;
   if (this.life === 0 && neighbours === 3) this.life = 1;
-  if (view.look(this.direction) !== ' ') this.direction = view.find(' ') || 's';
 };
 
 function charFromElement(element) {
@@ -124,11 +112,6 @@ View.prototype.findAll = function (ch) {
     if (this.look(dir) === ch) found.push(dir);
   }
   return found;
-};
-View.prototype.find = function (ch) {
-  var found = this.findAll(ch);
-  if (found.length === 0) return null;
-  return randomElement(found);
 };
 
 function World(map, legend, newGrid) {
