@@ -13,6 +13,9 @@ var plan = ['############################',
 var directions;
 var world;
 var directionNames;
+var nextButton = document.getElementById('next');
+var autoButton = document.getElementById('run');
+var interval;
 
 function Vector(x, y) {
   this.x = x;
@@ -162,7 +165,7 @@ World.prototype.toString = function () {
   }
   return output;
 };
-World.prototype.turn = function () {
+World.prototype.turn = function (auto) {
   var acted = [];
   this.grid.forEach(function (critter, vector) {
     if (critter.act && acted.indexOf(critter) === -1) {
@@ -170,12 +173,17 @@ World.prototype.turn = function () {
       this.letAct(critter, vector);
     }
   }, this);
-  setTimeout(function () {
-    world = new World(plan, { '#': Wall,
-      o: Life, ' ': Dead }, this.nextGenGrid);
-    world.turn();
-    console.log(world.toString());
-  }, 500);
+  world = new World(plan, { '#': Wall,
+         o: Life, ' ': Dead }, this.nextGenGrid);
+  if (auto) {
+    interval = setInterval(function () {
+      world = new World(plan, {
+        '#': Wall, o: Life, ' ': Dead
+      }, this.nextGenGrid);
+      world.turn();
+      console.log(world.toString());
+    }, 500);
+  }
 };
 
 World.prototype.letAct = function (critter, vector) {
@@ -199,7 +207,12 @@ World.prototype.checkDestination = function (action, vector) {
 world = new World(plan, { '#': Wall,
   o: Life, ' ': Dead });
 
-setTimeout(function () {
+nextButton.addEventListener('click', function () {
+  clearInterval(interval);
   world.turn();
   console.log(world.toString());
-}, 500);
+});
+
+autoButton.addEventListener('click', function () {
+  world.turn(true);
+});
