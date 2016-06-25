@@ -1,0 +1,17 @@
+body {
+	text-align: center;
+	background: #eee;
+	margin-top: 50px;
+}
+button {
+	min-width: 100px;
+	padding: 5px 15px;
+	border-radius: 5px;
+}
+button:hover {
+	cursor: pointer;
+}
+.avatar {
+	width: 200px;
+	margin: 30px;
+}
