@@ -14,7 +14,10 @@
      font-size: 100%;
      }
  body {
+     position: relative;
      background-color: #708090;
+     padding-top: 200px;
+
  }
  h1{
      font-family: "Helvetica Neue",Helvetica,sans-serif;
@@ -36,16 +39,21 @@
 
 
  }
-    .header {
-       background-color:#999999;
+    .navbar h3 {
+        color: antiquewhite;
+        border: none;
+        text-align: left;
+        margin: 5px 0 0 30px;
+
            }
-    .header h3{
+    .jumbotron h2{
         margin: 0 auto;
         text-align: left;
         font-size: 20px;
         font-weight: bolder;
         text-indent: 100px;
         font-family: "Comic Sans MS",Helvetica,sans-serif;
+        color: blueviolet;
     }
     h3{
         font-family: "Helvetica Neue",Helvetica,sans-serif;
@@ -55,16 +63,14 @@
         border-bottom:1px solid #555555;
         margin: 20px 0 20px 0;
     }
-    .tagline {
-        background-color: #000000;
-        padding: 35px 0 35px 0;
 
-    }
+
     .projects,.skills,.contact{
        width :1000px;
-        margin: 0 auto;
+        margin: 100px auto;
+        padding-top: 50px 20px 50px 20px;
     }
-    .projects ul, .badges ul, .articles ul{
+    .projects ul{
         list-style-type:none;
     }
     .projects li, .badges li, .articles li{
@@ -79,7 +85,7 @@
         font-size: 18px;
     }
 
- button:hover{border:solid 2px orangered;color:brown;background: #708090;
+ .nav .nav-pills li:hover{color:brown;background: #708090;
  }
     .skills li{
         font-family: "Helvetica Neue",Helvetica,sans-serif;
@@ -89,16 +95,16 @@
         display:inline;
         padding:8px 8px 8px 8px;
     }
- button {
+ .nav .nav-pills li{
      font-family: "Helvetica Neue",Helvetica,sans-serif;
      color: antiquewhite;
      font-weight: bolder;
-     background-color: brown;
+
      float:right;
-     border-radius: 40%;
+
      margin-bottom: 5px;
-     border:solid 2px #999999;
-     box-sizing: border-box;
+
+
      text-align: center;
      margin-right: 15px;
 
@@ -117,31 +123,59 @@
     .cont{
         margin-bottom: 15px;
     }
-    .mylogo{
-        float:left;
-       margin:-20px -20px 10px 10px;
-border-color: #fffec8;
-        border-image-width: 7px 7px 7px 7px;
-    }
 
+.menu{
+    float:right;
+}
+.jumbotron{
+
+    background-color: 	#2F4F4F;
+
+}
+    .navbar{
+        margin: 0 0 0 0;
+        background-color: black;
+    }
+.nav .nav-pills li{
+    font-family: "Helvetica Neue",Helvetica,sans-serif;
+    color: antiquewhite;
+    font-weight: bolder;
+    float:right;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-right: 15px;
+}
 
  </style>
 
-<body>
-<div class="header">
-<h3><i>Portfolio page</i></h3>
-</div>
-<div class="tagline">
+<body data-spy="scroll" data-target="#navbar-example">
 
-    <h2>Name <strong>Name2</strong>.Name3 <strong>Name4</strong></h2>
-    <img src="picture/frog-2.png" alt="my logo" class="mylogo">
-<div class="menu">
-        <button class="btn btn-large"><strong>ABOUT</strong></button>
-        <button class="btn btn-large"><strong>PROJECTS</strong></button>
-        <button class="btn btn-large"><strong>CONTACT</strong></button>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+<h3><i>Portfolio page</i></h3>
+    <div class="menu" id="navbar-example" data-offset="10">
+        <ul class="nav nav-tabs" role="tablist" >
+            <li class="active"><a href="#about" >ABOUT</a></li>
+            <li><a href="#projects" >PROJECTS</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </div>
+
+</nav>
+    <div class="container theme-showcase" role="main">
+    <div id="about">
+    <div class="jumbotron">
+
+   <h2>Name <strong>Name2</strong>.Name3 <strong>Name4</strong></h2>
+    <img src="picture/frog-2.png" alt="my logo" id="mylogo">
+                </div>
+
 </div>
- </div>
-<div class="projects">
+</div>
+
+
+<div class="projects" id="projects">
     <h3>Projects</h3>
     <ul>
         <div class="row">
@@ -171,7 +205,7 @@ border-color: #fffec8;
 
 </div>
 
-<div class="skills">
+<div class="skills" id="skills">
     <h3>Skills</h3>
 <ul>
     <li>MS Excel</li>
@@ -184,7 +218,7 @@ border-color: #fffec8;
 </ul>
 
 </div>
-<div class="contact">
+<div class="contact" id="contact">
     <h3>Contact me</h3>
     <form>
         <fieldset>
@@ -208,4 +242,13 @@ border-color: #fffec8;
 
 </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!--<script>-->
+    <!--$(document).ready(function(){-->
+    <!--$('body').scrollspy({target:"#navbar-example"});-->
+
+<!--})-->
+
+<!--</script>-->
 </html>
