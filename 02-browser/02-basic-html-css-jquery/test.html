@@ -23,7 +23,7 @@
     body {
         position: relative;
         background-color: #708090;
-        padding-top: 100px;
+        padding-top: 70px;
         padding-bottom: 0px;
 
     }
@@ -120,6 +120,9 @@
 
     .menu{
         float:right;
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        font-weight: bold;
+        font-style: inherit;
     }
     .jumbotron{
         margin: -100px 100px 0 100px;
@@ -142,6 +145,7 @@
     .navbar .container{
         position: relative;
         background-color: saddlebrown;
+        color:black;
           }
     .navbar a:active, a:hover{
         text-decoration: none;
@@ -163,14 +167,9 @@
     }
 .navbar h3{
     font-family: "Comic Sans MS";
-
-
 }
 
 
-.navbar li{
-    text-decoration: none;
-}
 
     form button{
         font-family: "Helvetica Neue",Helvetica,sans-serif;
@@ -200,6 +199,23 @@
         background-color: saddlebrown;
         width: 100%;
     }
+    #weblink{
+        text-align: center;
+        font-family: "Helvetica Neue",Helvetica,sans-serif;
+        padding: 20px 0 20px 0;
+        font-size: 100%;
+    }
+    #sign{
+        text-align: center;
+        padding: 5px 0 5px 0;
+    }
+    .footer p{
+        text-align: center;
+        margin-bottom: -15px;
+        font-weight: bold;
+        color: gray;
+    }
+
 
 </style>
 
@@ -212,11 +228,11 @@
     <h3><i>Portfolio page</i></h3>
     <div class="menu" id="navbar-example" data-offset="10">
         <ul class="nav nav-tabs" role="tablist" >
-            <li class="active"><a href="#about" >ABOUT</a></li>
+            <li class="active" id="first"><a href="#about" >ABOUT</a></li>
+            <li class="divider" ></li>
+            <li><a href="#projects" id="second">PROJECTS</a></li>
             <li class="divider"></li>
-            <li><a href="#projects" >PROJECTS</a></li>
-            <li class="divider"></li>
-            <li><a href="#contact">CONTACTS</a></li>
+            <li><a href="#contact" id="third">CONTACTS</a></li>
 
         </ul>
     </div>
@@ -280,19 +296,6 @@
 
 </div>
 
-<div class="skills" id="skills">
-    <h3>Skills</h3>
-    <ul>
-        <li>MS Excel</li>
-        <li>1C</li>
-        <li>MS Project</li>
-        <li>Project Expert</li>
-        <li>Git</li>
-        <li>basic HTML,CSS</li>
-        <li>basic JavaScript</li>
-    </ul>
-
-</div>
 <div class="contact" id="contact">
 <div class="row">
     <h3>Contact me</h3>
@@ -329,10 +332,16 @@
 </div>
 <footer class="footer">
         <div id="footer-above">
-
+            <p id="weblink">AROUND THE WEB</p>
+            <P>
+<a href="https://www.linkedin.com/in/darya-beloborodova-13481691?trk=nav_responsive_tab_profile">
+    <img src="picture/linkedn-2.png"> </a>
+<a href="https://github.com/bazzika">
+    <img src="picture/github-1.png"> </a>
+            </P>
         </div>
         <div id="footer-below">
-
+<p id="sign">bazzika&copy</p>
         </div>
 
     </div>
