@@ -51,25 +51,66 @@ body{
     <div class="desk">
         <div class="jumbotron">
             <div class="container">
+                <div id="allquote">
             <div id="quote-text">
                 <p class="lead" >
                     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec ac semper erat. Sed dignissim eros at pharetra finibus. Integer mattis.
                     </h3>
-
                 </div>
             <div id="author">
-
                     <h2>Lorem ipsum</h2>
                 </p>
             </div>
+                    </div>
          </div>
-        <button class="btn btn-large btn-primary" type="button">New quote</button>
+        <button class="btn btn-large btn-primary" type="button" id="changes">New quote</button>
             </div>
 </div>
 </div>
 <footer>
     <h3>by bazzika</h3>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    var quote = [
+        {
+            text: 'Life is about making an impact, not making an income.',
+            author: 'Kevin Kruse'
+        },
+        {
+            text: 'Whatever the mind of man can conceive and believe, it can achieve',
+            author: 'Napoleon Hill'
+        },
+        {
+            text: 'Strive not to be a success, but rather to be of value.',
+            author: 'Albert Einstein'
+        },
+        {
+            text: 'Life is what happens to you while you’re busy making other plans.',
+            author: 'John Lennon'
+        },
+        {
+            text: 'We become what we think about.',
+            author: 'Earl Nightingale'
+        },
+        {
+            text: 'An unexamined life is not worth living.',
+            author: 'Socrates'
+        },
+        {
+            text: 'Every child is an artist.  The problem is how to remain an artist once he grows up.',
+            author: 'Pablo Picasso'
+        },
+        {
+            text: 'You can never cross the ocean until you have the courage to lose sight of the shore.',
+            author: 'Christopher Columbus'
+        }
+    ]
+function changeQuote(){
+   alert("Way out!");
+}
+changes.addEventListener('click', changeQuote);
+</script>
 </body>
 </html>
