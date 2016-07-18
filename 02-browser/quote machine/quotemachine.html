@@ -54,12 +54,11 @@ body{
                 <div id="allquote">
             <div id="quote-text">
                 <p class="lead" >
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec ac semper erat. Sed dignissim eros at pharetra finibus. Integer mattis.
+                    <h3>Hasta la vista, baby.
                     </h3>
                 </div>
-            <div id="author">
-                    <h2>Lorem ipsum</h2>
+            <div id="quote-author">
+                    <h2>Terminator 2: Judgment Day</h2>
                 </p>
             </div>
                     </div>
@@ -75,40 +74,54 @@ body{
 <script>
     var quote = [
         {
-            text: 'Life is about making an impact, not making an income.',
+            quoteText: 'Life is about making an impact, not making an income.',
             author: 'Kevin Kruse'
         },
         {
-            text: 'Whatever the mind of man can conceive and believe, it can achieve',
+            quoteText: 'Whatever the mind of man can conceive and believe, it can achieve',
             author: 'Napoleon Hill'
         },
         {
-            text: 'Strive not to be a success, but rather to be of value.',
+            quoteText: 'Strive not to be a success, but rather to be of value.',
             author: 'Albert Einstein'
         },
         {
-            text: 'Life is what happens to you while you’re busy making other plans.',
+            quoteText: 'Life is what happens to you while you’re busy making other plans.',
             author: 'John Lennon'
         },
         {
-            text: 'We become what we think about.',
+            quoteText: 'We become what we think about.',
             author: 'Earl Nightingale'
         },
         {
-            text: 'An unexamined life is not worth living.',
+            quoteText: 'An unexamined life is not worth living.',
             author: 'Socrates'
         },
         {
-            text: 'Every child is an artist.  The problem is how to remain an artist once he grows up.',
+            quoteText: 'Every child is an artist.  The problem is how to remain an artist once he grows up.',
             author: 'Pablo Picasso'
         },
         {
-            text: 'You can never cross the ocean until you have the courage to lose sight of the shore.',
+            quoteText: 'You can never cross the ocean until you have the courage to lose sight of the shore.',
             author: 'Christopher Columbus'
         }
     ]
+
+//var getQuote = function(quote){
+//
+//$('#quote-text').text(quote.quoteText);
+//
+//
+//}
+//$(document).ready(function () {
+//
+//});
 function changeQuote(){
-   alert("Way out!");
+        var randomNumber=Math.ceil(Math.random()*Object.keys(quote).length);
+            $('#quote-text h3').text(quote[randomNumber].quoteText);
+            $('#quote-author h2').text(quote[randomNumber].author);
+
+
 }
 changes.addEventListener('click', changeQuote);
 </script>
