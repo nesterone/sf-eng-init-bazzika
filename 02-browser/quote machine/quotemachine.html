@@ -22,10 +22,18 @@ body{
         font-family: "Browallia New";
         font-size: x-large;
         text-align: center;
+        border: none;
     }
     .btn{
         padding-top: -20px;
         float: right;
+    }
+    #totweet{
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        border: none;
+        background-color: inherit;
+        float: left;
     }
     .jumbotron{
         margin: 25% auto auto auto;
@@ -43,6 +51,12 @@ body{
         height: 350px;
         width: 650px;
         margin: 20% auto auto auto;
+    }
+    .img-rounded{
+        border: none;
+    }
+    #allquote{
+        height: 200px;
     }
 
 </style>
@@ -63,7 +77,13 @@ body{
             </div>
                     </div>
          </div>
+            <div id="allbutton">
         <button class="btn btn-large btn-primary" type="button" id="changes">New quote</button>
+            <a class="twitter-share-button"
+               href="https://twitter.com/intent/tweet">
+        <button class="btn btn-default" id="totweet"><img src="pict/TwitterLogo7.png" class="img-rounded"></button>
+                </a>
+                </div>
             </div>
 </div>
 </div>
@@ -113,17 +133,14 @@ body{
 //
 //
 //}
-//$(document).ready(function () {
-//
-//});
-function changeQuote(){
-        var randomNumber=Math.ceil(Math.random()*Object.keys(quote).length);
-            $('#quote-text h3').text(quote[randomNumber].quoteText);
-            $('#quote-author h2').text(quote[randomNumber].author);
-
-
-}
-changes.addEventListener('click', changeQuote);
+$(document).ready(function () {
+    function changeQuote() {
+        var randomNumber = Math.ceil(Math.random() * Object.keys(quote).length);
+        $('#quote-text h3').text(quote[randomNumber].quoteText);
+        $('#quote-author h2').text(quote[randomNumber].author);
+    }
+    changes.addEventListener('click', changeQuote);
+});
 </script>
 </body>
 </html>
