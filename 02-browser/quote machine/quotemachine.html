@@ -6,56 +6,64 @@
     <title>Random Quote Machine</title>
 </head>
 <style>
-body{
-    background-color: cadetblue;
-}
+    body {
+        background-color: cadetblue;
+    }
 
-    footer{
+    footer {
         text-align: center;
         font-family: "Calibri Light";
         font-weight: 300;
         color: darkslategray;
     }
 
-    .quote-text{
+    .quote-text {
         line-height: 120%;
         font-family: "Browallia New";
         font-size: x-large;
         text-align: center;
         border: none;
     }
-    .btn{
+
+    .btn {
         padding-top: -20px;
         float: right;
     }
-    #totweet{
+
+    #totweet {
         padding: 0 0 0 0;
         margin: 0 0 0 0;
         border: none;
         background-color: inherit;
         float: left;
     }
-    .jumbotron{
+
+    .jumbotron {
         margin: 25% auto auto auto;
         height: 350px;
         width: 650px;
     }
-    p .jumbotron{
+
+    p .jumbotron {
         margin-bottom: 15px;
     }
-    #author{
+
+    #author {
         float: right;
         padding: 15px 15px 15px 15px;
     }
+
     .desk {
         height: 350px;
         width: 650px;
         margin: 20% auto auto auto;
     }
-    .img-rounded{
+
+    .img-rounded {
         border: none;
     }
-    #allquote{
+
+    #allquote {
         height: 200px;
     }
 
@@ -66,81 +74,82 @@ body{
         <div class="jumbotron">
             <div class="container">
                 <div id="allquote">
-            <div id="quote-text">
-                <p class="lead" >
-                    <h3>Hasta la vista, baby.
-                    </h3>
-                </div>
-            <div id="quote-author">
-                    <h2>Terminator 2: Judgment Day</h2>
-                </p>
-            </div>
+                    <div id="quote-text">
+                        <p class="lead">
+                        <h3>
+                        </h3>
                     </div>
-         </div>
-            <div id="allbutton">
-        <button class="btn btn-large btn-primary" type="button" id="changes">New quote</button>
-            <a class="twitter-share-button"
-               href="https://twitter.com/intent/tweet">
-        <button class="btn btn-default" id="totweet"><img src="pict/TwitterLogo7.png" class="img-rounded"></button>
-                </a>
+                    <div id="quote-author">
+                        <h2></h2>
+                        </p>
+                    </div>
                 </div>
             </div>
-</div>
+            <div id="allbutton">
+                <button class="btn btn-large btn-primary" type="button" id="changes">New quote</button>
+                <a class="twitter-share-button"
+                   href="https://twitter.com/intent/tweet">
+                    <button class="btn btn-default" id="totweet"><img src="pict/TwitterLogo7.png" class="img-rounded">
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 <footer>
     <h3>by bazzika</h3>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
-    var quote = [
-        {
-            quoteText: 'Life is about making an impact, not making an income.',
-            author: 'Kevin Kruse'
-        },
-        {
-            quoteText: 'Whatever the mind of man can conceive and believe, it can achieve',
-            author: 'Napoleon Hill'
-        },
-        {
-            quoteText: 'Strive not to be a success, but rather to be of value.',
-            author: 'Albert Einstein'
-        },
-        {
-            quoteText: 'Life is what happens to you while you’re busy making other plans.',
-            author: 'John Lennon'
-        },
-        {
-            quoteText: 'We become what we think about.',
-            author: 'Earl Nightingale'
-        },
-        {
-            quoteText: 'An unexamined life is not worth living.',
-            author: 'Socrates'
-        },
-        {
-            quoteText: 'Every child is an artist.  The problem is how to remain an artist once he grows up.',
-            author: 'Pablo Picasso'
-        },
-        {
-            quoteText: 'You can never cross the ocean until you have the courage to lose sight of the shore.',
-            author: 'Christopher Columbus'
-        }
-    ]
+    $(document).ready(function () {
+        var quotes = [
+            {
+                quoteText: 'Life is about making an impact, not making an income.',
+                author: 'Kevin Kruse'
+            },
+            {
+                quoteText: 'Whatever the mind of man can conceive and believe, it can achieve',
+                author: 'Napoleon Hill'
+            },
+            {
+                quoteText: 'Strive not to be a success, but rather to be of value.',
+                author: 'Albert Einstein'
+            },
+            {
+                quoteText: 'Life is what happens to you while you’re busy making other plans.',
+                author: 'John Lennon'
+            },
+            {
+                quoteText: 'We become what we think about.',
+                author: 'Earl Nightingale'
+            },
+            {
+                quoteText: 'An unexamined life is not worth living.',
+                author: 'Socrates'
+            },
+            {
+                quoteText: 'Every child is an artist.  The problem is how to remain an artist once he grows up.',
+                author: 'Pablo Picasso'
+            },
+            {
+                quoteText: 'You can never cross the ocean until you have the courage to lose sight of the shore.',
+                author: 'Christopher Columbus'
+            }
+        ];
 
-//var getQuote = function(quote){
-//
-//$('#quote-text').text(quote.quoteText);
-//
-//
-//}
-$(document).ready(function () {
-    function changeQuote() {
-        var randomNumber = Math.ceil(Math.random() * Object.keys(quote).length);
-        $('#quote-text h3').text(quote[randomNumber].quoteText);
-        $('#quote-author h2').text(quote[randomNumber].author);
-    }
-    changes.addEventListener('click', changeQuote);
-});
+        function changeQuote() {
+            var randomNumber = Math.ceil(Math.random() * Object.keys(quotes).length);
+            $('#quote-text h3').text(quotes[randomNumber].quoteText);
+            $('#quote-author h2').text(quotes[randomNumber].author);
+            $('.twitter-share-button').prop('href', 'https://twitter.com/intent/tweet?text='
+                    + quotes[randomNumber].quoteText +
+                    quotes[randomNumber].author
+            );
+        }
+
+        changeQuote();
+        $('#changes').on('click', changeQuote);
+    });
 </script>
 </body>
 </html>
