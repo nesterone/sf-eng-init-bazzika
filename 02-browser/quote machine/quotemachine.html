@@ -57,6 +57,8 @@
         height: 350px;
         width: 650px;
         margin: 20% auto auto auto;
+        background-color: inherit;
+        opacity: 0.9;
     }
 
     .img-rounded {
@@ -66,10 +68,13 @@
     #allquote {
         height: 200px;
     }
+    .new-quote {
+        background-color: indianred;
+    }
 
 </style>
 <body>
-<div class="container">
+<div class="container main">
     <div class="desk">
         <div class="jumbotron">
             <div class="container">
@@ -86,10 +91,11 @@
                 </div>
             </div>
             <div id="allbutton">
-                <button class="btn btn-large btn-primary" type="button" id="changes">New quote</button>
+                <button class="btn btn-large btn-info" type="button" id="changes">New quote</button>
                 <a class="twitter-share-button"
                    href="https://twitter.com/intent/tweet">
-                    <button class="btn btn-default" id="totweet"><img src="pict/TwitterLogo7.png" class="img-rounded">
+                    <button class="btn btn-default" id="totweet">
+                        <img src="pict/TwitterLogo7.png" class="img-rounded">
                     </button>
                 </a>
             </div>
@@ -136,7 +142,7 @@
                 author: 'Christopher Columbus'
             }
         ];
-
+var colorArray=["#007faa", "#28a228", "#f62459", "#708090", "#f64747", "#ff4500", "#7462e0","#8b008b"];
         function changeQuote() {
             var randomNumber = Math.ceil(Math.random() * Object.keys(quotes).length);
             $('#quote-text h3').text(quotes[randomNumber].quoteText);
@@ -145,6 +151,9 @@
                     + quotes[randomNumber].quoteText +
                     quotes[randomNumber].author
             );
+            var randomColor = colorArray[Math.floor(Math.random() * (colorArray.length - 0 + 1)) + 0];
+            $('body').css('background-color',randomColor);
+            $('.desk').css('color',randomColor);
         }
 
         changeQuote();
