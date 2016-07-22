@@ -14,7 +14,7 @@
         text-align: center;
         font-family: "Calibri Light";
         font-weight: 300;
-        color: darkslategray;
+        color: white;
     }
 
     .quote-text {
@@ -28,6 +28,8 @@
     .btn {
         padding-top: -20px;
         float: right;
+        border: none;
+        font-weight: 600;
     }
 
     #totweet {
@@ -91,7 +93,7 @@
                 </div>
             </div>
             <div id="allbutton">
-                <button class="btn btn-large btn-info" type="button" id="changes">New quote</button>
+                <button class="btn btn-large btn-info" type="button" id="changes" style="background-color: indianred">New quote</button>
                 <a class="twitter-share-button"
                    href="https://twitter.com/intent/tweet">
                     <button class="btn btn-default" id="totweet">
@@ -108,70 +110,85 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
-        var quotes = [
-            {
-                quoteText: 'Life is about making an impact, not making an income.',
-                author: 'Kevin Kruse'
-            },
-            {
-                quoteText: 'Whatever the mind of man can conceive and believe, it can achieve',
-                author: 'Napoleon Hill'
-            },
-            {
-                quoteText: 'Strive not to be a success, but rather to be of value.',
-                author: 'Albert Einstein'
-            },
-            {
-                quoteText: 'Life is what happens to you while you’re busy making other plans.',
-                author: 'John Lennon'
-            },
-            {
-                quoteText: 'We become what we think about.',
-                author: 'Earl Nightingale'
-            },
-            {
-                quoteText: 'An unexamined life is not worth living.',
-                author: 'Socrates'
-            },
-            {
-                quoteText: 'Every child is an artist.  The problem is how to remain an artist once he grows up.',
-                author: 'Pablo Picasso'
-            },
-            {
-                quoteText: 'You can never cross the ocean until you have the courage to lose sight of the shore.',
-                author: 'Christopher Columbus'
-            }
-        ];
+//        var quotes = [
+//            {
+//                quoteText: 'Life is about making an impact, not making an income.',
+//                author: 'Kevin Kruse'
+//            },
+//            {
+//                quoteText: 'Whatever the mind of man can conceive and believe, it can achieve',
+//                author: 'Napoleon Hill'
+//            },
+//            {
+//                quoteText: 'Strive not to be a success, but rather to be of value.',
+//                author: 'Albert Einstein'
+//            },
+//            {
+//                quoteText: 'Life is what happens to you while you’re busy making other plans.',
+//                author: 'John Lennon'
+//            },
+//            {
+//                quoteText: 'We become what we think about.',
+//                author: 'Earl Nightingale'
+//            },
+//            {
+//                quoteText: 'An unexamined life is not worth living.',
+//                author: 'Socrates'
+//            },
+//            {
+//                quoteText: 'Every child is an artist.  The problem is how to remain an artist once he grows up.',
+//                author: 'Pablo Picasso'
+//            },
+//            {
+//                quoteText: 'You can never cross the ocean until you have the courage to lose sight of the shore.',
+//                author: 'Christopher Columbus'
+//            }
+//        ];
 var colorArray=["#007faa", "#28a228", "#f62459", "#708090", "#f64747", "#ff4500", "#7462e0","#8b008b"];
-        function changeQuote() {
-            var randomNumber = Math.ceil(Math.random() * Object.keys(quotes).length);
-            $('#quote-text h3').text(quotes[randomNumber].quoteText);
-            $('#quote-author h2').text(quotes[randomNumber].author);
-            $('.twitter-share-button').prop('href', 'https://twitter.com/intent/tweet?text='
-                    + quotes[randomNumber].quoteText +
-                    quotes[randomNumber].author
-            );
-            var randomColor = colorArray[Math.floor(Math.random() * (colorArray.length - 0 + 1)) + 0];
-            $('body').css('background-color',randomColor);
-            $('.desk').css('color',randomColor);
-        }
+//        function changeQuote() {
+//            var randomNumber = Math.ceil(Math.random() * Object.keys(quotes).length);
+//            $('#quote-text h3').text(quotes[randomNumber].quoteText);
+//            $('#quote-author h2').text(quotes[randomNumber].author);
+//            $('.twitter-share-button').prop('href', 'https://twitter.com/intent/tweet?text='
+//                    + quotes[randomNumber].quoteText +
+//                    quotes[randomNumber].author
+//            );
+//            var randomColor = colorArray[Math.floor(Math.random() * (colorArray.length - 0 + 1)) + 0];
+//            $('body').css('background-color',randomColor);
+//            $('.desk').css('color',randomColor);
+//        }
 
-        changeQuote();
-        $('#changes').on('click', changeQuote);
-$.ajax({
-    url: "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous",
-    type: "POST",
-    contentType: 'application/x-www-form-urlencoded',
-    headers: {
-        "X-Mashape-Key": 'qhyhrKUqBcmshva9qkFDbjNSwNKNp1Ho8TTjsnVyCWLAGdFEWb'
-    },
-    dataType: 'json'
-}).done(function(quote){
-    console.log(quote);
+//        changeQuote();
+//        $('#changes').on('click', changeQuote);
+
+function remoteQuotes(){
+    $.ajax({
+        url: "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous",
+        type: "POST",
+        contentType: 'application/x-www-form-urlencoded',
+        headers: {
+            "X-Mashape-Key": 'qhyhrKUqBcmshva9qkFDbjNSwNKNp1Ho8TTjsnVyCWLAGdFEWb'
+        },
+        dataType: 'json'
+    }).done(function(quote){
+        console.log(quote);
+        $('#quote-text h3').text(quote.quote);
+        $('#quote-author h2').text(quote.author);
+        $('.twitter-share-button').prop('href', 'https://twitter.com/intent/tweet?text='
+                + quote.quote +
+                quote.author
+        );
+        var randomColor = colorArray[Math.floor(Math.random() * (colorArray.length - 0 + 1)) + 0];
+        $('body').css('background-color',randomColor);
+        $('.desk').css('color',randomColor);
+        $('#changes').css('background-color',randomColor);
+});
+        }
+        remoteQuotes();
+        $('#changes').on('click', remoteQuotes);
 });
 
 
-    });
 </script>
 </body>
 </html>
