@@ -2,6 +2,22 @@
 
 **[<= Back](../01-dom/dom.md)**		*	*	*	**[Next =>](../03-dom-api-advanced/dom-and-api.md)**
 
+### Theory
+
+1. [HTML](http://www.htmldog.com/guides/html)
+2. [CSS](http://www.htmldog.com/guides/css)
+    * [Position](http://alistapart.com/article/css-positioning-101)
+    * [Floats](http://alistapart.com/article/css-floats-101)
+        * [Collapsing](http://complexspiral.com/publications/containing-floats/)
+    * [BFC](http://maxdesign.com.au/jobs/sample-block-formatting-context/index.htm)
+        * [Uncolapsing Margins](http://www.complexspiral.com/publications/uncollapsing-margins/)
+    * [z-index](https://www.smashingmagazine.com/2009/09/the-z-index-css-property-a-comprehensive-look/)
+    * [Media Query](https://www.sitepoint.com/web-foundations/understanding-media-queries/)
+    * [Grids](https://www.sitepoint.com/understanding-css-grid-systems/)
+        * [Bootstrap Grid System](https://www.sitepoint.com/understanding-bootstrap-grid-system/)
+3. [Learn CSS Layout](http://learnlayout.com/toc.html)
+
+
 ### Practice
 
 Make sure that you logged in [freeCodeCamp](https://www.freecodecamp.com/about) and has access to `Front End Development Certification`
@@ -41,6 +57,7 @@ Make sure that you logged in [freeCodeCamp](https://www.freecodecamp.com/about) 
 
 ### Additional
 
-...
+1. [Responsive Web Design](http://alistapart.com/article/responsive-web-design)
+1. [CSS Grid Layout](https://abookapart.com/products/get-ready-for-css-grid-layout)
 
 **[<= Back](../01-dom/dom.md)**		*	*	*	**[Next =>](../03-dom-api-advanced/dom-and-api.md)**
