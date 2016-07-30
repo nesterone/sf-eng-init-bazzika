@@ -6,6 +6,7 @@
 
 1. [HTML](http://www.htmldog.com/guides/html)
 2. [CSS](http://www.htmldog.com/guides/css)
+    * [Specificity](https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/)
     * [Position](http://alistapart.com/article/css-positioning-101)
     * [Floats](http://alistapart.com/article/css-floats-101)
         * [Collapsing](http://complexspiral.com/publications/containing-floats/)
